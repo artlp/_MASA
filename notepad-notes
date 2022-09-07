@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<NotepadPlus>
+    <Session activeView="0">
+        <mainView activeIndex="1">
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="1889" startPos="266" endPos="266" selMode="0" offset="0" wrapCount="1" lang="None (Normal Text)" encoding="-1" userReadOnly="no" filename="C:\Users\falco\Desktop\Web Development\_MASA\notes-semantics-accessibility.txt" backupFilePath="" originalFileLastModifTimestamp="375973138" originalFileLastModifTimestampHigh="30982395" mapFirstVisibleDisplayLine="-1" mapFirstVisibleDocLine="-1" mapLastVisibleDocLine="-1" mapNbLine="-1" mapHigherPos="-1" mapWidth="-1" mapHeight="-1" mapKByteInDoc="512" mapWrapIndentMode="-1" mapIsWrap="no" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="1889" startPos="466" endPos="466" selMode="0" offset="0" wrapCount="1" lang="None (Normal Text)" encoding="-1" userReadOnly="no" filename="C:\Users\falco\Desktop\Web Development\_MASA\notes-general.txt" backupFilePath="" originalFileLastModifTimestamp="-1411223049" originalFileLastModifTimestampHigh="30982614" mapFirstVisibleDisplayLine="-1" mapFirstVisibleDocLine="-1" mapLastVisibleDocLine="-1" mapNbLine="-1" mapHigherPos="-1" mapWidth="-1" mapHeight="-1" mapKByteInDoc="512" mapWrapIndentMode="-1" mapIsWrap="no" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="1889" startPos="189" endPos="189" selMode="0" offset="0" wrapCount="1" lang="None (Normal Text)" encoding="-1" userReadOnly="no" filename="C:\Users\falco\Desktop\Web Development\_MASA\notes-vscode.txt" backupFilePath="" originalFileLastModifTimestamp="-260465419" originalFileLastModifTimestampHigh="30982404" mapFirstVisibleDisplayLine="-1" mapFirstVisibleDocLine="-1" mapLastVisibleDocLine="-1" mapNbLine="-1" mapHigherPos="-1" mapWidth="-1" mapHeight="-1" mapKByteInDoc="512" mapWrapIndentMode="-1" mapIsWrap="no" />
+        </mainView>
+        <subView activeIndex="0" />
+    </Session>
+</NotepadPlus>

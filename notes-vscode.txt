@@ -1,0 +1,6 @@
+emmet 
+! - creates the initial html template
+ctrl+space - force emmet shortcut
+alt+shift+ UP\DOWN - copy line up\down
+ALT+UP/DOWN - move lines up and down
+CTRL+D - select similar words

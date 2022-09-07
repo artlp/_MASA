@@ -1,0 +1,4 @@
+alt attribute is important for search engines and for blind users with screen readers (accessibility). Should remain empty if the image is purely for decoration.
+
+div has no semantics, but there are special sections:
+<section>, <main>, <header>, <footer>, <aside>

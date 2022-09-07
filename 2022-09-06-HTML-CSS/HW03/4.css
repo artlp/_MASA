@@ -1,0 +1,39 @@
+body {
+    background-color: rgb(121, 194, 254);
+
+}
+
+.box1 {
+    background-color: rgb(125, 255, 125);
+    width: 80%;
+    text-align: center;
+    margin: 0 auto;
+    padding: 5% 5%;
+}
+
+.box2 {
+    background-color: rgb(255, 184, 207);
+    width: 95%;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.box3 {
+    background-color: rgb(125, 255, 125);
+    width: 95%;
+    text-align: left;
+    margin: 0 auto;
+
+}
+
+ul {
+    font-size: xx-large;
+    padding: 5% 2%;
+    line-height: 200%;
+    list-style: inside;
+    margin-left: 15%;
+}
+ul>li:nth-child(even){
+    font-style: italic;
+    color: purple;
+}​

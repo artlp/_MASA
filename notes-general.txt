@@ -1,0 +1,92 @@
+MASA FTP:
+de10.fcomet.com:2083
+science3
+Yalla123456!
+http://scienceart.co.il/
+
+Case sensitivity:
+tags are not case sensitive
+entities are case sensitive
+hexidemal encoding - case insensitive
+css rules - case insensitive, classes are case sensitive
+
+Block:
+H1-6, div, p,
+
+Inline:
+a, img, span
+
+
+Inline takes width of its content, sits inline, no new lines before or after. Not affected by width and height rules. Margin and padding affect its size.
+Block takes all the width of its parent container, height is 0 by default, then it takes its height from content
+
+
+СИСТЕМЫ ИСЧИСЛЕНИЯ
+десятичная
+двоичная
+шестнадцатеричная 
+
+101101 из двоичной в десятичную: 
+101101 = 45
+100110110 =ноль в конце - четное = 310 
+УМНОЖАЕМ НА СТЕПЕНИ ДВОЙКИ СПРАВА НАЛЕВО
+
+0*0
+1*2
+1*4
+0*8
+1*16
+1*32
+0*64
+0*128
+1*256
+= 310
+
+125/2=1 последнее
+124/2=62
+62/2=0
+62/2=31
+31/2=1
+30/2=15
+
+272 перевести в двоичную систему:
+272/2=0 находим остаток от деления на 2 - остаток 0
+четное делим на 2 - 272/2 = 136
+136/2 - остаток 0
+136/2 = 68
+68/2 - остаток 0
+68/2 = 34
+34/2 - остаток 0
+34/2 = 17
+17/2 - остаток 1
+16/2=8
+8/2 - остаток 0
+8/2 = 4
+4/2 остаток 0
+4/2 = 2
+2/2 - остаток 0
+2/2 = 1
+1/2 - остаток 1
+100010000
+
+
+ШЕСТНАДЦАТЕРИЧНАЯ 
+0123456789ABCDEF 
+
+FB6C = 64364
+16^3	16^2	16^1	16^0
+12*16^0
+6*16^1
+11*16^2
+15*16^3
+
+AB = 11*16^0 + 10*16^1 = 171
+
+286/16 - остаток 14 (E)
+286-14 = 272
+272/16 = 17
+17/16 - остаток 1
+17-1=16
+16/16 = 1
+1/16 - остаток 1
+286 = 11E << ОТВЕТ 

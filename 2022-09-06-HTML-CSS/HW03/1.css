@@ -1,0 +1,22 @@
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #97d1f5;
+}
+#paragraph3 {
+    font-family: 'Oswald', sans-serif;
+    color:rgba(255, 59, 28, 0.836)
+
+    /* font-family: 'Rubik', sans-serif; */
+}
+.paragraph {
+    font-family: 'Merriweather', serif;
+    color:rgb(243, 84, 235);
+}
+ul {
+    padding: 0 40% 1rem 5rem;
+}
+span {
+    margin: 5px 5px 10px 5px;
+    padding: 0 40% 1rem 5rem;
+}

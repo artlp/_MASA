@@ -1,0 +1,73 @@
+body {
+    line-height: 150%;
+    background-color: rgb(185, 248, 252);
+}
+h1 {
+    margin: 2% 20px 3%;
+    padding: 0;
+    text-align: center;
+}
+h2 {
+    color: rgb(193, 54, 154);
+    margin: 0 12px 20px;
+    padding: 10px 5px 3px 20px
+}
+h3 {
+    margin: 5px;
+    padding: 4% 3% 3% 7%;
+    text-align: right;
+}
+
+.paragraph1 {
+    color:rgb(174, 28, 60);
+    text-align: center;
+}
+.paragraph2 a {
+    font-family: Comic Sans, Verdana, sans-serif; 
+    text-decoration: underline overline #1f7167 2px;
+    text-align: justify;
+}
+.coloredBg {
+    background-color: rgb(201, 253, 104) !important;
+}
+
+h3 {
+    border-color: rgb(42, 247, 52) red blue salmon;
+    border-style: solid dashed groove double;
+    border-width: 15px 11px 7px 17px;
+}
+.class1 {
+    background-color: purple;
+    margin: 2px;
+    border: 1px solid green;
+    width: 300px;
+    height: 150px;
+}
+.picdiv {
+    width: 500px;
+    height:500px;
+    margin: 0 auto;
+}
+.div5 {
+    background-color: rgb(7, 76, 172);
+    margin: 2px;
+    border: 1px solid rgb(238, 255, 0);
+    width: 200px;
+    height: 100px;
+    font-style:inherit;
+}
+.container {
+    background-color: bisque;
+    width:70%;
+    margin: 0 auto;
+}
+
+.list1 {
+    list-style:lower-greek;
+}
+.list2 {
+    list-style:decimal-leading-zero;
+}
+.list3 {
+    list-style: circle;
+}

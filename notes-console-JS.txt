@@ -1,0 +1,40 @@
+clear() - clears the console.
+
+arithmetics work
+
+% - remainder after division
+
+Data types:
+Number
+String (text) (eg, "hello world")
+
+
+"i live in" + " Ayanot"
+'i live in Ayanot' - STRING CONCATENATION
+
+"the result of 2*2 is " + 4
+'the result of 2*2 is 4' - DATA TYPE CONVERSION
+
+"8"+6
+86 - IMPLICIT DATA TYPE CONVERSION
+
+console.log("Result of 7+8-9 is " + [7+8-9]); OR console.log("Result of 7+8-9 is " ,7+8-9);
+
++-/*% - OPERATORS
+
+TYPEOF - OPERATOR WHICH SHOWS DATA TYPE
+
+\ = ESCAPE CHARACTER, MEANS THAT THE FOLLOWING CHARACTER IS JUST A SYMBOL WITHOUT ANY MEANING
+\n - new line in strings.
+\t - tab in strings.
+
+{} - CONTAINS BLOCK OF COMMANDS
+
+=== - EQUAL (STRICT COMPARISON)
+== - EQUAL (NON-STRICT COMPARISON)
+!== - NOT EQUAL (STRICT COMPARISON)
+!= - NOT EQUAL (NON-STRICT COMPARISON)
+> - GREATER THAN
+>= - GREATER THAN OR EQUAL
+< - LESS THAN 
+<= - LESS THAN OR EQUAL
