@@ -1,3 +1,30 @@
 body {
-    background-color: aquamarine;
+    background-color: #007;
+    font-size: 24px;
+}
+.yellow {
+    background-color: #ff0;
+    margin: 20px;
+    padding: 20px;
+}
+
+.transparent-background {
+    background-color: rgba(255, 255, 0, 0.2);
+    /* opacity: 0.2; */
+
+}
+.small {
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+    color: #608;
+}
+.half-transparent {
+    opacity: 0.5;
+}
+
+.yellow > p {
+    /*! only for paragraphs that are direct children of .YELLOW*  */
+    background: rgb(255, 142, 255);
+    padding: 3px 5px;
 }

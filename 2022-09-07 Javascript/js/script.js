@@ -33,13 +33,13 @@ console.log('Cities: Jerusalem \n\tTel-Aviv \n\tHaifa \n\tAshdod');
 console.log('Do you want a seat near the window? \n Y\\N');
 
 
-var question = 'Do you have a clean shirt?';
-var answer = prompt(question);
-if (answer === 'yes') {
-    console.log("well done, wear it");
-} else {
-    console.log("it's a shame");
-}
+// var question = 'Do you have a clean shirt?';
+// var answer = prompt(question);
+// if (answer === 'yes') {
+//     console.log("well done, wear it");
+// } else {
+//     console.log("it's a shame");
+// }
 
 var question2 = "What is your favorite color?";
 var answer2 = "red";
