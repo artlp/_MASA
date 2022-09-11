@@ -38,3 +38,22 @@ TYPEOF - OPERATOR WHICH SHOWS DATA TYPE
 >= - GREATER THAN OR EQUAL
 < - LESS THAN 
 <= - LESS THAN OR EQUAL
+
+
+LOGIC OPERATORS:
+&& - and
+|| - or
+! - not 
+
+&&    | true | false
+---------------------
+true  | true | false
+false | false| false
+
+||    | true | false
+---------------------
+false | true | false
+true  | true | true
+
+
+ALL INPUTS ARE STRINGS
