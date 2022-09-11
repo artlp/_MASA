@@ -1,0 +1,22 @@
+var redTable = {
+/* properties */
+	color:  "red",
+	height: 88,
+	width: 100,
+/* method - function which belongs to an object*/
+	move: function ...
+}
+
+To show the height of the redTable:
+console.log(redTable.height);
+
+To move the table:
+
+redTable.move();
+
+*********************************
+group of some objects with same basic properties is called CLASS
+
+Each class has a function (method) - CONSTRUCTOR, which creates new basic object of this class
+
+For example, class Furniture will have CONSTRUCTOR function Furniture(color, weight, price, manufacturer)
