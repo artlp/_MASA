@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HW 06 task 1</title>
+    </head>
+
+    <body>
+        <p>1. Birthdays. Get day, month and year of birth for two persons.
+            (No need to make all the prompts,
+            you can just set them like this:
+
+            var year1=1999, year2=1998, month1="May", month2="May",
+            day1=22, day2=22)
+
+            If they were born on the same day, the program says:
+            You both were born on the same day exactly!
+            If they were born on the same day but in different years,
+            the program says: you've got the same birth date!</p>
+        <script>
+            var year1 = 1999, year2 = 1998, month1 = "May", month2 = "May",
+                day1 = 22, day2 = 22;
+            if ((year1 === year2) && (month1 === month2) && (day1 === day2)) { 
+                 console.log("You both were born on the same day exactly!") ;
+        } else if ((month1 === month2) && (day1 === day2)) {
+            console.log("You've got the same birth date!");
+        } else {
+            console.log("You don't share any dates");
+        }
+        </script>
+    </body>
+
+</html>

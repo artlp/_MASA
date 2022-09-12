@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HW 06 task 5</title>
+</head>
+<body>
+    5. The program gets 3 numbers. Use ternary operator to decide
+   (without multiplying them!!!) if their product (произведение) 
+   will be positive or negative
+
+   <script>
+    var num1 = +prompt("enter num1");
+    var num2 = +prompt("enter num2");
+    var num3 = +prompt("enter num3");
+    (num1 < 0 && num2 > 0 && num3 > 0) || (num1 < 0 && num2 < 0 && num3 < 0) || (num1 > 0 && num2 < 0 && num3 > 0) || (num1 > 0 && num2 > 0 && num3 < 0) ? console.log("negative") : console.log("positive");
+    console.log(num1*num2*num3);
+   </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HW 06 task 4</title>
+</head>
+<body>
+    4. Get an integer number by prompt(). Perform validation 
+  (make sure that the input is valid - not empty, number, 
+  integer - by Number.isInteger().
+  Example of usage:
+        if (Number.isInteger(num) === true) 
+               console.log('this is integer'))
+
+   Use ternary operator and tell if the number is even or odd.
+    <script>
+        var number = prompt("Please enter your number");
+        if (number === "" || number === null || isNaN(number) === true) {
+            alert("PLEASE ENTER A NUMBER");
+        } else {
+            number = +number;
+            if (Number.isInteger(number) === false) {
+                console.log("number is not integer");
+            } else {
+                number % 2 === 0 ? console.log("number is even") : console.log("number is odd");
+            }
+        }
+
+    </script>
+</body>
+</html>

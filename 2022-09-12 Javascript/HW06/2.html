@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HW06 task 2</title>
+</head>
+<body>
+    <p style="width:40%">2. a) Prompt the user for 3 numbers. 
+        It's given that no two numbers are equal.   
+        Show at the console the numbers from the smallest to the biggest, 
+        like 6 < 8 < 122. 
+  
+        or
+  
+     b) CHALLENGE
+        Some of the numbers may be equal. Show, if needed the equality, like:
+        6 = 6 < 122
+  </p>
+  <script>
+    var num1 = +prompt("enter num1");
+    var num2 = +prompt("enter num2");
+    var num3 = +prompt("enter num3");
+      if (num1 === num2 || num1 === num3 || num2 === num3) {
+        alert("Please enter 3 different numbers!");
+      } else if (num1 < num2 && num2 < num3) {
+        console.log(num1, num2, num3, "шаг 1");
+      } else if (num1 < num3 && num3 < num2) {
+        console.log(num1, num3, num2, "шаг 2");
+      }else if (num2 < num1 && num1 < num3) {
+        console.log(num2, num1, num3, "шаг 3");
+      }else if (num2 < num3 && num3 < num1) {
+        console.log(num2, num3, num1, "шаг 4");
+      }else if (num3 < num2 && num2 < num1) {
+        console.log(num3, num2, num1, "шаг 5");
+      }else if (num3 < num1 && num1 < num2) {
+        console.log(num3, num1, num2, "шаг 6");
+      } else {
+        console.log("ни один из вариантов");
+      }
+      {
+
+      }
+  </script>
+</body>
+</html>
