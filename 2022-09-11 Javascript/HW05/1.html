@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HW05 1 and 2</title>
+    </head>
+
+    <body>
+        <script>
+            var userName = prompt("What is your name?");
+            var birthYear = prompt("What year were you born?");
+            var currentDate = new Date().getFullYear();
+            var userAge = Number(currentDate) - Number(birthYear);
+            console.log("Hello " + userName + " , you are " + userAge);
+            if (userAge > 60) {
+                console.log("Оооо, you're like Methuselach!");
+            }
+            else if (userAge % 10 != 0) {
+                console.log(userName + ", congratulations, you are " + userAge);
+            } else {
+                console.log(userName + ", congratulations, with your " + userAge + "th anniversary!");
+            }
+
+
+        </script>
+    </body>
+
+</html>

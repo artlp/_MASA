@@ -57,3 +57,14 @@ true  | true | true
 
 
 ALL INPUTS ARE STRINGS
+
+
+Primitive data types 
+Number
+string
+boolean
+null
+undefined 
+
+
+DATATYPE OF NAN IS NUMBER!!!

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HW 05 task 2</title>
+</head>
+<body>
+    <h1>Enter three different numbers</h1>
+    <script>
+        var num1 = Number(prompt('Enter number 1'));
+        var num2 = Number(prompt('Enter number 2'));
+        if (num1 == num2) {
+            alert('The first and the second numbers are equal. \nWrong input!');
+        } else {
+            var num3 = Number(prompt('Enter number 3'));
+            console.log("The biggest number entered is " + Math.max(num1,num2,num3));
+        }
+    </script>
+</body>
+</html>

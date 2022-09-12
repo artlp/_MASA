@@ -6,3 +6,4 @@ console.log('Datatype of num3: ', typeof num3);
 //! ALL INPUTS ARE STRINGS
 //! Number(str) > converts str to number
 //! +str > converts str to number 
+//! parseInt(str), parseFloat(str) > converts str to number

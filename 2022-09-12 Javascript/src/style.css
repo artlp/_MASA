@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+html {
+    /* background-color: aquamarine; */
+    height: 100%;
+}
+li {
+    margin-left: 4%;
+}
+body {
+    background: rgb(255, 144, 144);
+    height:100%;
+
+}
+div {
+    margin: 0 auto;
+}
+.yellow {
+    background: yellow;
+    height: 100%;
+    width: 50%;
+}
+.pink {
+    background-color: pink;
+    box-sizing: border-box; /* * size of border and padding is included in its size     */
+}
+.black {
+    background-color: black;
+    box-sizing: content-box; /* * default sizing, only content is included in its size  */
+
+}
+.pink, .black {
+    height: 200px;
+    margin: 20px;
+    padding: 20px;
+    width: 300px;
+    border: 5px solid green;
+    /* overflow:scroll; */
+}
+
+.inner {
+    background-color:aqua;
+    height: 200px;
+
+}
+
+.bill img {
+    max-width: 100%;
+}
+details {
+    background-color: darkcyan;
+}

@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+html {
+    /* background-color: aquamarine; */
+    height: 100%;
+}
+
+nav ul {
+    list-style: none;
+}
+nav ul li {
+    background-color: lightsteelblue;
+    font-weight: bold;
+    padding: 0 14px;
+
+}
+body {
+    background: rgb(233, 158, 248);
+    font-size: 2rem;
+    height:100%;
+    /* font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
+
+}
+div {
+    margin: 0 auto;
+}
+.yellow {
+    background: yellow;
+    height: 100%;
+    width: 50%;
+}
+
+img {
+    width: 200px;
+}
+
+.left {
+    float: left;
+}
+.right {
+    float: right; 
+}
+table {
+    border-collapse: collapse;
+}
+td, th {
+    border: 1px solid grey;
+}
