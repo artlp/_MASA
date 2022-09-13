@@ -17,7 +17,7 @@ nav ul li {
 
 }
 body {
-    background: rgb(233, 158, 248);
+    background: rgb(251, 228, 255);
     font-size: 2rem;
     height:100%;
     /* font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
@@ -31,9 +31,14 @@ div {
     height: 100%;
     width: 50%;
 }
+.clearfix {
+    clear: both;
+    margin-top: 3%;
+}
 
 img {
-    width: 200px;
+    width: 300px;
+    
 }
 
 .left {

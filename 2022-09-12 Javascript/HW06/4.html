@@ -17,7 +17,7 @@
    Use ternary operator and tell if the number is even or odd.
     <script>
         var number = prompt("Please enter your number");
-        if (number === "" || number === null || isNaN(number) === true) {
+        if (number === "" || number === null || isNaN(number) === true || number === undefined) {
             alert("PLEASE ENTER A NUMBER");
         } else {
             number = +number;

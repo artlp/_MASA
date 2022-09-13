@@ -15,7 +15,7 @@ table {
     float: right;
     text-align: center;
 }
-td img {
+#mainpic {
     max-width:300px;
 }
 section > h2 {
@@ -24,4 +24,7 @@ section > h2 {
 }
 .dogs, .cats {
     float: left;
+}
+.div__photo img {
+    width: 30%;
 }

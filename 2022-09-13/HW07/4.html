@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HW 07 task 4</title>
+        <style>
+            body {
+                width: 400px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <p>4. Our application should get a month and output it’s season
+            in accordance with this specification:
+
+            Winter: December, January and February
+            Spring: March, April and May
+            Summer: June, July and August
+            Autumn: September, October and November
+
+            Use switch.</p>
+        <script>
+            var month = prompt("Enter month");
+            month = month.toLowerCase();
+            switch (month) {
+                case 'december':
+                case 'january':
+                case 'february':
+                    console.log(month + ' is during winter season');
+                    break;
+                case 'march':
+                case 'april':
+                case 'may':
+                    console.log(month + ' is during spring season');
+                    break;
+                case 'june':
+                case 'july':
+                case 'august':
+                    console.log(month + ' is during summer season');
+                    break;
+                case 'september':
+                case 'october':
+                case 'november':
+                    console.log(month + ' is during autumn season');
+                    break;
+                default:
+                    console.log(month);
+                    console.log("Unknown month entered");
+                    break;
+            }
+        </script>
+    </body>
+
+</html>

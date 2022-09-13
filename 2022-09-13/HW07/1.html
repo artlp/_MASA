@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HW 07 task 1</title>
+        <style>
+            body {
+                width: 400px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <p>1. Ternary operator practice.
+            a) var adminPassword = 'Rxjel$#1hs';
+            var admin1 = "Yosi", admin2 = "Noa", admin3 = "Yael"
+
+            Ask the user their username and
+            ask to enter a password.
+
+            If the username is equal to one of the admin's names
+            and if the password is equal to adminPassword,
+            show message "You're redirected to the admin area"
+
+            If it is wrong, alert "Access denied"
+
+            b) Ask the user to enter a word in upper case.
+            Say if it is OK, or not in upper case.
+
+            Hint to how to make this check see below all the exercises. </p>
+        <script>
+            var adminPassword = 'Rxjel$#1hs';
+            var admin1 = "Yosi", admin2 = "Noa", admin3 = "Yael";
+            var enteredUsername = prompt("Enter your login");
+            var enteredPassword = prompt("Enter your password");
+            (enteredUsername === admin1 || enteredUsername === admin2 || enteredUsername === admin3) && (adminPassword === enteredPassword) ? console.log("You're redirected to the admin area") : alert("Access denied");
+
+            console.log("==========PART 2==========");
+            var input = prompt("Enter a word in CAPS");
+            var checkWord = input.toUpperCase();
+            // console.log(`${input}, ${checkWord}`);
+            input === checkWord ? console.log(`thank you`) : console.log(`wrong`);
+
+        </script>
+    </body>
+
+</html>

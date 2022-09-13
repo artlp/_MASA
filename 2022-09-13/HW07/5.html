@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HW 07 task 5</title>
+        <style>
+            body {
+                width: 400px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <p>
+            5. Get person's height and weight.
+            Use switch(true).
+
+            Respond to the person's combination of height
+            and weight (define your ranges), for example:
+
+            If the person is taller than 180 and weights less than 90,
+            say "You're tall, you should eat more".
+            If the height is between 160 and 170 and the weight is less
+            than 80, say "You're height is great, why you're
+            speaking about your weight?", etc.</p>
+        <script>
+            var height = +prompt("Enter your height in cm");
+            var weight = +prompt("Enter your weight in kg");
+
+            switch (true) {
+                case height >= 200 && weight >= 120:
+                    console.log("wow you're huge");
+                    break;
+                case height >= 200 && weight < 120:
+                    console.log("you are a tall person");
+                    break;
+                case height <= 170 && weight < 70:
+                    console.log("You're normal");
+                    break;
+                case height < 110 && weight < 40:
+                    console.log("hey there kid");
+                    break;
+                case height >= 130 && weight >= 120:
+                    console.log("wow you're a ball");
+                    break;
+                default:
+                    console.log("I don't judge people like you");
+                    break;
+            }
+
+        </script>
+    </body>
+
+</html>

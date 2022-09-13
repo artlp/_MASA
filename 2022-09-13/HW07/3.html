@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HW 07 task 3</title>
+        <style>
+            body {
+                width: 400px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <p>3. Show opening hours of museum.
+
+            Get current Date by "new Date()".
+            Use function currentDate.getDay().
+            If it returns 1, it's Monday, the museum is closed.
+            If it returns 0 or 4 - it's Sunday or Wednesday,
+            it's open half day from 8:00 till 12:00,
+            In the other days it should be open from 8:00 till 20:00.
+
+            Use switch.</p>
+        <script>
+            var currentDate = new Date().getDay();
+            // The getDay() method returns the day of the week (0 to 6) of a date.
+            // var currentDate = +prompt();
+            switch (true) {
+                case currentDate === 1:
+                    console.log(`Museum is closed on Monday`);
+                    break;
+                case currentDate === 0 || currentDate === 4:
+                    console.log(`Museum is open today, from 8:00 till 12:00`);
+                    break;
+                default:
+                console.log(`Museum is open today, from 8:00 till 20:00`);
+                    break;
+            }
+        </script>
+    </body>
+
+</html>
