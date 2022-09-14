@@ -26,3 +26,4 @@ str6=str6.replace(str6[1], 'n'); //! IT CHANGES THE LETTER N, NOT CHARACTER IN P
 console.log(str6);
 str6=str6.replace(str6[2], 'e');
 console.log(str6);
+console.log(`Fixed str6:\n ${str6}`);
