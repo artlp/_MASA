@@ -27,7 +27,11 @@
             number === '' || number === null || isNaN(number) || number === 'undefined' ? console.log("It's not a number") :
                 number < 70 ? console.log(`${number} < 70`) :
                 number > 210 ? console.log(`${number} > 210`) : console.log(`${number} is between 70 and 210`);
-
+            //
+                var firstName = prompt("Enter your name");
+                var lastName = prompt("Enter your lastname");
+                var fullName = firstName + lastName;
+                fullName === 'JohnSmith' || fullName === `JaneSmith` || fullName === `JackDaniels` ? console.log(`I'm happy to see you, ${firstName} ${lastName}!`) : console.log(`please go away`);
 
            </script>
 </body>
