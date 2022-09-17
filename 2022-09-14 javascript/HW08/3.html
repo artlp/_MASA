@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HW 08 task 3</title>
+    </head>
+
+    <body>
+        <p style="width: 40%;">3. Datatypes. Use typeof operator. You're going to check
+            datatypes and to use new functions parseInt() and parseFloat().
+            <br>
+            -- Show which data type is empty string ('') <br>
+            -- Create new variable, but don't assign it a value.
+            Show which data taype this variable is. <br>
+            -- Show datatype of true and datatype of false
+            (they are not strings and shoud not be in quotes) <br>
+            -- Use function confirm() like this:
+            var answer = confirm('Are you agree?')
+            Check which value is assigned to answer variable
+            when you click on "OK" and when you click "Cancel" <br>
+            -- Run function parseInt() and function parseFloat()
+            on the next values: 15.5, '12asdf', '1024.34asdf',
+            7.82, 'asdf', '', null, undefined.
+            What is the output of each and what is it's data type?
+            (You may do this by creating and using a function, like
+            <br>
+            function checkParse(str) {
+            <br>
+            console.log(`parseInt(${str}) value: ${parseInt(str)}, datatype: ${typeof parseInt(str)}`);
+            <br>
+            console.log(`parseFloat(${str}) value: ${parseFloat(str)}, datatype: ${typeof parseFloat(str)}`);
+            <br>
+            }
+            <br>
+            checkParse(15.5); <br>
+            checkParse('12asdf'); <br>
+            checkParse('1024.34asdf'); <br>
+            checkParse(7.82); <br>
+            checkParse('asdf'); <br>
+            checkParse(''); <br>
+            checkParse(null); <br>
+            checkParse(undefined); <br>
+            <br>
+            )
+        </p>
+        <script>
+            var emptyString = '';
+            console.log(`Show which data type is empty string (''): ${typeof (emptyString)}`);
+            var emptyVar;
+            console.log(`Show which data type is empty variable: ${typeof (emptyVar)}`);
+            console.log(`Show which data type is true and false: ${typeof (true)}, ${typeof (false)}`);
+            function Confirm() {
+                var answer = confirm('Do you agree?');
+                console.log(`Data type of your choice (${answer}) is ${typeof (answer)}`);
+            }
+            Confirm();
+            // var num1 = 15.5;
+            // var num2 = '12asdf';
+            // var num3 = '1024.34asdf';
+            // var num4 = 7.82;
+            // var num5 = 'asdf';
+            // var num6 = '';
+            // var num7 = undefined;
+            // var num8 = null;
+            // function checkParse() {
+            //     console.log(`parseInt(${num1}) value: ${parseInt(num1)}, datatype: ${typeof parseInt(num1)}`);
+            //     console.log(`parseFloat(${num1}) value: ${parseFloat(num1)}, datatype: ${typeof parseFloat(num1)}`);
+            //     console.log(`parseInt(${num2}) value: ${parseInt(num2)}, datatype: ${typeof parseInt(num2)}`);
+            //     console.log(`parseFloat(${num2}) value: ${parseFloat(num2)}, datatype: ${typeof parseFloat(num2)}`);
+            //     console.log(`parseInt(${num3}) value: ${parseInt(num3)}, datatype: ${typeof parseInt(num3)}`);
+            //     console.log(`parseFloat(${num3}) value: ${parseFloat(num3)}, datatype: ${typeof parseFloat(num3)}`);
+            //     console.log(`parseInt(${num4}) value: ${parseInt(num4)}, datatype: ${typeof parseInt(num4)}`);
+            //     console.log(`parseFloat(${num4}) value: ${parseFloat(num4)}, datatype: ${typeof parseFloat(num4)}`);
+            //     console.log(`parseInt(${num5}) value: ${parseInt(num5)}, datatype: ${typeof parseInt(num5)}`);
+            //     console.log(`parseFloat(${num5}) value: ${parseFloat(num5)}, datatype: ${typeof parseFloat(num5)}`);
+            //     console.log(`parseInt(${num6}) value: ${parseInt(num6)}, datatype: ${typeof parseInt(num6)}`);
+            //     console.log(`parseFloat(${num6}) value: ${parseFloat(num6)}, datatype: ${typeof parseFloat(num6)}`);
+            //     console.log(`parseInt(${num7}) value: ${parseInt(num7)}, datatype: ${typeof parseInt(num7)}`);
+            //     console.log(`parseFloat(${num7}) value: ${parseFloat(num7)}, datatype: ${typeof parseFloat(num7)}`);
+            //     console.log(`parseInt(${num8}) value: ${parseInt(num8)}, datatype: ${typeof parseInt(num8)}`);
+            //     console.log(`parseFloat(${num8}) value: ${parseFloat(num8)}, datatype: ${typeof parseFloat(num8)}`);
+            // }
+            // checkParse();
+
+            function checkParse2(str) { 
+
+console.log(`parseInt(${str}) value: ${parseInt(str)}, datatype: ${typeof parseInt(str)}`);
+
+console.log(`parseFloat(${str}) value: ${parseFloat(str)}, datatype: ${typeof parseFloat(str)}`);
+
+}
+
+checkParse2(15.5);
+checkParse2('12asdf');
+checkParse2('1024.34asdf');
+checkParse2(7.82);
+checkParse2('asdf');
+checkParse2('');
+checkParse2(null);
+checkParse2(undefined);
+
+        </script>
+    </body>
+
+</html>

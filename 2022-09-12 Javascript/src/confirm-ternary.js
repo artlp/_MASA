@@ -39,3 +39,10 @@ console.log(response2);
 var missionNumber = prompt("Enter your number please");
 var result = missionNumber === '' || missionNumber === null || isNaN(missionNumber) ? "it's not a number" : "it's a number";
 console.log(result);
+
+var age = 25;
+var response3 = age < 18 ? `You're too young to get married yet` :
+   age < 90 ? `Sure, get married` :
+      `Well done, grandma`;
+
+console.log(response3);

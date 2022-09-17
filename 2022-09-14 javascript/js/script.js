@@ -27,3 +27,12 @@ console.log(str6);
 str6=str6.replace(str6[2], 'e');
 console.log(str6);
 console.log(`Fixed str6:\n ${str6}`);
+
+// * triple ternary
+
+var car = prompt("Which car you drive?").toLowerCase();
+var response = car === 'lexus' ? `You are a traitor` :
+   car === 'susita' ? `Go to museum` :
+      `Take good care of it`;
+
+console.log(response);

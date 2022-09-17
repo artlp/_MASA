@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>14 September 2022 FUNCTIONS</title>
+        <style>
+            * {
+                margin: 1% 15px;
+            }
+
+            body {
+                width: 90%;
+            }
+
+
+            .amazing-square__square {
+                width: 500px;
+                height: 500px;
+                background-color: green;
+            }
+
+            .form__input-range {
+                width: 500px;
+            }
+
+            .form__submit {
+                width: 100px;
+                height: 100px;
+                color: white;
+                background-color: black;
+            }
+        </style>
+    </head>
+
+    <body>
+        <form action="get">
+            <fieldset>
+                <legend>Test form</legend>
+                <input type="checkbox" name="checkbox" id="checkbox__1" disabled>
+                <label for="checkbox__2">try me</label>
+                <input type="checkbox" name="checkbox__2" id="checkbox__2" required>
+                <input type="text" name="" id="" placeholder="Enter your name">
+                <select name="" id="">
+                    <option value="fksdjf">dfls;kf;</option>
+                    <option value="sdfsf">vmsddsfdsf</option>
+                    <option value="fdgdg">vbpcvpxocvpx</option>
+                    <option value="dfhdfh">dfsdmdsfksld</option>
+                </select>
+            </fieldset>
+        </form>
+        <h1>Форма веб-бегиннеров</h1>
+        <form action="" method="get">
+            <fieldset>
+                <legend>COLOR BOX</legend>
+                <input type="color" name="" class="form__input-color">
+                <label for="height">HEIGHT</label><input id="height" type="range" name="" class="form__input-range_height" min="20" max="700"
+                        value="500">
+                <label for="width">WIDTH</label><input id="height" type="range" name="" class="form__input-range_width" min="20" max="700"
+                        value="500">
+                <button type="submit" class="form__submit">Push me</button>
+            </fieldset>
+        </form>
+        <div class="amazing-square__square"></div>
+        <script>
+            const inputWidth = document.querySelector('.form__input-range_width');
+            const inputHeigth = document.querySelector('.form__input-range_height');
+            const inputColor = document.querySelector('.form__input-color');
+            const button = document.querySelector('.form__submit');
+            const square = document.querySelector('.amazing-square__square')
+
+
+            button.addEventListener('click', (evt) => {
+                evt.preventDefault();
+                console.log(square.style.width);
+                square.style.width = `${inputWidth.value}px`;
+                square.style.height = `${inputHeigth.value}px`;
+                square.style.backgroundColor = inputColor.value;
+                console.log(inputWidth.value)
+            })
+        </script>
+        <script src="./js/functions.js"></script>
+    </body>
+
+</html>

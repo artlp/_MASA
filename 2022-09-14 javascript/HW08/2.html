@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HW 08 task 2</title>
+    </head>
+
+    <body>
+        <p style="width: 40%;">2. a) Write function avg(a, b, c) that gets 3 numeric parameters (arguments)
+            and prints their average
+            <br>
+            b) Write function avg2(a, b, c) that gets no parameters (arguments),
+            asks user for three numbers, and prints their average
+            <br>
+            c) Run the both functions couple of times, like:
+            <br>
+            var x = 15, y = 20, z = 33;
+            <br>
+            avg(x, y, z);
+            avg(30, 40, 50);
+            <br>
+            avg2();
+            avg2();
+        </p>
+        <script>
+
+            function average() {
+                var num1 = +prompt('num1');
+                var num2 = +prompt('num2');
+                var num3 = +prompt('num3');
+                var result = (num1 + num2 + num3) / 3;
+                console.log('average 1 is ' + result);
+            }
+            average();
+
+            function avg(x,y,z) {
+                var avgResult = (x+y+z)/3;
+                console.log('average 2 is ' + avgResult);
+            }
+            avg(10,20,45);
+            avg(+prompt("1"), +prompt("2"), +prompt("3"));
+        </script>
+    </body>
+
+</html>

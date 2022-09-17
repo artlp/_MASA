@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HW 08 task 54</title>
+    </head>
+
+    <body>
+        <p style="width: 40%;">5. Write a function that gets first name, birth year, month, day
+            and the age of retirement, uses "calculate age" function
+            from the previous exercise and outputs to the console
+            results like "John is going to retire 14 years from now",
+            "Jane is already retired".</p>
+        <script>
+            var currDate = new Date();
+            var currYear = currDate.getFullYear();
+            var currMonth = currDate.getMonth() + 1;
+            var currDay = currDate.getDate();
+            console.log(currDate, currYear, currMonth, currDay);
+            function birthdayCalc() {
+                var name = prompt("What's your name?")
+                var ageRetire = 65;
+                var birthYear = +prompt("Enter the year you were born");
+                var birthMonth = +prompt("Enter the month you were born");
+                var birthDay = +prompt("Enter the day you were born");
+                var age;
+                if (birthDay > 31 || birthMonth > 12 || birthYear > currYear) {
+                    console.log("Wrong input");
+                } else if (birthMonth > currMonth) {
+                    age = currYear - birthYear-1;
+                } else if (birthMonth < currMonth) {
+                    age = currYear - birthYear;
+                } else if (birthMonth = currMonth && currDay < birthDay) {
+                    age = currYear - birthYear-1;
+                } else if (birthMonth = currMonth && currDay >= birthDay) {
+                    age = currYear - birthYear;
+                } else {
+                    console.log("unknown error");
+                }
+                if (age >= ageRetire) {
+                console.log(`${name} is retired.`);
+            } else {
+                console.log(`${name} is going to retire in ${ageRetire - age} years`);
+            }
+        }
+            birthdayCalc();
+        </script>
+    </body>
+
+</html>

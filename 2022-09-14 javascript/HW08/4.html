@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HW 08 task 4</title>
+    </head>
+
+    <body>
+        <p style="width: 40%;">4. Calculate age. Write function that gets a birth year
+            of a person, birth month and birth day,
+            gets the current date by the next statements:
+            <br>
+            var currDate = new Date();<br>
+            var currYear = currDate.getFullYear();<br>
+            var currMonth = currDate.getMonth();<br>
+            var currDay = currDate.getDate();<br>
+            <br>
+            and returns the age of the person. Pay attention that getMonth()
+            returns month number (0 - January, 1 - February, 2 - March, etc.),
+            so you may make month input by number too.
+            <script>
+                var currDate = new Date();
+                var currYear = currDate.getFullYear();
+                var currMonth = currDate.getMonth() + 1;
+                var currDay = currDate.getDate();
+                console.log(currDate, currYear, currMonth, currDay);
+                function birthdayCalc() {
+                    var birthYear = +prompt("Enter the year you were born");
+                    var birthMonth = +prompt("Enter the month you were born");
+                    var birthDay = +prompt("Enter the day you were born");
+                    if (birthDay > 31 || birthMonth > 12 || birthYear > currYear) {
+                        console.log("Wrong input");
+                    } else if (birthMonth === currMonth && birthDay === currDay) {
+                        console.log(`It's your birthday today! You are turning ${currYear - birthYear}`);
+                    } else if (birthMonth === currMonth && birthDay < currDay) {
+                        console.log(`You had a birthday earlier this month, you celebrated your ${currYear - birthYear}th birthday`);
+                    } else if (birthMonth === currMonth && birthDay > currDay) {
+                        console.log(`You have a birthday later this month, you will be ${currYear - birthYear} years old`);
+                    } else if (birthMonth < currMonth) {
+                        console.log(`You had a birthday earlier this year, you turned ${currYear - birthYear} years old`);
+                    } else if (birthMonth > currMonth) {
+                        console.log(`You have a birthday later this year, you will be ${currYear - birthYear} years old`);
+                    } else {
+                        console.log("unknown error");
+                    }
+                }
+
+                birthdayCalc();
+            </script>
+    </body>
+
+</html>

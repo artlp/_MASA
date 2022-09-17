@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding:0;
+}
+table {
+    border: 3px solid black;
+    border-collapse: collapse;
+    max-width: 70%;
+    min-width: 40%;
+
+}
+table td {
+    border: 1px solid rgb(123, 123, 123);
+    border-collapse: collapse;
+    max-width: 80px;
+    min-width: 40px;
+}
+thead, th {
+    background-color: bisque;
+    border: 1px solid black;
+    font-weight: bold;
+    padding: 3px 20px;
+}
+tr {
+    text-align: center;
+    width: 30px;
+    font-weight: bold;
+}
+
+tr td:first-child, #diving {
+text-align: left;
+min-width: 120px;
+max-width: 190px;
+padding: 3px;
+margin: 5%;
+font-weight:normal;
+}
+.event {
+    background-color: aqua;
+}
+.medals {
+    background-color: gold;
+}
+.oc {
+    background-color: limegreen;
+}
+
+img {
+    max-height:16px;
+    width:auto;
+}

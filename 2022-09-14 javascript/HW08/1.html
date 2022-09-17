@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HW 08 task 1</title>
+</head>
+<body>
+    <p style="width: 40%;">1. Ternary operator inside ternary operator.
+<br>
+        a) Ask user to enter a number. Your output should be: "x < 70" 
+           or "x > 210" or "x is between 70 and 210".
+           <br>
+           CHALLENGE: With more ternary operators inside. Check if 
+                      there is any input. Check if the input is numeric.
+                      <br>
+        b) Ask the user to enter his name (one variable) 
+           and family name (another variable) and say 
+           that you're happy to see him if his name is John Smith, 
+           Jane Smith or Jack Daniels, otherwise tell him "go away".
+           <br>
+           Check that the user enters not empty string and not null 
+           (when clicking on "Cancel")</p>
+           <script>
+            var number = prompt("Enter a random number");
+            number === '' || number === null || isNaN(number) || number === 'undefined' ? console.log("It's not a number") :
+                number < 70 ? console.log(`${number} < 70`) :
+                number > 210 ? console.log(`${number} > 210`) : console.log(`${number} is between 70 and 210`);
+
+
+           </script>
+</body>
+</html>
