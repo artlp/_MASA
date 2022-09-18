@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HW 09 task 3</title>
+    </head>
+
+    <body>
+        <p>3. FOR loop. <br>
+
+            a) Make the program to write 15 times
+            `I'll never tell lies`<br>
+
+            b) Start from 3, go until 19.
+            Show all the odd numbers,
+            including 3 and 19.<br>
+
+            c) Go from 25 until -16.
+            Starting with 25 and for each fifth
+            number show it's square root
+            (use Math.sqrt()) if it is possible,
+            and show it's absolute value
+            (use Math.abs())</p>
+
+        <script>
+            // A
+            for (var i = 1; i <= 15; i = i + 1){
+                console.log(`I'll never tell lies`);
+            }
+            // B
+            for (var i = 3; i <= 19; i = i + 1){
+                if (i % 2 === 1) {
+                    console.log(i);
+                } else {}
+            }
+            // C
+            for (var i = 25; i >= -16; i--) {
+                if (i % 5 === 0 && i > 0) {
+                    console.log(`${Math.sqrt(i)}, ${Math.abs(i)}`);
+                }
+            }
+        </script>
+    </body>
+
+</html>

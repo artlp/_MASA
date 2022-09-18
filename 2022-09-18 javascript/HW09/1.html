@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HW 09 task 1</title>
+    </head>
+
+    <body>
+        <p>1. Two-Number Calculator.
+            Put this program into mango/your-name/two-num-calc directory.
+            The program gets by prompt() two numbers and a sign
+            (three prompts in total),
+            and shows the result of the appropriate calculation.
+            The sign should be one of: +, -, *, /,
+            % (should show the whole part and the remainder), ^ (power).
+            Create functions add(), subtract(), multiply(), divide(),
+            divideIntegers(), power().
+            Use switch. In each case call the appropriate function.</p>
+
+        <script>
+            let num1 = +prompt("Enter number 1");
+            let num2 = +prompt("Enter number 2");
+            let operation = prompt("Choose one of the following: + - / * % ^");
+
+            function add() {
+                result = num1 + num2;
+                return result;
+            }
+            function subtract() {
+                result = num1 - num2;
+                return result;
+            }
+            function multiply() {
+                result = num1 * num2;
+                return result;
+            }
+            function divide() {
+                result = num1 / num2;
+                return result;
+            }
+            function divideIntegers() {
+                // Math.floor(num1/num2);
+                // result = num1 % num2;
+                result = `${num1} % ${num2} is ${Math.floor(num1/num2)} and remainder is ${num1 % num2}`;
+                return result;
+            }
+            function power() {
+                result = Math.pow(num1, num2);
+                return result;
+            }
+
+            switch (operation) {
+                case "+":
+                    add();
+                    break;
+                case "-":
+                    subtract();
+                    break;
+                case "*":
+                    multiply();
+                    break;
+                case "/":
+                    divide();
+                    break;
+                case "%":
+                    divideIntegers();
+                    break;
+                case "^":
+                    power();
+                    break;
+
+                default:
+                    console.log("Error input");
+                    break;
+            }
+            console.log(result);
+        </script>
+    </body>
+</html>
