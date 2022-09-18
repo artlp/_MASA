@@ -1,0 +1,119 @@
+/*Здесь подключаем шрифты к странице*/
+@font-face {
+    font-family: "Montserrat Black";
+    src: url(../vendor/fonts/static/Montserrat-Black.ttf);
+    font-weight: 900;
+}
+@font-face {
+    font-family: "Montserrat Bold";
+    src: url(../vendor/fonts/Montserrat/static/Montserrat-Bold.ttf);
+    font-weight: 700;
+}
+@font-face {
+    font-family: "Montserrat Bold Italic";
+    src: url(../vendor/fonts/Montserrat/static/Montserrat-BoldItalic.ttf);
+    font-weight: 700;
+    font-style: italic;
+}
+* {
+    font-family: Arial;
+}
+
+.header {
+    margin: 0;
+    text-align: center;
+    background-color: plum;
+    padding: 20px;
+    color: white;
+}
+
+.header__heading {
+    margin: 0;
+}
+
+.main {
+    width: 1180px;
+    margin: 0 auto;
+}
+
+/*section fonts*/
+.fonts__heading {
+    margin: 15px 0 15px;
+    font-size: 24px;
+}
+
+.fonts__p {
+    margin:  0 0 10px;
+    font-size: 18px;
+}
+
+.fonts__p_bold {
+/*    сюда подключаем стиль bold*/
+font-family: "Montserrat Bold";
+font-weight: 700;
+}
+
+.fonts__p_black {
+/*    сюда подключаем стиль black*/
+font-family: "Montserrat Black", sans-serif;
+font-weight: 900;
+}
+
+.fonts__p_bold-italic {
+    /*    сюда подключаем стиль bold и italic*/
+    font-family: "Montserrat Bold Italic";
+    /* font-weight: 700;
+    font-style: italic; */
+}
+
+/*section flex-one*/
+
+.flex-one__container {
+/* флекс-контейнер для выравнивания первого элемента*/
+    width: 500px;
+    height: 500px;
+    background-color: aquamarine;
+    margin: 0 auto 50px;
+    display: flex;
+}
+
+
+.flex-one__element {
+    /*flex-элемент */
+    width: 300px;
+    height: 300px;
+    background-color: aqua;
+    margin: auto;
+}
+
+/*section flex-two*/
+
+.flex-two__container {
+    background-color: cornflowerblue;
+    width: 500px;
+    height: 500px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    display: flex;
+    flex-direction:column;
+/*    flex-контейнер, здесь надо задать направление*/
+}
+
+
+
+.flex-two__element {
+    width: 100px;
+    height: 100px;
+    background-color: plum;
+    margin-bottom: 10px;
+}
+
+.flex-two__element_round {
+    border-radius: 50%;
+    background-color: mediumaquamarine;
+}
+
+.flex-two__element_rounded {
+    border-radius: 10%;
+    background-color: indigo;
+}
