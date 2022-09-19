@@ -1,0 +1,27 @@
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+img {
+width: 100px;
+height:auto;
+}
+
+.right-circle {
+    float:right;
+    shape-outside: circle(50%);
+    object-fit: cover;
+    margin: 5px;
+}
+
+.left-circle {
+    float:left;
+    shape-outside: circle(50%);
+    object-fit: cover;
+    margin: 5px;
+}
+
+.second {
+    background: green;
+    padding: 5px;
+    color:yellow;
+}

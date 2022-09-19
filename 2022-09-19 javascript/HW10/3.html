@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HW 10 task 3</title>
+    </head>
+
+    <body style="width:70%">
+        <p>
+        <div style="background-color: rgb(255, 202, 202);">
+            3. Pay attention. New string function: str.repeat(n).
+            This function repeats the string n times.
+            Write a function that gets a number, uses '*'.repeat() and creates right-angled triangle
+            of stars with the given number of rows, for example:
+
+            starTriangle(5);
+
+            *
+            **
+            ***
+            ****
+            *****
+        </div>
+        <script>
+            function stars(number) {
+                for (i = 1; i <= number; i++) {
+
+                    console.log('*'.repeat(i));
+                }
+
+            }
+            stars(+prompt('Enter a number'))
+        </script>
+    </body>
+
+</html>

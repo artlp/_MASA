@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HW 10 task 4</title>
+    </head>
+
+    <body style="width:70%">
+        <h1>HANGMAN GAME (NOT ACTUALLY WORKING)</h1>
+        <div style="background-color: rgb(255, 202, 202);">
+            4. Write a function that prepares the given word for "Hangman" game:
+            it gets the word and returns string that consists of the first
+            and the last characters
+            of the word in upper case and the right number of hyphens between them.
+            Example outputs:
+
+            console.log(С('strawberry'));
+
+            S--------Y
+
+            console.log(prepareWordForHangman('caramel'));
+
+            C-----L
+
+            console.log(prepareWordForHangman('I'));
+
+            ERROR
+
+            console.log(prepareWordForHangman(''));
+
+            ERROR
+
+            console.log(prepareWordForHangman());
+
+            ERROR
+        </div>
+        <script>
+            function prepareWordForHangman(string) {
+                let result = '';
+                if ((string === null) || (string.length < 3)) {
+                    console.log("ERROR");
+                } else {
+                    console.log("PREPARING THE GAME");
+                    let firstLetter = '';
+                    let lastLetter = '';
+                    let middleLetters = '';
+                    for (i = 1; i <= string.length - 2; i++) {
+                        firstLetter = string[0].toUpperCase();
+                        lastLetter = string[string.length - 1].toUpperCase();
+                        result = firstLetter + ' - '.repeat(i) + lastLetter;
+                    }
+                }
+                return result;
+            }
+            console.log(prepareWordForHangman(prompt('Enter your word')));
+
+        </script>
+    </body>
+
+</html>

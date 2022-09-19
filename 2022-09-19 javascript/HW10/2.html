@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HW 10 task 2</title>
+    </head>
+
+    <body style="width:70%">
+        <p>
+        <h3>FOR loop</h3>
+        <div style="background-color: rgb(255, 202, 202);">
+            a) Write a function that gets a number and uses a "for" loop
+            to find a sum of all the numbers from 1 till this number (including), for example:
+            sumFromOneTillNum(6);
+            21
+            sumFromOneTillNum(1);
+            1
+        </div>
+
+        <div style="background-color: rgb(159, 255, 177);"> b) Write a function that gets a number and uses a "for" loop
+            to show all the even numbers from 2 till this number (including it, if it is even).
+            Show them in one row, for example:
+
+            showEven(9);
+            8 6 4 2
+        </div>
+        <div style="background-color: rgb(255, 199, 247);"> c) Write a function that gets a string and uses a "for" loop
+            to show each letter from the end to the beginning.
+            If you show them in one row - it means you reverted the word!
+
+            For example:
+
+            revertTheWord('cat');
+            t a c</p>
+        </div>
+        <script>
+            console.log(`EXERCISE A`);
+            function taskA(number) {
+                let x = 0;
+                for (i = 1; i <= number; i++) {
+
+                    x = x + i;
+                    // console.log(i, number, x);
+                }
+                return x;
+            }
+            console.log(taskA(+prompt("enter number")));
+
+            console.log(`EXERCISE B`);
+            function taskB(number2) {
+                let y = '';
+                for (i = 1; i <= number2; i++) {
+                    if (i % 2 === 0) {
+                        y = y + ' ' + i;
+                    }
+                }
+                return y;
+            }
+            console.log(taskB(+prompt("enter number")));
+
+            console.log(`EXERCISE C`);
+            function taskC(string) {
+                let z = '';
+                for (i = string.length - 1; i >= 0; i--) {
+                    z = z + string[i];
+                }
+                return z;
+            }
+            console.log(taskC(prompt("enter word")));
+        </script>
+    </body>
+
+</html>

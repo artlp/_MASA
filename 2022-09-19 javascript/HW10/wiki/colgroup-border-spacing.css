@@ -1,0 +1,60 @@
+:root {
+    --green-back: rgb(174, 245, 67);
+}
+
+h1, h2, h3 {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.container {
+
+    padding: 10px;
+
+}
+
+.special {
+    font-style: italic;
+    color: navy;
+}
+
+.green {
+    background-color: var(--green-back);
+}
+
+/* TABLE */
+
+.table-without-lines {
+    border-spacing: 1cm;
+    border: 1px solid #999999;
+}
+
+th {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+
+.table-with-lines , 
+.table-with-lines th, /* th that is the descendant of .table-with-lines */
+.table-with-lines td { 
+    border: 1px solid #999999;
+}
+
+.table-with-lines {
+    border-collapse: collapse;
+}
+
+/* There are very small amount of properties that could affect 
+   a colgroup - as colgroup is less specific than tr, th or td */
+.large-and-orange {
+    font-size:32px; /* Not affecting colgroup */
+    background: orangered; /* Affecting colgroup */
+}
+.large-and-blue {
+    font-size:25px;
+    background: cornflowerblue;
+}
+
+thead .titles {
+    background:var(--green-back);
+    font-family: 'Courier New', Courier, monospace;
+}

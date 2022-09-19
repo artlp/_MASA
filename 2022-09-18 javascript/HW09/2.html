@@ -17,19 +17,19 @@
             of days in February.</p>
 
         <script>
-            function countDays() {
-            var year = +prompt("Enter year");
-            var month = +prompt('Enter number of month');
+            function countDays(year, month) {
+            // var year = +prompt("Enter year");
+            // var month = +prompt('Enter number of month');
             var leapYear;
             if (year % 4 === 0 && year % 100 === 0 && year % 400 === 0) {
                 leapYear = true;
-                console.log("1");
+                console.log("leapyear");
             } else if (year % 4 === 0 && year % 100 > 0) {
                 leapYear = true;
-                console.log("2");
+                console.log("leapyear");
             } else {
                 leapYear = false;
-                console.log("3");
+                console.log("not leap year");
             }
             switch (month) {
                 case 1:
@@ -39,14 +39,14 @@
                 case 8:
                 case 10:
                 case 12:
-                    console.log(year, month);
+                    console.log(year, month, leapYear);
                     console.log('In this month there are 31 days');
                     break;
                 case 4:
                 case 6:
                 case 9:
                 case 11:
-                    console.log(year, month);
+                    console.log(year, month, leapYear);
                     console.log('In this month there are 30 days');
                     break;
                 case 2:
@@ -67,7 +67,7 @@
                     break;
             }
         }
-        countDays();
+        countDays(+prompt("Enter year"),+prompt('Enter number of month'));
             // months with 31 days: January (0), March (2), May (4), July (6), August (7), October (9), December (11)
             // months with 30 days: April (3), June (5), September (8), November (10)
             // February has 28 or 29 days depending on leap year

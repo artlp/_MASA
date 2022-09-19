@@ -110,3 +110,34 @@ function bmiCalculator() {
     return bmi;
 }
 bmiCalculator();
+
+
+function calcBMI(w, h) {
+
+    return w/h**2;
+
+}
+
+function physician(firstName, weight, height) {
+
+    bmi = calcBMI(weight, height);
+
+    if (bmi < 5 || bmi > 50) {
+        alert(`${firstName}, you supplied wrong weight or height`);
+        return;
+    }
+
+    var recommendation;
+    if (bmi > 26) {
+        recommendation = `${firstName}, you should walk 10000 steps a day `;
+    } else if (bmi > 19) {
+        recommendation = `${firstName}, don't salt your meal too much, don't forget about sport, minimum 10000 steps a day`;
+    } else {
+        recommendation = `${firstName}, eat more creppes, don't salt your meal too much, don't forget about sport, minimum 10000 steps a day`;
+    }
+
+    return recommendation;
+}
+
+console.log(`Physician said: ${physician('Yosi', 80, 1.8)}`);
+physician('Moshe',8,1.8);
