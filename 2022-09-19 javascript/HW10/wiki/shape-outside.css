@@ -1,23 +1,24 @@
 body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
-img {
+/* img {
 width: 100px;
 height:auto;
-}
+} */
 
 .right-circle {
     float:right;
     shape-outside: circle(50%);
-    object-fit: cover;
+    object-fit: contain;
     margin: 5px;
 }
 
 .left-circle {
     float:left;
-    shape-outside: circle(50%);
-    object-fit: cover;
+    shape-outside: polygon(50% 0%, 31% 58%, 98% 35%, 68% 57%, 79% 91%, 49% 90%, 35% 80%, 20% 63%, 2% 35%, 35% 21%);;
+    object-fit: fill;
     margin: 5px;
+    clip-path: polygon(50% 0%, 31% 58%, 98% 35%, 68% 57%, 79% 91%, 49% 90%, 35% 80%, 20% 63%, 2% 35%, 35% 21%);
 }
 
 .second {

@@ -40,7 +40,7 @@
         <script>
             function prepareWordForHangman(string) {
                 let result = '';
-                if ((string === null) || (string.length < 3)) {
+                if ((!string) || (string.length < 3)) {
                     console.log("ERROR");
                 } else {
                     console.log("PREPARING THE GAME");
