@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HW11 task 2</title>
+        <style>
+            body {
+                margin: 0;
+                width: 70%;
+                font-size: 2rem;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                margin: 0 auto;
+            }
+
+            div {
+                padding: 30px;
+            }
+
+            .a1 {
+                background-color: firebrick;
+            }
+
+            .a2 {
+                background-color: olivedrab;
+            }
+
+            .answerx {
+                color: crimson;
+                border: 1px solid crimson;
+                padding: 5px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="a1">
+            2. More of "for" loop.
+            a) Get input number (small integer),
+            and draw a square with the side of this number of stars,
+            for example (the number is 4):
+            ****
+            ****
+            ****
+            ****
+        </div>
+
+        <div class="a2">
+
+            b) Write a function that gets a word, goes
+            over it's letters and creates new string,
+            where vowels are omitted (without a,e,i,o,u).
+            For example, it gets "strange" and returns "strng",
+            gets "astonishment" and returns "stnshmnt".
+        </div>
+        <div class="answer"></div>
+
+
+
+        <script>
+            console.log(`EXERCISE A`);
+            var number = parseInt(prompt('Enter a number'));
+            for (i = 1; i <= number; i++) {
+
+                console.log(`${'*'.repeat(number)} \n`);
+            }
+            console.log(`EXERCISE B`);
+            function hello(word) {
+                let newWord = '';
+                for (i = 0; i < word.length; i++) {
+                    switch (true) {
+                        case (word[i] === "a"):
+                        case (word[i] === "e"):
+                        case (word[i] === "i"):
+                        case (word[i] === "o"):
+                        case (word[i] === "u"):
+                            break;
+                        default:
+                        newWord += word[i];
+                            break;
+                    }
+
+                }
+                console.log(newWord);
+                document.getElementsByClassName("answer")[0].innerHTML = `Result of exercise B: <span class="answerx">${newWord}</span>`;
+
+            }
+            hello(prompt('Enter any word'))
+
+        </script>
+    </body>
+
+</html>

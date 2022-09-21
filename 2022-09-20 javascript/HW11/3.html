@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HW11 task 3</title>
+        <style>
+            body {
+                margin: 0;
+                width: 70%;
+                font-size: 1rem;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                margin: 0 auto;
+            }
+
+            .a1 {
+                padding: 30px;
+                background-color: rgb(174, 255, 116);
+            }
+
+            .a2 {
+                background-color: olivedrab;
+            }
+
+            .answerx {
+                color: crimson;
+                border: 1px solid crimson;
+                padding: 0 5px;
+            }
+
+            span {
+                font-weight: bold;
+                font-size: 1.1rem;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="a1">
+            <h1>Arrays.</h1>
+            <p>
+                a) var animals = ['cAt','DoG','giRaFFe','LION','tiGer','monkey']
+                Go over the words in the array - exchange each word
+                by the same word, but in the lowercase.
+                Show the array after the loop.
+                Can you change one word to lowercase and the next to uppercase and so on?
+                Example of the output:
+                console.log(`after the change "animals":`,animals);
+                ['cat','DOG','giraffe','LION','tiger','MONKEY']
+            <div><span id="a"></span></div>
+            </p>
+
+            <p>
+                b) Go over the previous array. For each word show at the console
+                the first and the last letter. Example (not neccessary to change the case):
+                ct
+                dg
+                ge
+                ln
+                tr
+                my
+            <div><span id="b"></span></div>
+            </p>
+
+            <p>
+                c) Go over the previous array. Show the animals at the console
+                numbered by their order. Example:
+                1. cat
+                2. dog
+                3. giraffe
+                4. lion
+                5. tiger
+                6. monkey
+            <div><span id="c"></span></div>
+            </p>
+
+            <p>
+                d) Do the same, but start from the end. Example:
+                1. monkey
+                2. tiger
+                3. lion
+                4. giraffe
+                5. dog
+                6. cat
+            <div><span id="d"></span></div>
+            </p>
+
+            <p>
+                e) var adjectives = ['black','curious','spotted','scary','striped','happy']
+                Go over the animal array and show each animal together with
+                an adjective. Example:
+                black cat
+                curiuos dog
+                spotted giraffe
+                scary lion
+                striped tiger
+                happy monkey
+            <div><span id="e"></span></div>
+            </p>
+
+            <p>
+                f) Do the same, but combine the words in the reverse order. Example:
+                happy cat
+                striped dog
+                scary giraffe
+                spotted lion
+                curious tiger
+                black monkey
+            <div><span id="f"></span></div>
+            </p>
+
+            <p>
+                g) Go over the array of the words and combine them into one string.
+                (Hint: declare the string before the loop and make it empty string)
+                var words = ['I','am','never','too','late',',','the','others','are','just','too','early']
+            <div><span id="g"></span></div>
+            </p>
+
+            <p>
+                h) Go over the array and find average of all the numbers:
+                (Hint: you should find their sum, and when the loop stops,
+                divide the sum by the amount of numbers.
+                So declare the variable of the sum before the loop
+                and assign it zero)
+                var num = [44, 22, 33, 11, -66, -88, 22, 33]
+            <div><span id="h"></span></div>
+            </p>
+        </div>
+        <div class="answer"></div>
+
+
+
+        <script>
+            console.log(`TASK A`);
+            var animals = ['cAt', 'DoG', 'giRaFFe', 'LION', 'tiGer', 'monkey'];
+            for (i = 0; i < animals.length; i++) {
+                if (i % 2 === 0) {
+                    animals[i] = animals[i].toLowerCase();
+                } else {
+                    animals[i] = animals[i].toUpperCase();
+                }
+            }
+            console.log(animals);
+            document.getElementById("a").innerHTML = `Result of exercise A: <span class="answerx">${animals}</span>`;
+
+
+            console.log(`TASK B`);
+            var animals = ['cAt', 'DoG', 'giRaFFe', 'LION', 'tiGer', 'monkey'];
+            for (i = 0; i < animals.length; i++) {
+                animals[i] = animals[i][0] + animals[i][animals[i].length - 1];
+            }
+            console.log(animals);
+            document.getElementById("b").innerHTML = `Result of exercise B: <span class="answerx">${animals}</span>`;
+
+            console.log(`TASK C`);
+            var animals = ['cAt', 'DoG', 'giRaFFe', 'LION', 'tiGer', 'monkey'];
+            for (i = 0; i < animals.length; i++) {
+                animals[i] = ` ${[i + 1]}. ${animals[i]}`;
+            }
+            console.log(animals);
+            document.getElementById("c").innerHTML = `Result of exercise C: <span class="answerx">${animals}</span>`;
+
+            console.log(`TASK D`);
+            var animals = ['cAt', 'DoG', 'giRaFFe', 'LION', 'tiGer', 'monkey'];
+            var animalsLength = animals.length;
+            var newAnimals = [];
+            var temp = '';
+            for (i = 0; i < animalsLength; i++) {
+                temp = animals.pop();
+                newAnimals[i] = ` ${[i + 1]}. ${temp}`;
+            }
+            console.log(newAnimals);
+            document.getElementById("d").innerHTML = `Result of exercise D: <span class="answerx">${newAnimals}</span>`;
+
+
+            console.log(`TASK E`);
+            var animals = ['cAt', 'DoG', 'giRaFFe', 'LION', 'tiGer', 'monkey'];
+            var adjectives = ['black', 'curious', 'spotted', 'scary', 'striped', 'happy'];
+            var animalsLength = animals.length;
+            var newAnimals = [];
+            var temp = '';
+            for (i = 0; i < animalsLength; i++) {
+                newAnimals[i] = ` ${adjectives[i]} ${animals[i]}`;
+            }
+            console.log(newAnimals);
+            document.getElementById("e").innerHTML = `Result of exercise E: <span class="answerx">${newAnimals}</span>`;
+
+            console.log(`TASK F`);
+            var animals = ['cAt', 'DoG', 'giRaFFe', 'LION', 'tiGer', 'monkey'];
+            var adjectives = ['black', 'curious', 'spotted', 'scary', 'striped', 'happy'];
+            var animalsLength = animals.length;
+            var newAnimals = [];
+            var temp = '';
+            for (i = 0; i < animalsLength; i++) {
+                temp = animals.pop();
+                newAnimals[i] = ` ${adjectives[i]} ${temp}`;
+            }
+            console.log(newAnimals);
+            document.getElementById("f").innerHTML = `Result of exercise F: <span class="answerx">${newAnimals}</span>`;
+
+            console.log(`TASK G`);
+            var words = ['I', 'am', 'never', 'too', 'late', ',', 'the', 'others', 'are', 'just', 'too', 'early'];
+            var wordsLength = words.length;
+            var stringWords = [];
+            var temp = '';
+            for (i = 0; i < wordsLength; i++) {
+                words[i] === ',' ? stringWords += words[i] : stringWords += ' ' + words[i];
+            }
+            console.log(stringWords);
+            document.getElementById("g").innerHTML = `Result of exercise G: <span class="answerx">${stringWords}</span>`;
+
+            console.log(`TASK H`);
+            var num = [44, 22, 33, 11, -66, -88, 22, 33];
+            var numLength = num.length;
+            var newNum = 0;
+            var sum = 0;
+            for (i = 0; i < numLength; i++) {
+                sum += num[i];
+            }
+            newNum = sum / num.length;
+            console.log(newNum);
+            document.getElementById("h").innerHTML = `Result of exercise H: <span class="answerx">${newNum}</span>`;
+
+
+        </script>
+    </body>
+
+</html>
