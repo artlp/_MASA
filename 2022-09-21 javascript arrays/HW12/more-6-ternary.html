@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HW 12 task extra 6</title>
+    </head>
+
+    <body>
+        <p>Ternary operator
+
+            a) Create a function makeDecision(), that asks what
+            the user has decided (Y/N).
+
+            Use variable "action" and ternary operator.
+            If the decision is 'Y', fill the variable "action"
+            with the value
+            "do it", otherwise - with the value "don't do it".
+            The function should log the action to the console.
+
+            Examples:
+            makeDecision() asks for the decision and gets 'Y',
+            the output:
+            "Do it"
+
+            makeDecision() asks for the decision and gets 'N',
+            the output:
+            "Don't do it"
+
+            b) Create a function checkPassed() that asks a student about
+            the exam grade. Create "result"
+            variable. Use ternary operator to check
+            if the grade is greater than 60 and then put "passed"
+            into the "result" variable, otherwise put "failed"
+            into the "result" variable.
+            Conclude with the next sentence:
+
+            console.log(`You ${result} the exam.`);
+
+            We assume that the input is always valid, and it is
+            an integer from 0 to 100.
+
+            Examples:
+            checkPassed() asks for a grade, gets 60,
+            shows "You failed the exam."
+
+            checkPassed() asks for a grade, gets 77,
+            shows "You passed the exam."
+
+            checkPassed() asks for a grade, gets 31,
+            shows "You failed the exam."
+
+            c) Add to a) ternary operator inside to react to the option
+            when the answer is not Y and not N
+
+            d) Add to b) ternary operator inside to react to the option
+            when the grade is not in the range between 0 and 100
+
+            e) Ask user which color is her car.
+            If it is blue, tell her: "Like a sky", if it is red, tell her:
+            "It suits your eyes"
+
+            f) Ask user which color and what company is her car.
+            If it is blue, tell her: "Like a sky", if it is red,
+            check which company it is, and if it is 'Toyota",
+            tell her: "Like a sun on Japanese flag". If it is not,
+            tell her: "Like a tomato"</p>
+        <script>
+            console.log("A");
+            function makeDecision() {
+                let action = prompt("Do it or no? Y/N?").toLowerCase();
+                action === 'y' ? console.log("DO IT") :
+                    action === 'n' ? console.log("DON'T DO IT") :
+                        console.log('wrong input');
+            }
+            makeDecision();
+
+            console.log("B");
+            //         b) Create a function checkPassed() that asks a student about
+            //   the exam grade.Create "result";
+            //         variable.Use ternary operator to check;
+            //         if the grade is greater than 60 and then put "passed"
+            //   into the "result" variable, otherwise put "failed"
+            //   into the "result" variable.
+            //   Conclude with the next sentence:
+
+            //         console.log(`You ${result} the exam.`);
+
+            //   We assume that the input is always valid, and it is
+            //   an integer from 0 to 100.;
+
+            //         Examples:
+            //         checkPassed() asks for a grade, gets 60,
+            //             shows "You failed the exam.";
+
+            //         checkPassed() asks for a grade, gets 77,
+            //             shows "You passed the exam.";
+
+            //         checkPassed() asks for a grade, gets 31,
+            //             shows "You failed the exam."
+
+            function checkPassed(result) {
+                (result > 60) && (result <= 100) ? console.log("you passed") :
+                    (result >= 1) && (result <= 60) ? console.log("you failed") :
+                        console.log("wrong input");
+            }
+            checkPassed(+prompt("How many points did you get in the test (0-100)?"));
+
+
+            //         f) Ask user which color and what company is her car.
+            //   If it is blue, tell her: "Like a sky", if it is red,  
+            //   check which company it is, and if it is 'Toyota", 
+            //   tell her: "Like a sun on Japanese flag". If it is not,
+            //   tell her: "Like a tomato"
+            var carColor = prompt("What's your car color?").toLowerCase();
+            var car = prompt("What's your car manufacturer?").toLowerCase();
+            carColor === "blue" ? console.log("Blue like a sky? Nice") :
+            (carColor === "red") && (car === "toyota") ? console.log("Like the sun on the Japanese flag!") :
+                carColor === "red" ? console.log("Red like a tomato? Awesome") :
+                console.log("Could have been better.");                ;
+
+        </script>
+    </body>
+
+</html>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HW12 task 4</title>
+        <style>
+            body {
+                margin: 0;
+                width: 70%;
+                font-size: 1rem;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                margin: 0 auto;
+                color: aliceblue
+            }
+
+            .a1 {
+                padding: 30px;
+                background-color: rgb(24, 25, 25);
+            }
+
+            .answerx {
+                color: rgb(170, 196, 255);
+                border: 1px solid rgb(145, 185, 209);
+                padding: 0 5px;
+            }
+
+            span {
+                font-weight: bold;
+                font-size: 1.1rem;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="a1">
+            <h1>4. "while" loop.</h1>
+            <p>a) Only even. User is prompted for an integer.
+                The app asks him to continue
+                to enter integers untill he enters an even number.
+            <div><span id="a"></span></div>
+            </p>
+
+            <p>
+                b) Right password. The app asks the user to enter a password.
+                It stops only when the user enters the word "Password"
+                or "password".
+            <div><span id="b"></span></div>
+            </p>
+
+            <p>
+                c) Create a function checkMultiplication()
+                that gets 2 numbers as parameters
+                and asks the user (with prompt())
+                the result of multiplication of these 2 numbers. <br>
+
+                If the answer is wrong, the function starts the loop
+                "while" which will stop when there is right answer,
+                or "stop" or no answer.
+                <br>
+                Examples:
+                checkMultiplication(11,11);
+                checkMultiplication(1,1045);
+                checkMultiplication(-45.3,0);
+            <div><span id="c"></span></div>
+            </p>
+
+            <p>
+                d) Create a function showUpper() that gets an array of words,
+                goes over it, shows each word in upper case
+                and stops when there is an empty string. <br>
+
+                Arrays for example: <br>
+                const words1 = ['stone','water','sand','oil','fire','','mist','rain']; <br>
+                const words2 = ['stand','dance','run','jump','']; <br>
+                const words3 = ['','stupid','smart','swift']; <br>
+                const words4 = ['']; <br>
+                const words5 = []; <br>
+                const words6 = ['code','letter','digit','number','cifer'];
+                <br>
+                Run the function at least 6 times - with each of
+                the previous arrays as a parameter.
+            <div><span id="d"></span></div>
+            </p>
+
+            <p>e) Create a function sumUntilMax() that gets an array of
+                numbers and a maximal sum, goes over the array,
+                sums the numbers, stops when the sum is equal
+                or greater than the maximum and shows the current sum.
+
+                const nums1 = [10, 15, 6, 5, 4, 100, 21]; <br>
+                const nums2 = [0, 1, 3, 0, 7, 7]; <br>
+                const nums3 = []; <br>
+                const nums4 = [12]; <br>
+
+                Examples: <br>
+                sumUntilMax(nums1, 33) <br>
+                Output: 36 <br>
+
+                sumUntilMax(nums1, 141) <br>
+                Output: 161 <br>
+
+                sumUntilMax(nums2, 33) <br>
+                Output: 18 <br>
+                sumUntilMax(nums2, 0) <br>
+                Output: 0 <br>
+
+                sumUntilMax(nums3, 33) <br>
+                Output: 0
+                <br>
+                sumUntilMax(nums4, 33) <br>
+                Output: 12 <br>
+
+                sumUntilMax(nums4, 11) <br>
+                Output: 12
+            <div><span id="e"></span></div>
+            </p>
+
+        </div>
+        <div class="answer"></div>
+
+
+
+        <script>
+            // console.log(`TASK A`);
+            // let numberA = +prompt("enter a number");
+            // console.log(numberA);
+            // while (numberA % 2 !== 0) {
+            //     numberA = +prompt("enter an even number");
+            // } alert("thanks");
+            // document.getElementById("a").innerHTML = `Result of exercise A: <span class="answerx">thank you, ${numberA} is even</span>`;
+
+
+            // console.log(`TASK B`);
+            // let pwdB = prompt("Enter your password");
+            // while ((pwdB != "password") && (pwdB != "Password") && (pwdB !== null)) {
+            //     pwdB = prompt("Enter your password");
+            // }
+            // alert(`Nice password`);
+            // document.getElementById("b").innerHTML = `Result of exercise B: <span class="answerx">Your password is ${pwdB}</span>`;
+
+            // console.log(`TASK C`);
+            // function checkMultiplication(num1, num2) {
+            //     var userAnswer = +prompt(`What is ${num1} * ${num2}?`);
+            //     var correctAnswer = num1 * num2;
+            //     if (correctAnswer !== userAnswer) {
+            //         while (correctAnswer !== userAnswer) {
+            //             console.log(`${userAnswer} is not the same as ${correctAnswer}`);
+            //             userAnswer = +prompt(`What is ${num1} * ${num2}?`);
+
+            //         } console.log(correctAnswer, userAnswer);
+            //     }
+            //     console.log(userAnswer, correctAnswer);
+            //     document.getElementById("c").innerHTML = `Result of exercise C: <span class="answerx">${userAnswer} is the same as ${correctAnswer}</span>`;
+            // }
+            // checkMultiplication(+prompt(`enter num1`), +prompt(`enter num2`));
+
+            console.log(`TASK D`);
+            const words1 = ['stone', 'water', 'sand', 'oil', 'fire', '', 'mist', 'rain'];
+            const words2 = ['stand', 'dance', 'run', 'jump', ''];
+            const words3 = ['', 'stupid', 'smart', 'swift'];
+            const words4 = [''];
+            const words5 = [];
+            const words6 = ['code', 'letter', 'digit', 'number', 'cifer'];
+            let i = 0;
+            function showUpper(array) {
+                while ((i < array.length) && (array[i] !== "")) {
+                    console.log(array[i].toUpperCase());
+                    i++;
+                } console.log("end of array");
+                console.log(array);
+                document.getElementById("d").innerHTML = `Result of exercise D: <span class="answerx">${array}</span>`;
+            }
+            showUpper(words1);
+            showUpper(words2);
+            showUpper(words3);
+            showUpper(words6);
+
+            console.log(`TASK E`);
+            const nums1 = [10, 15, 6, 5, 4, 100, 21];
+            const nums2 = [0, 1, 3, 0, 7, 7];
+            const nums3 = [];
+            const nums4 = [12];
+            let max = 0;
+            function sumUntilMax(array, x) {
+
+                    for (i = 0; x >= max && i < array.length; i++) {
+                        max += array[i];
+                        // console.log(array, max, x);
+                    }
+                    console.log(`Output is: ${max}`);
+                }
+ 
+            sumUntilMax(nums4, 14)
+
+            document.getElementById("e").innerHTML = `Result of exercise E: <span class="answerx">Output is: ${max}</span>`;
+
+
+        </script>
+    </body>
+
+</html>

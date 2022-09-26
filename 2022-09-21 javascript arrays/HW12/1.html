@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HW12 task 1</title>
+        <style>
+            body {
+                margin: 0;
+                width: 70%;
+                font-size: 1rem;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                margin: 0 auto;
+            }
+
+            .a1 {
+                padding: 30px;
+                background-color: rgb(174, 255, 116);
+            }
+
+            .a2 {
+                background-color: olivedrab;
+            }
+
+            .answerx {
+                color: crimson;
+                border: 1px solid crimson;
+                padding: 0 5px;
+            }
+
+            span {
+                font-weight: bold;
+                font-size: 1.1rem;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="a1">
+            <h3>1. String and array functions - substring(), indexOf(), trim(),
+                trimStart(), trimEnd(), pop(),
+                push(), shift(), unshift().</h3>
+            <p>
+                a) Capitalize. User enters a word, and sees in the output
+                the word with the 1st capital letter
+                and other letters in lowercase.
+                (The hint for the exercise is below all the exercises)
+            <div><span id="a"></span></div>
+            </p>
+
+            <p>
+                b) var animals = ['cAt','DoG','giRaFFe','LION','tiGer','monkey']
+
+                Go over the array. For each word show at the console
+                first two letters. Example:
+
+                ca
+                do
+                gi
+                li
+                ti
+                mo
+
+            <div><span id="b"></span></div>
+            </p>
+
+            <p>
+                c) const colors = ['blue','yellow','orange','green']
+                const drinks = ['tea','coffee','milk','water','juice']
+
+                Use pop(), push(), shift(), unshift() and some variables to exchange
+                the first elements of the above arrays between them, and
+                to exchange their last elements too.
+            <div><span id="c"></span></div>
+            </p>
+
+            <p>
+                d) let str=`"Be strong", I wispered to my WIFY sygnal`.
+                Find the indexes of the quotes (индексы двойных кавычек).
+                Find the starting indexes of the strings "WI/wi".
+                Find the starting index of the string "strange" or tell
+                if it is not there
+            <div><span id="d"></span></div>
+            </p>
+
+            <p>
+                e) const colors = ['_red','_white_','_yellow_','green_','_lime_','_purple_','_blue','teal_','_aquamarine
+                ','_turquoise_']
+
+                I With FOR loop go over the array and show all it's members without the spaces
+                II With FOR loop go over the array and show all the members with even indexes
+                without the spaces at the left, and all the members with odd indexes without
+                the spaces at the right
+            <div><span id="e"></span></div>
+            </p>
+
+        </div>
+        <div class="answer"></div>
+
+
+
+        <script>
+            console.log(`TASK A`);
+            const enteredWord = prompt(`Enter any word`);
+            let newFirstLetter = (enteredWord.trim())[0].toUpperCase();
+            let newRemainingWord = (enteredWord.substring(enteredWord.indexOf(newFirstLetter) + 2)).toLowerCase();
+            let newWord = newFirstLetter + newRemainingWord;
+            // console.log(newRemainingWord);
+            console.log(newWord);
+            document.getElementById("a").innerHTML = `Result of exercise A: <span class="answerx">${newWord}</span>`;
+
+
+            console.log(`TASK B`);
+            var animals = ['cAt', 'DoG', 'giRaFFe', 'LION', 'tiGer', 'monkey'];
+            let shortAnimals = [];
+            let tempWord = '';
+            for (i = 0; i < animals.length; i++) {
+                tempWord = animals[i].substring(0, 2).toLowerCase();
+                shortAnimals[i] = tempWord;
+            }
+            console.log(shortAnimals);
+            document.getElementById("b").innerHTML = `Result of exercise B: <span class="answerx">${shortAnimals}</span>`;
+
+            console.log(`TASK C`);
+            const colors = ['blue', 'yellow', 'orange', 'green'];
+            const drinks = ['tea', 'coffee', 'milk', 'water', 'juice'];
+            let colorsFirst = colors[0];
+            let drinksFirst = drinks[0];
+            let colorsLast = colors[colors.length - 1];
+            let drinksLast = drinks[drinks.length - 1];
+            colors[0] = drinksFirst;
+            drinks[0] = colorsFirst;
+            colors[colors.length - 1] = drinksLast;
+            drinks[drinks.length - 1] = colorsLast;
+            console.log(colors, drinks);
+            document.getElementById("c").innerHTML = `Result of exercise C: <span class="answerx">${colors} | ${drinks}</span>`;
+
+            console.log(`TASK D`);
+            let str = `"Be strong", I whispered to my WIFI signal`;
+            console.log(`indexes of quotes are ${str.indexOf('\"')} and ${str.indexOf('\"', (str.indexOf('\"')) + 1)}`);
+            let strange = str.indexOf("strange");
+            if (strange === -1) {
+                console.log(`There is no string "strange" in this sentence`);
+                document.getElementById("d").innerHTML = `Result of exercise D: <span class="answerx">${`indexes of quotes are ${str.indexOf('\"')} and ${str.indexOf('\"', (str.indexOf('\"')) + 1)}`}. There is no string "strange" in this sentence.</span>`;
+            } else {
+                console.log(`index of string "strange" is ${strange}`);
+                document.getElementById("d").innerHTML = `Result of exercise D: <span class="answerx">${`indexes of quotes are ${str.indexOf('\"')} and ${str.indexOf('\"', (str.indexOf('\"')) + 1)}`}. index of string "strange" is ${strange}</span>`;
+            }
+
+
+            console.log(`TASK E`);
+            const colors2 = ['   red', '    white   ', '   yellow ', 'green   ', '  lime  ', ' purple ', '   blue', 'teal   ', ' aquamarine   ', '  turquoise '];
+            let noSpaces = [];
+            let rightColors = [];
+            var temp = '';
+            console.log(noSpaces);
+            for (i = 0; i < colors2.length; i++) {
+                noSpaces[i] = colors2[i].trim();
+                (i + 1) % 2 === 1 ? rightColors[i] = colors2[i].trimEnd() : rightColors[i] = colors2[i].trimStart();
+            }
+            console.log(noSpaces, rightColors);
+            document.getElementById("e").innerHTML = `Result of exercise E: <span class="answerx">${noSpaces} <br> ${rightColors}</span>`;
+
+
+        </script>
+    </body>
+
+</html>

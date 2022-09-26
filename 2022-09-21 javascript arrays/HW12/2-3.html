@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HW12 tasks 2 and 3</title>
+        <style>
+            body {
+                margin: 0;
+                width: 70%;
+                font-size: 1rem;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                margin: 0 auto;
+            }
+
+            .a1 {
+                padding: 30px;
+                background-color: rgb(243, 200, 255);
+            }
+
+            .a2 {
+                padding: 30px;
+                background-color: rgb(222, 143, 125);
+            }
+
+            .answerx {
+                color: rgb(9, 93, 82);
+                border: 1px solid rgb(83, 146, 255);
+                padding: 0 5px;
+            }
+
+            span {
+                display: inline-block;
+                margin: 10px 0;
+                font-weight: bold;
+                font-size: 1.1rem;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="a1">
+            <h1>2. How many<br>
+                a) gigabytes are there in 4398046511104 Bytes?<br>
+                a) bytes are there in 2.8Gb?<br></h1>
+            <div><span id="a"></span></div>
+            <div><span id="b"></span></div>
+        </div>
+        <div class="a2">
+            <h1>3. Perform only approximate calculation of <br>
+                a) how many bytes are there in 35Gb<br>
+                b) how many gigabytes are there in 78574390129 bytes</h1>
+            <div><span id="c"></span></div>
+            <div><span id="d"></span></div>
+        </div>
+        <script>
+            let answerA = 4398046511104 / 1024 / 1024 / 1024;
+            let answerB = 2800 * 1024 * 1024 * 1024;
+            let answerC = 35000 * 1024 * 1024 * 1024;
+            let answerD = 78574390129 * 1024 * 1024 * 1024;
+
+            document.getElementById("a").innerHTML = `Result of exercise A: <span class="answerx">${answerA}</span>`;
+            document.getElementById("b").innerHTML = `Result of exercise A: <span class="answerx">${answerB}</span>`;
+            document.getElementById("c").innerHTML = `Result of exercise B: <span class="answerx">${answerC}</span>`;
+            document.getElementById("d").innerHTML = `Result of exercise B: <span class="answerx">${answerD}</span>`;
+        </script>
+    </body>
+
+</html>
