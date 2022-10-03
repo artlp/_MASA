@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Q U E S T I O N N A I R E</title>
+        <style>
+            html {
+                background-color: rgb(255, 254, 249);
+                margin-top: 40px;
+            }
+            body {
+                display:flex;
+                flex:1;
+                flex-direction: column;
+                width: 70%;
+                margin: 0 auto;
+                border: 4px solid black;
+                box-shadow: 0px 12px 20px black;
+            }
+            li:nth-child(even) {
+                background-color: rgb(219, 219, 219);
+            }
+
+            li:nth-child(odd) {
+                background-color: rgb(193, 193, 193);
+            }
+
+            ul>li::before {
+                color: red;
+            }
+
+            .score {
+                font-size: 1rem;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                text-decoration: 2px underline rgba(0, 128, 255, 0.689);
+                height: 20px;
+                padding: 5px;
+                font-weight: 900;
+            }
+            #welcome {
+                padding: 5px;
+                height: 20px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h4 id="welcome"> </h4>
+        <ol>
+            <li>What is 5+1? <span class="answer"></span>
+            </li>
+            <li>What is 5+2? <span class="answer"></span>
+            </li>
+            <li>What is 5+3? <span class="answer"></span>
+            </li>
+            <li>What is 5+4? <span class="answer"></span>
+            </li>
+        </ol>
+        <div class="score"></div>
+        <script src="./quest.js"></script>
+    </body>
+
+</html>

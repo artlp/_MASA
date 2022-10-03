@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HW 13 task 5</title>
+    </head>
+
+    <body>
+
+
+        <h1>5. Create a function padWithStar(strAr,numAr,total).</h1>
+        <p> This function should get a string array, a number array
+            of the same length, and a number.
+            <br>
+            It should go with the FOR loop over the arrays, take string from the
+            string array and pad it from the START with STARS till the number
+            from the number array.
+            After that it should pad the string from the END with STARS till
+            the "total" number and show it at the console.
+            <br>
+            const ar1 = [' ',' ',' ',' '] <br>
+            const ar2 = ['',' ',' ',' ',' ',' ',' ',' ',''] <br>
+            const arNum1 = [5,6,7,8] <br>
+            const arNum2 = [6,7,8,9] <br>
+            const arNum3 = [5,6,7,8,9,8,7,6,5] <br>
+            let tot1 = 9 <br>
+            let tot2 = 11 <br>
+            <br>
+            Run the function with the next presets:
+            <br>
+            padWithStar(ar1,arNum1,tot1); <br>
+            padWithStar(ar1,arNum2,tot2); <br>
+            padWithStar(ar2,arNum3,tot2); <br>
+            <br>
+            Have you got 2 triangles and 1 diamond?
+        </p>
+
+        <script>
+        const ar1 = [' ','   ','     ','       ']
+        const ar2 = ['',' ','   ','     ','       ','     ','   ',' ',''];
+                const arNum1 = [5, 6, 7, 8];
+                const arNum2 = [6, 7, 8, 9];
+                const arNum3 = [5, 6, 7, 8, 9, 8, 7, 6, 5];
+                let tot1 = 9;
+                let tot2 = 11;
+                let arrayLength = 0;
+            function padWithStar(strAr, numAr, total) {
+                if (strAr.length >= numAr.length) {
+                    arrayLength = strAr.length;
+                } else {
+                    arrayLength = numAr.length;
+                }
+                for (i = 0; i < arrayLength; i++) {
+                    strAr[i] = strAr[i].padStart(numAr[i],'*');
+                    strAr[i] = strAr[i].padEnd(total,'*');
+                }
+console.log(strAr);
+            }
+
+            padWithStar(ar1, arNum1, tot1);
+            padWithStar(ar1, arNum2, tot2);
+            padWithStar(ar2, arNum3, tot2);
+
+
+            
+// const ar1 = [' ','   ','     ','       ']
+// const ar2 = ['',' ','   ','     ','       ','     ','   ',' ','']
+// const arNum1 = [5,6,7,8]
+// const arNum2 = [6,7,8,9]
+// const arNum3 = [5,6,7,8,9,8,7,6,5]
+// let tot1 = 9
+// let tot2 = 11
+
+// function padWithStar(strAr, numAr, total) {
+// 	let result = new Array();
+// 	for (let i = 0; i < strAr.length; i++) {
+// 		result.push(strAr.at(i).padStart(numAr.at(i), '*'))
+// 		result.push(strAr.at(i).padStart(total, '*'))
+// 	}
+// 	console.log(result)
+// }
+
+// padWithStar(ar1,arNum1,tot1);
+// padWithStar(ar1,arNum2,tot2);
+// padWithStar(ar2,arNum3,tot2);
+        </script>
+    </body>
+
+</html>

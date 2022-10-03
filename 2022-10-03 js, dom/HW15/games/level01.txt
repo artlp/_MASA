@@ -1,0 +1,35 @@
+Level 1
+1. Напишите цикл for, кот. выдаёт на консоль все целые числа от -5 до 14
+2. Напишите цикл for, кот. выдаёт на консоль все четные числа, 
+   начиная с 2-х и заканчивая 22
+3. Напишите цикл for, кот. выдаёт на консоль все целые числа, 
+   начиная с 12 и заканчивая 1
+4. Напишите цикл for, кот. выдаёт на консоль каждое пятое число, 
+   начиная с 35 и заканчивая -10 ("минус 10")
+5. При помощи двух команд prompt и функции parseInt() 
+   присвойте двум переменным значения минимума и максимума.
+
+   Напишите цикл for, кот. выдаёт на консоль все целые числа, 
+   начиная с минимума и заканчивая максимумом
+6. При помощи трёх команд prompt и функции parseInt() 
+   присвойте трём переменным значения минимума, максимума и шага.
+
+   Напишите цикл for, кот. выдаёт на консоль все целые числа 
+   с промежутком в заданный шаг, 
+   начиная с минимума, заканчивая максимумом (включительно, если шаг позволяет)
+
+7. var cyclones = ['Ana','Bill','Claudette','Danny','Elsa','Fred','Grace','Henri','Ida','Julian','Kate','Larry','Mindy','Nicholas','Odette','Peter','Rose','Sam','Teresa','Victor','Wanda']
+
+   Use cycle 'FOR' to loop over the array and print the strings to the console.
+
+8. Write a function rep() that gets a string and a number
+   and repeats the string number of times on the next line.
+   (use function repeat())
+
+   For example:
+   rep('house',3)
+
+output:
+   house
+   house
+   house

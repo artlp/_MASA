@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HW 13 task 3</title>
+    </head>
+
+    <body>
+
+        <h1>3. indexOf + while challenge.</h1>
+        <p>Write function findAll(),
+            that gets a word and a letter.
+            Go over the word and get all the locations of the given letter
+            and return them in an array.
+
+            For example
+
+            findAll('archaebacteria','a') returns [0,4,7,13]
+            findAll('abracadabra','a') returns [0,3,5,7,10]
+            findAll('encyclopedy','m') returns []
+            findAll('encyclopedy','c') returns [2,4]
+            findAll('encyclopedy','c') returns [2,4]
+            findAll('error','e') returns [0]
+
+            Check the function with all the above pairs of word and letter.</p>
+
+        <script>
+            function findAll(word, letter) {
+                const array = [];
+                let i = 0;
+                let index = 0;
+                while ((i < word.length)) {
+
+                    index = word.indexOf(letter, i);
+                    if (index === i) {
+                        array.push(index);
+                        i++; 
+                    } else {
+                        i++;
+                    }
+                    console.log(`i = ${i}, index = ${index}`);
+                }zxczxc
+                console.log(array);
+            }
+            findAll('archaebacteria', 'a')
+
+        </script>
+    </body>
+
+</html>

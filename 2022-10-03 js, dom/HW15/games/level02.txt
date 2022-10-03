@@ -1,0 +1,73 @@
+Level 2
+
+1. 
+var food = ['pizza','bread','butter','banana','humus','falafel']
+
+
+// MISSION: go with "for" loop over the array and show only the second
+//  letter of each food on the next line
+
+2.
+var drink = [ 'water','milk','juice','beer','coffee','wine']
+
+// MISSION: create pairs of food and drink
+///   with the same index:
+/// pizza water
+///// bread milk
+//// butter juice
+
+3.
+
+// MISSION: go over the array drink, exchange each drink
+// by it's index
+
+// after the loop show the array at the console
+
+4. Что празднуем?
+
+   Используйте SWITCH statement.
+   Программа получает месяц и число
+   и сообщает, на какие праздники
+   попала эта дата. 
+   "Tishrei", 1-22 - "Autumn Holidays"
+   "Kislev", 24-30 - "Chanuka"
+   "Tevet", 1-3 - "Chanuka"
+   "Shvat", 15 - "Tu biShvat"
+   "Adar", 13-16 - "Purim"
+   "Nisan", 14-21 - "Pesach"
+
+5. var John = ['John','Smith','developer','Ohio',1997,'John','Mary']
+
+   Use cycle 'FOR' to loop over the array and print the strings to the console.
+   If you encounter something that not a string, exit the loop.
+   
+6. var John = ['John','Smith','developer','Ohio',1997,'John','Mary']
+
+   Use cycle 'FOR' to loop over the array and print the strings to the console.
+   If this is not a string, skip it and do not print.
+
+7. var todos = ['clean room','brush teeth','exercise','study javascript','eat healthy'];
+
+   Take the Array "todos", loop through it by "for" loop, and add "!" to each entry 
+
+8. Level 2.7 continued. Take the changed "todos", loop through it by "for" loop, imagine  
+   that each time first mission is executed, remove it from the array and print to the console what has left of the list
+
+9.    Use cycle 'FOR' to loop over the array and find the sum of the elements of the array.
+
+Examples:
+var arr1 = [375,-18,6.4,7.12,-0.08,1,128,0,567]
+
+Console: 1066.44
+
+var arr2 = [-1.5, 4.6, -7.1, 4]
+
+Console: 0
+
+var arr3 = [0,0,0,0,0,0]
+
+Console: 0
+
+var arr4 = []
+
+Console: 0

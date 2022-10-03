@@ -1,0 +1,13 @@
+:root {
+    BACKGROUND-COLOR: rgb(37, 58, 79);
+}
+
+pre {
+    background-color: BACKGROUND-COLOR;
+    color: rgb(199, 199, 199);
+    font-size: 1.2rem;
+    padding-left: 40px;
+    text-shadow: 3px 1px 2px rgb(109, 70, 216);
+    /* text-shadow: 3px 1px 2px rgb(216, 109, 70); */
+}
+

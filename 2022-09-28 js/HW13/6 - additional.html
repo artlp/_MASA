@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HW 13 task 6 - additional</title>
+    </head>
+
+    <body>
+        <p>WHILE loop
+            <br>
+            const ar1 = ['Paris','London','Washington','Amsterdam','Kahir','Jerusalem','Tokyo','Athena'] <br>
+            const ar2 = ['Paris','London','Washington','Amsterdam','Kahir','Tokyo','Athena'] <br>
+            const ar3 = ['Jerusalem','Tel-Aviv','Ramat-Gan'] <br>
+            const ar4 = ['Jerusalem'] <br>
+            <br>
+            Create a function that gets an array, goes over it with "while" loop until
+            encounters 'Jerusalem'. At the end tell how many cities you visited before
+            got to Jerusalem. If there is no Jerusalem, tell that you yet not got there.
+            <br>
+            Run the function for the above arrays.
+        </p>
+        <script>
+            const ar1 = ['Paris', 'London', 'Washington', 'Amsterdam', 'Kahir', 'Jerusalem', 'Tokyo', 'Athena'];
+            const ar2 = ['Paris', 'London', 'Washington', 'Amsterdam', 'Kahir', 'Tokyo', 'Athena'];
+            const ar3 = ['Jerusalem', 'Tel-Aviv', 'Ramat-Gan'];
+            const ar4 = ['Jerusalem'];
+            const ar5 = ['Paris', 'London', 'Jerusalem', 'Washington', 'Amsterdam', 'Moscow', 'Tokyo', 'Athena'];
+            function cities(ar) {
+                let count = ``;
+                let i = 0;
+                while (i < ar.length) {
+                    count = ar[i];
+                    if ((count === "Jerusalem") && (i === 0)) {
+                        console.log(`Jerusalem was the first city you visited`);
+                        break;
+                    } else if ((count === "Jerusalem") && (i > 0)) {
+                        console.log(`You visited ${i} cities before you got to Jerusalem`);
+                        break;
+                    } else if ((count !== "Jerusalem") && (i === ar.length - 1)) {
+                        console.log(`You didn't visit Jerusalem at all.`);
+                        break;
+                    } else {
+                        // console.log(count, i);
+                        i++;
+                    }
+
+                }
+                // console.log(`You visited ${i} cities before you got to Jerusalem`);
+            }
+            cities(ar1);
+
+
+
+        </script>
+    </body>
+
+</html>

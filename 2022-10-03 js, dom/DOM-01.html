@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document Object Model - Start. Lesson 1.</title>
+        <style>
+            :root {
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            }
+            body {
+                display:flex;
+                flex-wrap: wrap;
+                justify-content: space-evenly;
+                padding-top: 40px;
+            }
+            .green {
+                width: 400px;
+                height: 400px;
+                background-color: rgb(60, 180, 76);
+                color: rgb(31, 30, 29);
+                font-size: xx-large;
+            }
+
+            .orange {
+                width: 200px;
+                height: 200px;
+                background-color: rgb(234, 137, 0);
+                color: rgb(31, 30, 29);
+                font-size: xx-large;
+            }
+
+            .blue {
+                color: rgb(14, 14, 126);
+                font-weight: bolder;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="green"> </div>
+        <div class="orange"> </div>
+<p class="blue">My favourite food is <span class="blue"></span>!</p>
+        <script>
+
+            const divObj = document.querySelector('.green');
+            divObj.innerText = "Shalom";
+            const divObj2 = document.querySelector('.orange');
+            divObj2.innerText = "Haverim";
+            document.querySelectorAll('.blue')[1].innerHTML = "<em>pizza</em>";
+
+
+
+
+
+        </script>
+    </body>
+
+</html>
