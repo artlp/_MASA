@@ -13,55 +13,86 @@
 //    "Shvat", 15 - "Tu biShvat"
 //    "Adar", 13-16 - "Purim"
 //    "Nisan", 14-21 - "Pesach"
+console.log("==============3.1==============");
+let day = 14;
+let month = "Adar";
+// let cancel = true;
+do {
+    switch (true) {
+    case ((day >= 1) && (day <= 22)) && (month === "Tishrei"):
+        console.log("Autumn Holidays");
+        break;
+    case ((day >= 24) && (day <= 30)) && (month === "Kislev"):
+        console.log("Chanuka");
+        break;
+    case ((day >= 1) && (day <= 3)) && (month === "Tevet"):
+        console.log("Chanuka");
+        break;
+    case (day === 15) && (month === "Shvat"):
+        console.log("Tu biShvat");
+        break;
+    case ((day >= 13) && (day <= 16)) && (month === "Adar"):
+        console.log("Purim");
+        break;
+    case ((day >= 14) && (day <= 21)) && (month === "Nisan"):
+        console.log("Pesach");
+        break;
 
-// let day = 15;
-// let month = "Adar";
-// switch (true) {
-//     case ((day >= 1) && (day <= 22)) && (month === "Tishrei"):
-//         console.log("Autumn Holidays");
-//         break;
-//     case ((day >= 24) && (day <= 30)) && (month === "Kislev"):
-//         console.log("Chanuka");
-//         break;
-//     case ((day >= 1) && (day <= 3)) && (month === "Tevet"):
-//         console.log("Chanuka");
-//         break;
-//     case (day === 15) && (month === "Shvat"):
-//         console.log("Tu biShvat");
-//         break;
-//     case ((day >= 13) && (day <= 16)) && (month === "Adar"):
-//         console.log("Purim");
-//         break;
-//     case ((day >= 14) && (day <= 21)) && (month === "Nisan"):
-//         console.log("Pesach");
-//         break;
+    default:
+        console.log("Not a holiday");
+        // cancel = false;
+        break;
+    }
 
-//     default:
-//         console.log("Not a holiday");
-//         break;
-// }
+} while (false)
+
+
+// console.log("==============OPTION 2 (ONLY WORKS IN BROWSER)==============");
+let cancel2 = true;
+do {
+    let day2 = +prompt("Enter day");
+    let month2 = prompt("Enter month");
+    if (((day2 >= 1) && (day2 <= 22)) && (month2 === "Tishrei")) {
+        console.log("Autumn Holidays");
+    } else if (((day2 >= 24) && (day2 <= 30)) && (month2 === "Kislev")) {
+        console.log("Chanuka");
+    } else if (((day2 >= 1) && (day2 <= 3)) && (month2 === "Tevet")) {
+        console.log("Chanuka");
+    } else if ((day2 === 15) && (month2 === "Shvat")) {
+        console.log("Tu biShvat");
+    } else if (((day2 >= 13) && (day2 <= 16)) && (month2 === "Adar")) {
+        console.log("Purim");
+    } else if (((day2 >= 14) && (day2 <= 21)) && (month2 === "Nisan")) {
+        console.log("Pesach");
+    } else {
+        console.log("Not a holiday");
+        cancel2 = false;
+    }
+
+} while (cancel2 === true);
+
 
 
 // b.    Use cycle 'FOR' to loop over the array and find the average of the elements of the array.
 
-Examples:
-var arr1 = [375,-18,6.4,7.12,-0.08,1,128,0,567,-23]
+// Examples:
+var arr1 = [375, -18, 6.4, 7.12, -0.08, 1, 128, 0, 567, -23];
 
-// Console: 104.344
+// // Console: 104.344
 
-var arr2 = [-1.5, 4.6, -7.1, 4]
+var arr2 = [-1.5, 4.6, -7.1, 4];
 
-// Console: 0
+// // Console: 0
 
-var arr3 = [0,0,0,0,0,0]
+var arr3 = [0, 0, 0, 0, 0, 0];
 
-// Console: 0
+// // Console: 0
 
-var arr4 = []
+var arr4 = [];
 
-// Console: 0
+// // Console: 0
 
-var arr5 = [20,30];
+var arr5 = [20, 30];
 
 function arrayAvg(array) {
     let sum = 0;
@@ -69,7 +100,7 @@ function arrayAvg(array) {
     for (i = 0; i < array.length; i++) {
         sum = sum + array[i];
     }
-    console.log(sum/number);
+    console.log(sum / number);
 }
 
 arrayAvg(arr1);
@@ -87,7 +118,7 @@ arrayAvg(arr5);
 //          максимум*(-1) до максимума и
 //          вызывает для каждого из них
 //          функцию Math.abs().
- 
+
 //    Пример:
 //    var max = 3
 
@@ -105,9 +136,9 @@ arrayAvg(arr5);
 
 //    Console:
 //    0
-
+console.log("==============3.3==============");
 var max = 13;
-for (i = Math.abs(max)*-1; i <= max; i++){
+for (i = Math.abs(max) * -1; i <= max; i++) {
     console.log(Math.abs(i));
 }
 
@@ -120,7 +151,7 @@ for (i = Math.abs(max)*-1; i <= max; i++){
 //          до максимума (не включая максимум)
 //          и вызывает функцию для каждого
 //          числа.
- 
+
 //    Пример:
 //    var max = 5
 
@@ -136,6 +167,7 @@ for (i = Math.abs(max)*-1; i <= max; i++){
 
 //    Console:
 //    -4
+console.log("==============3.4==============");
 let numb = 5;
 for (i = 0; i < numb; i++) {
     maxNumb = i ** 3 - 4;
@@ -186,12 +218,12 @@ for (i = 0; i < numb; i++) {
 // 2
 // 3
 // 4
-console.log("=============3.5=============");
+console.log("==============3.5==============");
 var max2 = -4;
 if (max2 >= 0) {
-for (i = Math.abs(max2)*-1; i <= max2; i++){
-    console.log(Math.abs(i));
-}
+    for (i = Math.abs(max2) * -1; i <= max2; i++) {
+        console.log(Math.abs(i));
+    }
 } else {
     for (i = Math.abs(max2); i >= max2; i--) {
         console.log(Math.abs(i));
@@ -204,7 +236,7 @@ for (i = Math.abs(max2)*-1; i <= max2; i++){
 //          (Факториал - произведение всех
 //           чисел от 1 до самого числа)
 //          0! = 1 (Факториал нуля равен 1)
- 
+
 //    Пример:
 //    var num = 5
 
@@ -222,11 +254,11 @@ for (i = Math.abs(max2)*-1; i <= max2; i++){
 
 //    Console:
 //    1
-console.log(`=========3.6===========`);
+console.log(`==============3.6==============`);
 let abc = 5;
 let result = 1;
 for (i = 1; i <= abc; i++) {
-    result = result*i;
+    result = result * i;
     // abc--;
     console.log(result);
 }
@@ -240,7 +272,7 @@ for (i = 1; i <= abc; i++) {
 //    попадают в заданный промежуток с заданным
 //    шагом. Во втором - все те же числа, но
 //    в обратном порядке. 
-  
+
 //    Пример:
 //    var min = -4, max = 11, step 3
 
@@ -261,7 +293,7 @@ for (i = 1; i <= abc; i++) {
 //    Console:
 //    [-3]
 //    [-3]
-   console.log(`=========3.7===========`);
+console.log(`=========3.7===========`);
 var min3 = -4, max3 = 11, step3 = 3;
 const arrayX = [];
 const arrayY = [];
