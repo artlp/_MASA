@@ -16,7 +16,7 @@
 console.log("==============3.1==============");
 let day = 14;
 let month = "Adar";
-// let cancel = true;
+let cancel = true;
 do {
     switch (true) {
     case ((day >= 1) && (day <= 22)) && (month === "Tishrei"):
@@ -40,7 +40,7 @@ do {
 
     default:
         console.log("Not a holiday");
-        // cancel = false;
+        cancel = false;
         break;
     }
 
