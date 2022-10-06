@@ -1,0 +1,50 @@
+body {
+    box-sizing: border-box;
+}
+
+div {
+    border-radius: 10px;
+    display: inline-block;
+    margin: 3px;
+    /* outline: 2px solid red; */
+}
+
+.purple_box {
+background-color: purple;
+color: yellow;
+height: 170px;
+width: 300px;
+border: 3px solid transparent;
+overflow-wrap: break-word;
+overflow-y: hidden;
+
+}
+button {
+    border-radius: 10px;
+    font-size: 1rem;
+    padding: 0.5rem;
+    width: 150px;
+}
+button:hover {
+    border: 2px solid rgb(41, 7, 105);
+    cursor: pointer;
+}
+
+.yellow_button {
+background-color: yellow ;
+border: 2px solid rgb(181, 181, 166);
+
+}
+
+.black_button {
+    background-color: rgb(0, 0, 0) ;
+    border: 2px solid rgb(181, 181, 166);
+    color: white;
+
+
+}
+
+.hover {
+
+    box-shadow: 0px 10px 20px rgba(23, 27, 23, 0.58);
+}

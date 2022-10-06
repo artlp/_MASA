@@ -81,6 +81,18 @@ for (i = 0; i < arr.length; i++) {
 }
 console.log(newArr);
 
+console.log(`=====4.2 OPTION 2=====`);
+function absSqrt(n) {
+return Math.sqrt(Math.abs(n));
+}
+function createNewAr(ar) {
+    const newAr = [];
+    for (i = 0; i < ar.length; i++) {
+        newAr.push(absSqrt(ar[i]));
+    }
+    console.log(newAr);
+}
+createNewAr (arr);
 // Level 4.3 Ваша программа получает 
 //    два массива одинаковой длины -
 //    массив чисел и массив строчек.
