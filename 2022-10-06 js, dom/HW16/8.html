@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HW 16 task 8</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800;900&display=swap"
+            rel="stylesheet">
+        <style>
+            body {
+                padding: 0;
+                width: 70vw;
+                margin: 0 auto;
+                background-color: gainsboro;
+                font-family: 'Figtree', sans-serif;
+            }
+
+            .wrapper {
+                background-color: aliceblue;
+                min-height: 91vh; 
+                padding: 2rem;
+                box-shadow: 0 0px 20px rgba(65, 65, 65, 0.215);
+            }
+
+            h1 {
+                margin: 0;
+                padding: 0;
+                font-size: 2rem;
+                font-weight: 500;
+            }
+
+            label {
+                font-weight: 600;
+            }
+            .message:nth-child(even) {
+                text-transform: uppercase;
+            }
+            .message:nth-child(odd) {
+                text-transform: lowercase;
+            }
+            .message:nth-child(3n) {
+                font-weight: bold;
+            }
+        </style>
+    </head>
+
+    <body>
+        <section class="wrapper">
+            <h1>8. Input and listeners.</h1>
+
+            <div class="task_a">
+                <p>
+                    a) Multiplication table. Use input field
+                    of type "number". You app gets
+                    an integer in range from 2 to 9
+                    (including) and shows multiplication
+                    table for this number.
+                    The example for 7 is
+                    at mult_table_example.PNG.
+                </p>
+                <label for="taskA">Enter a number from 2 to 9</label>
+                <input type="number" name="taskA" id="taskA" min="2" max="9"> <input type="button"
+                    value="Show multiplication table" id="buttonA">
+                <p class="resultA"></p>
+            </div>
+            <div class="task_b">
+                <p>
+                    b) Harry Potter. Input: how many times
+                    Harry Potter (or computer :)
+                    should write "I will tell no lies".
+                    Output this number of sentences -
+                    write one in lowercase, one in uppercase,
+                    one in lowercase, one in uppercase, etc.
+                    Could you make only each third (or fifth)
+                    sentence be written in uppercase?
+                </p>
+                <label for="taskB">Enter a number from 1 to 29</label>
+                <input type="number" name="taskA" id="taskB" min="1" max="29"> <input type="button"
+                    value="Make him write" id="buttonB">
+                <p class="resultB"></p>
+            </div>
+        </section>
+
+        <script>
+            const message = "I will tell no lies";
+            let numValue;
+            function calcTable() {
+                numValue = document.querySelector("#taskA").value;
+                document.querySelector(".resultA").innerHTML = "";
+                for (i = 1; i <= numValue; i++) {
+                    document.querySelector(".resultA").innerHTML += `${i}*${numValue} = ${i*numValue} <br>`
+                    console.log(i);
+                }
+
+            }
+            document.querySelector("#buttonA").addEventListener(`click`, calcTable)
+
+
+            //* OPTION 2
+            // document.querySelector(`#buttonA`).addEventListener(`click`, function () {
+            //     document.querySelector(".resultA").innerHTML = "";
+            //     numValue = document.querySelector("#taskA").value;
+            //     for (i = 1; i <= numValue; i++) {
+            //         document.querySelector(".resultA").innerHTML += `${i}*${numValue} = ${i * numValue} <br>`;
+            //     }
+            // }
+            // );
+
+            document.querySelector(`#buttonB`).addEventListener(`click`, function () {
+                document.querySelector(".resultB").innerHTML = "";
+                numValue = document.querySelector("#taskB").value;
+                for (i = 1; i <= numValue; i++) {
+                    document.querySelector(".resultB").innerHTML += `<span class="message">${message} <br><span>`;
+                }
+            }
+            );
+        </script>
+    </body>
+
+</html>

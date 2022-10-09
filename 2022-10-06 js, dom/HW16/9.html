@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HW 16 task 9</title>
+    </head>
+
+    <body>
+        9. Flag. User should enter the right password,
+        for example the string "Password123!".
+
+        Write a loop that asks the user for the password.
+        If the password is OK, exit the loop.
+        If the password is wrong, ask the user if they want to
+        choose a new password. If yes, exit the loop,
+        if no, continue asking for a password.
+
+        After the loop check if the loop has ended because
+        of that the user used the right password (than
+        say "You're connected") or because thay decided to choose a new
+        password (than say: "choose a new password").
+        <pre id="log"></pre>
+        <script src="../../logtohtml.js"></script>
+        <script>
+            let flag = 0;
+            let realPassword = "a";
+            let userPassword;
+            do {
+            userPassword = prompt("Enter password");
+                if (realPassword !== userPassword) {
+                    // console.log("path A");
+                    let newPw = confirm("Wrong password. Want to set a new one?");
+                    flag = 1;
+                    if (newPw === true) {
+                        realPassword = prompt("Please select a new password");
+                    }
+                    // break;
+                } else if (realPassword === userPassword) {
+                    console.log("You are connected");
+                }
+                else {
+                    // console.log("path B");
+                    confirm("Want to B?")
+                    flag = 2;
+                }
+            } while (realPassword !== userPassword);
+            if (flag === 1) {
+                console.log("You set a new password");
+            } else if (flag === 2) {
+                console.log("STOP ERROR");
+            }  else if (flag === 0) {
+                console.log("Logged in successfully");
+            }
+
+
+        </script>
+    </body>
+
+</html>
