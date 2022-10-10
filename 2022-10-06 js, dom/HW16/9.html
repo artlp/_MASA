@@ -29,29 +29,21 @@
             let realPassword = "a";
             let userPassword;
             do {
-            userPassword = prompt("Enter password");
+                userPassword = prompt("Enter password");
                 if (realPassword !== userPassword) {
-                    // console.log("path A");
                     let newPw = confirm("Wrong password. Want to set a new one?");
                     flag = 1;
                     if (newPw === true) {
                         realPassword = prompt("Please select a new password");
                     }
-                    // break;
                 } else if (realPassword === userPassword) {
                     console.log("You are connected");
                 }
-                else {
-                    // console.log("path B");
-                    confirm("Want to B?")
-                    flag = 2;
-                }
+                else { }
             } while (realPassword !== userPassword);
             if (flag === 1) {
                 console.log("You set a new password");
-            } else if (flag === 2) {
-                console.log("STOP ERROR");
-            }  else if (flag === 0) {
+            } else if (flag === 0) {
                 console.log("Logged in successfully");
             }
 
