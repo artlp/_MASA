@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HW 17 level 6 DOM</title>
+        <link rel="stylesheet" href="./6DOM.css">
+    </head>
+
+    <body>
+        <section class="info" id="s6-3">
+            <p>Level 6.3
+                Создайте поле input и div.
+                Когда в input меняется число, в div
+                должна появляться сумма чисел от 1 до этого числа.
+
+                Решите задачу один раз через событие 'change',
+                а второй раз через событие 'input'. Use </p>
+            <input type="number" name="s63" id="s63input" min="1">
+            <div class="result" id="s63result"></div>
+        </section>
+        <section class="info" id="s6-4">
+            <p>
+                Level 6.4 Создайте поле input и div.
+    Когда в input меняется число, в div должно появляться 
+    произведение чисел от 1 до этого числа.
+
+    Если произведение отрицательное, div должен окраситься розовым, 
+    если неотрицательное,
+    то зеленым.
+
+    Решите задачу один раз через событие 'change',
+    а второй раз через событие 'input'</p>
+            <input type="number" name="s64" id="s64input">
+            <div class="result green" id="s64result"></div>
+        </section>
+        <section class="info" id="s6-5">
+            <p>Level 6.5. Создайте 2 поля input и div.
+                Когда в первом input меняется число, в div должен появляться список чисел от 1 до этого числа
+                через пробел.
+            
+                Если число из первого input больше, чем число из второго, div должен окраситься 
+                сиреневым, если не больше, то желтым.
+            
+                Решите задачу один раз через событие 'change',а второй раз через событие 'input'.
+            
+            Level 6.6. То же, что и 6.5, но список чисел должен идти через запятую
+            </p>
+            <label for="s66">Number to count to</label>
+            <input type="number" name="s65" id="s65input" placeholder="Enter a number" min="2">
+            <br>
+            <label for="s66">Number to compare to</label>
+            <input type="number" name="s66" id="s66input" placeholder="Enter a number" value="1">
+            <div class="result" id="s65result"></div>
+        </section>
+        <script src="./6.js"></script>
+    </body>
+
+</html>

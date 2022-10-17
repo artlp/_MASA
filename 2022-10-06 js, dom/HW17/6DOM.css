@@ -1,0 +1,36 @@
+body {
+    margin: 0 auto;
+    overflow-wrap: break-word;
+    width: 70%;
+}
+
+.info {
+    font-weight: 900;
+    padding: 20px;
+}
+.result {
+    font-size: larger;
+    padding: 5px;
+}
+
+#s6-3 {
+    background-color: darkseagreen;
+}
+#s6-4 {
+    background-color: lightsalmon;
+}
+#s6-5 {
+    background-color: palevioletred;
+}
+input:focus {
+    border: 2px solid rgb(0, 0, 0);
+    outline: 0;
+}
+
+.red {
+    color: rgb(96, 6, 6);
+}
+
+.green {
+    color:green
+}

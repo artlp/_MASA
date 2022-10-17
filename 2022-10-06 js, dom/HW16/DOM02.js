@@ -33,7 +33,6 @@ function makeLarger() {
     document.querySelector(`#boxSize`).innerText = `${purpleDiv.offsetWidth}x${purpleDiv.offsetHeight}`;
     console.log(purpleDiv.offsetWidth, purpleDiv.offsetHeight);
 }
-
 function resetBox() {
     purpleDiv.style.width = initialWidth + "px";
     purpleDiv.style.height = initialHeight + "px";

@@ -223,8 +223,8 @@ console.log(result);
 //    "Adar", 13-16 - "Purim"
 //    "Nisan", 14-21 - "Pesach"
 console.log(`5.5`);
-let day = 14;
-let month = "Adar";
+const day = 14;
+const month = "Adar";
 let cancel = true;
 do {
     switch (true) {
@@ -276,7 +276,7 @@ checkArrays(arr2);
 // If the user answers "Yes" or "No", say "Great answer!" and 
 // get out of the loop. 
 // After the loop say: "The loop has stopped"
-console.log(`5.6`);
+console.log(`5.7`);
 let answer;
 while (true) {
     answer = prompt("Enter yes or no").toLowerCase();
@@ -292,7 +292,7 @@ console.log("The loop has stopped");
 // We stop when there is no input (use parseInt to get it from prompt).
 // If the number is even, we divide it by 2 and show.
 // If the number is odd, we do nothing
-console.log(`5.7`);
+console.log(`5.8`);
 let userInput;
 while (true) {
     userInput = parseInt(prompt("Enter a number"));
@@ -310,3 +310,32 @@ while (true) {
     }
     
 }
+// Level 5.9 Ternary operator. 
+
+// Write function checkGreat() that gets firstName.
+// If the name starts with 'M' or 'G' - say 'Great!'
+// If not, say with which letter it starts.
+
+console.log(`5.9`);
+function checkGreat() {
+    let userName = prompt(`enter a name`).toLowerCase();
+    userName.charAt(0) === "m" || userName.charAt(0) === "g" ? console.log("great") : console.log(`Entered name starts with ${userName.charAt(0).toUpperCase()}`);
+    
+}
+checkGreat('Miri'); // 'Great!'
+checkGreat('Gila'); // 'Great!'
+checkGreat('Roni'); // 'R'
+
+
+// Level 5.10 Ternary operator
+// Declare variable "color" at the beginning of the program.
+// Write function colorDecision() that gets a letter.
+// Check if the letter equal 'b', return 'blue', 
+// otherwise return 'red'.
+// Use the function to assign color to the variable.
+function colorDecision(letter) {
+    return letter === `b` ? "blue" : "red"
+}
+color = colorDecision('b') // "color" equals "blue"
+color = colorDecision('d') // "color" equals "red"
+colorDecision("b");
