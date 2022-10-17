@@ -45,8 +45,6 @@ do {
     }
 
 } while (false)
-
-
 // console.log("==============OPTION 2 (ONLY WORKS IN BROWSER)==============");
 let cancel2 = true;
 do {
