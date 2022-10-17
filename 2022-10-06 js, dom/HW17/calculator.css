@@ -1,0 +1,44 @@
+body {
+    background-color: rgb(135, 135, 135);
+    font-family: 'Kanit', sans-serif;
+}
+
+.wrapper {
+    background-color: rgb(220, 238, 238);
+    padding: 5px 5%;
+    height: 96vh;
+    box-shadow: 0 3px 13px black;
+}
+
+input[type="number"] {
+    width: 7ch;
+    display: block;
+}
+
+label {
+    vertical-align: sub;
+    font-size: x-small;
+    color: rgba(0, 0, 0, 0.52);
+}
+
+input:focus {
+    outline: 0;
+    border: 2px solid black;
+}
+.black {
+    color: red;
+}
+button img {
+    width: 20px;
+    height: auto;
+    vertical-align: center;
+    padding-top: 3px;
+}
+
+.buttons {
+    margin: 15px 0;
+}
+
+.output {
+    font-size: 1.5rem;
+}
