@@ -1,0 +1,46 @@
+body {
+    background-color: mediumturquoise;
+    transition: all 1s ease;
+}
+h1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    border-radius: 20px;
+    padding: 15px 2px;
+}
+
+#change-color {
+    display: block;
+    margin: 0 auto;
+    padding: 20%;
+    transition: all 1s ease;
+    font-size: 2rem;
+    box-shadow: 0 5px 11px rgba(0, 0, 0, 0.432);
+    border-width: 2px;
+    border-radius: 20px;
+}
+
+.purple {
+    background: #D800A6;
+    color: #efc8ff;
+}
+
+.grey {
+    background: #EAEAEA;
+    color: #00ABB3;
+}
+
+.orange {
+    background: #FF884B;
+    color: #fff157;
+}
+
+.border {
+    border: 5px solid rgb(95, 199, 255);
+}
+
+.night {
+    background: black;
+    color: white;
+    border-color: white;
+}
