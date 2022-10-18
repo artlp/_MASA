@@ -81,7 +81,6 @@ function colorize(num, i) {
 
 console.log(`6.5, 6.6`);
 
-
 document.querySelector("#s65input").addEventListener(`input`, function () {
     const input = +document.querySelector(`#s65input`).value;
     const result65 = document.querySelector(`#s65result`);
@@ -96,3 +95,6 @@ document.querySelector("#s65input").addEventListener(`input`, function () {
         } else {
             result65.style.backgroundColor = "purple";
 }});
+
+let array34 = [adad, asdad, asdad, assad];
+

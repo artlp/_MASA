@@ -31,8 +31,6 @@ function divide() {
     return output.innerHTML = result;
 }
 function divideIntegers() {
-    // Math.floor(num1/num2);
-    // result = num1 % num2;
     getInput();
     return output.innerHTML = `${num1} % ${num2} is ${Math.floor(num1/num2)} and remainder is ${num1 % num2}`;
 }
