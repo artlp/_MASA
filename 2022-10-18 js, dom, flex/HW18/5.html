@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HW 18 task 5</title>
+        <style>
+            .out {
+                font-weight: 600;
+                width: 70%;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>Sheva Boom!</h1>
+        <label for="max">
+            Enter the max number from 10 to 99:
+            <input type="number" id="max" min="10" max="99">
+        </label><br><br>
+        <label for="digit">
+            Enter a digit from 2 to 9:
+            <input type="number" id="digit" min="2" max="9">
+        </label>
+        <br>
+        <button onclick="stringBoom()">Do the magic</button>
+        <h3>All the Booms:</h3>
+        <div class="out">Waiting for input</div>
+
+        <script>
+            const maxInp = document.querySelector('#max');
+            const digitInp = document.querySelector('#digit');
+            const out = document.querySelector('.out');
+
+            const stringBoom = () => {
+                let max = +maxInp.value;
+                let digit = +digitInp.value;
+                out.innerText = '';
+                for (i = 1; i <= max; i++) {
+                    if ((i % digit === 0) || (String(i).includes(digitInp.value))) {
+                        out.innerText += " " + i;
+                    }
+                };
+            }
+        </script>
+    </body>
+
+</html>

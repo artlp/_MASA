@@ -1,0 +1,34 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+h1 {
+
+}
+figure {
+    border: 1px solid rgba(99, 99, 99, 0.146);
+    box-shadow: 0 15px 10px rgba(0, 0, 0, 0.324);
+    display:flex;
+    flex-direction: column;
+    font-size: 1.4rem;
+    justify-content: center;
+    max-width: 40%;
+    padding: 2rem;
+}
+.output {
+    background-color: rgb(192, 185, 240);
+    height: 2rem;
+    padding: 0.9rem;
+    text-align: center;
+    border: 1px solid black;
+}
+
+figure button{
+    font-size: 1.4rem; 
+    padding: 1rem;
+    border: 1px solid black;
+}

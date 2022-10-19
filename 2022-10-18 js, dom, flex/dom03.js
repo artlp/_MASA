@@ -12,8 +12,6 @@ function changeColor() {
     let color = "red";
 }
 
-
-
 btnChangeColor.addEventListener("click", () => {
     let color = generateRGB();
     let textColor = generateRGB();

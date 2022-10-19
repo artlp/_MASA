@@ -1,0 +1,23 @@
+* {
+    outline: 1px solid blue;
+}
+.wrapper {
+    display:flex;
+    gap: 30px;
+}
+
+.right {
+    display:flex;
+    flex-flow: column wrap;
+}
+.left {
+    display:flex;
+    flex-flow: row no-wrap;
+    
+}
+img {
+    display:block;
+    max-width: 300px;
+    height: auto;
+    max-height: 300px;
+}

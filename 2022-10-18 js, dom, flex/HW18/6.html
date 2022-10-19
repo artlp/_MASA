@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HW18 task 6</title>
+        <style>
+            body {
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+            }
+
+            h3 {
+                text-align: center;
+            }
+
+            .wrapper {
+                display: flex;
+                gap: 20%;
+                width: 100%;
+                justify-content: space-evenly;
+            }
+
+            .trafficlight {
+                display: flex;
+                flex-flow: column nowrap;
+                width: 180px;
+                height: 500px;
+                background-color: black;
+                gap: 10px;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .trafficlight>div {
+                width: 150px;
+                height: 150px;
+                position: relative;
+                border-radius: 50%;
+            }
+
+            .red {
+                background-color: red;
+                box-shadow: 0 0 15px red;
+            }
+
+            .yellow {
+                background-color: yellow;
+                box-shadow: 0 0 15px yellow;
+            }
+
+            .green {
+                background-color: green;
+                box-shadow: 0 0 15px green;
+            }
+
+            .dim {
+                opacity: 0.2;
+            }
+
+            button {
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                font-size: 1.4rem;
+                background-color: #9FA8DA;
+                display: block;
+                margin: 20px auto;
+                width: 40%;
+                height: 90px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h3>Traffic lights</h3>
+
+        <div class="wrapper">
+            <div class="trafficlight" id="traffic1">
+                <div class="light red dim"></div>
+                <div class="light yellow dim"></div>
+                <div class="light green dim"></div>
+            </div>
+            <div class="trafficlight" id="traffic2">
+                <div class="light red dim"></div>
+                <div class="light yellow dim"></div>
+                <div class="light green dim"></div>
+            </div>
+        </div>
+
+        <button id="switcher2" onclick="changeLightsx()">Change the lights</button>
+        <button id="switcher3">Automatic mode (WIP, CAN'T STOP)</button>
+        <button id="switcher4" onclick="toggleAuto()">Automatic mode 2 (BROKEN)</button>
+        <button id="switcher" onclick="changeLights()">Invert the lights</button>
+        <script src="./6.js">
+        </script>
+    </body>
+
+</html>
