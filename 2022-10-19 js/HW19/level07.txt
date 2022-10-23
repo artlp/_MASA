@@ -1,0 +1,293 @@
+Level 7.1 Наподобие задачи Level 4.1.
+   Ваша программа получает массив
+   чисел и отдельное число.
+   Она проходит по нему циклом "forEach" и
+   увеличивает каждый элемент массива
+   на заданное число.
+   
+   Пример:
+   var arr = [-3.4, 3.7, 0, 5.6, 0.5], num = 2
+
+   Console:
+   [-1.4, 5.7, 2, 7.6, 2.5]
+
+   Пример:
+   var arr = [], num = 3
+
+   Console:
+   []
+
+   Пример:
+   var arr = [-8], num = 10
+
+   Console:
+   [2]
+ 
+   Пример:
+   var arr = [4.5, 0, 2.8, -15, -12.3], num = -2.8
+
+   Console:
+   [1.7, -2.8, 0, -17.8, -15.1]
+
+Level 7.2 Наподобие задачи Level 4.3
+   Ваша программа получает 
+   два массива одинаковой длины -
+   массив чисел и массив строчек.
+   Вычислите одним циклом "forEach" 
+   сумму всех чисел, и соедините
+   все строчки в одну.
+   
+   Пример:
+   var arrNum = [6.25, -0.36, 0, 1, -144]
+   var arrStr = ['O ','la-la, ','what ','a ','day!']
+
+   Console:
+   -137.11
+   'O la-la, what a day!'
+
+   Пример:
+   var arrNum = [-121]
+   var arrStr = ['']
+
+   Console:
+   -121
+
+Level 7.3 Используйте цикл "forEach" -
+   выводите на консоль индексы элементов.
+   Выдайте грустное сообщение, когда
+   дойдете до предпоследнего элемента,
+   и выдайте радостное сообщение,
+   когда дойдете до последнего элемента.
+   INPUT - массив, кот. состоит как 
+   минимум из 2-х элементов
+   
+   Пример:
+   var arr = [true, false, 0, 'rain']
+
+   Console:
+   0
+   1
+   2 The cake has gone
+   3 Happy hour!
+
+   Пример:
+   var arr = [7, 'Snowwhite']
+
+   Console:
+   0 The cake has gone
+   1 Happy hour!
+
+
+Level 7.4
+   а) Напишите функцию calc01, кот. получает число, 
+      добавляет к нему 3 и результат возводит в квадрат.
+   b) Запустите эту функцию для -5, 2.1, 0.
+      Output: 4, 26.01, 9
+   c) const arr1 = [-71, 0, 8, -62, -2, 512, 9, 160, -140]
+      Пройдите по массиву при помощи цикла for и запустите
+      эту функцию для каждого из чисел при помощи console.log()
+      Output: 4624
+                 9
+               121
+              3481
+                 1
+            265225
+               144
+             26569
+             18769  
+   d) Пройдите по массиву при помощи цикла forEach и запустите
+      эту функцию для каждого из чисел.
+      Output: 4624
+                 9
+               121
+              3481
+                 1
+            265225
+               144
+             26569
+             18769  
+
+Level 7.5 а) Напишите функцию calc02, кот. получает число,
+      вычисляет квадратный корень из него и округляет
+      результат до целого
+   b) Запустите функцию для 16, 0, 23, 4.5
+      Output: 4, 0, 5, 2
+   c) const arr2 = [16, 0, 23, 4.5, 50.33, 99] 
+      Пройдите по массиву при помощи цикла for и запустите
+      эту функцию для каждого из чисел при помощи console.log()
+      Output:  4
+               0
+               5
+               2
+               7
+              10
+   d) Пройдите по массиву при помощи цикла forEach и запустите
+      эту функцию для каждого из чисел.
+      Output:  4
+               0
+               5
+               2
+               7
+              10
+   e) const arr2 = [16, 0, 23, 4.5, 50.33, -3, 99] 
+      Пройдите по массиву при помощи цикла while или do while и запустите эту функцию для каждого из чисел.
+      Остановите цикл, когда он дойдёт до отрицательного числа.
+      Output:  4
+               0
+               5
+               2
+               7
+
+Level 7.6 а) Напишите функцию calc3(), кот. получает 2 числа 
+      и умножает их сумму на их разность
+   b) Запустите эту функцию для нескольких пар параметров:
+      73 и 18
+      0 и -6
+      -11.34 и 121
+      Output:
+       5005
+        -36
+      15835.8044
+   c) Напишите функцию calc4(), кот. получает имя и 2 числа
+      и запускает функцию calc3() так, чтобы получилась
+      надпись вроде "John, 73 + 18 multiplied by 73 - 18 are 5005"
+   d) Запустите функцию calc4() для следующих троек параметров:
+      "John", 73, 18
+      "Mike", 0, -6
+      "Lisa", -11.34, 121
+      "Jane", 4, 12
+      Output: 
+      "John, 73 + 18 multiplied by 73 - 18 are 5005"
+      "Mike, 0 + -6 multiplied by 73 - -6 are -36"
+      "Lisa, -11.34 + 121 multiplied by -11.34 - 121 are 15835.8044"
+      "Jane, 4 + 12 multiplied by 4 - 12 are -128"
+   е) Даны 3 массива:
+      const arr3 = [73,0,335,-11.34,4,0,4032]
+      const arr4 = [18,-6,335,121,12,0,3999]
+      const names1 = ["John","Mike","Mary","Lisa","Jane","David","Ann"]
+      Пройдите по всем трем массивам при помощи одного общего цикла for и запустите функцию calc4(), используя на каждом шаге цикла, соответствующие по индексу числа и имя
+      Output:
+      "John, 73 + 18 multiplied by 73 - 18 are 5005"
+      "Mike, 0 + -6 multiplied by 73 - -6 are -36"
+      "Mary, 335 + 335 multiplied by 335 - 335 are 0"
+      "Lisa, -11.34 + 121 multiplied by -11.34 - 121 are 15835.8044"
+      "Jane, 4 + 12 multiplied by 4 - 12 are -128"
+      "David, 0 + 0 multiplied by 0 - 0 are 0"
+      "Ann, 4032 + 3999 multiplied by 4032 - 3999 are 265023"
+   f) Даны 3 массива:
+      const arr3 = [73,0,335,-11.34,4,0,4032]
+      const arr4 = [18,-6,335,121,12,0,3999]
+      const names1 = ["John","Mike","Mary","Lisa","Jane","David","Ann"]
+      Пройдите по одному из массивов припомощи forEach, используйте индекс, чтобы одновременно в том же цикле обратиться к соответствующим элементам двух других массивов и запустите функцию calc4()
+      Output:
+      "John, 73 + 18 multiplied by 73 - 18 are 5005"
+      "Mike, 0 + -6 multiplied by 73 - -6 are -36"
+      "Mary, 335 + 335 multiplied by 335 - 335 are 0"
+      "Lisa, -11.34 + 121 multiplied by -11.34 - 121 are 15835.8044"
+      "Jane, 4 + 12 multiplied by 4 - 12 are -128"
+      "David, 0 + 0 multiplied by 0 - 0 are 0"
+      "Ann, 4032 + 3999 multiplied by 4032 - 3999 are 265023"
+   g) Даны 3 массива:
+      const arr3 = [73,0,335,-11.34,4,0,4032]
+      const arr4 = [18,-6,335,121,12,0,3999]
+      const names2 = ["John","Mike","Mary","Lisa","Jane","David","Margaret"]
+      Пройдите по всем трем массивам при помощи одного общего цикла while или do while и запустите функцию calc4(), используя на каждом шаге цикла, соответствующие по индексу числа и имя. Остановите выполнение цикла, если
+      имя будет длиннее, чем 5 букв.
+      Output:
+      "John, 73 + 18 multiplied by 73 - 18 are 5005"
+      "Mike, 0 + -6 multiplied by 73 - -6 are -36"
+      "Mary, 335 + 335 multiplied by 335 - 335 are 0"
+      "Lisa, -11.34 + 121 multiplied by -11.34 - 121 are 15835.8044"
+      "Jane, 4 + 12 multiplied by 4 - 12 are -128"
+      "David, 0 + 0 multiplied by 0 - 0 are 0"
+   h) Поменяйте в предыдущем задании массив names2 
+      на массив names1. Убедитесь, что результат получается верный
+      Output:
+      "John, 73 + 18 multiplied by 73 - 18 are 5005"
+      "Mike, 0 + -6 multiplied by 73 - -6 are -36"
+      "Mary, 335 + 335 multiplied by 335 - 335 are 0"
+      "Lisa, -11.34 + 121 multiplied by -11.34 - 121 are 15835.8044"
+      "Jane, 4 + 12 multiplied by 4 - 12 are -128"
+      "David, 0 + 0 multiplied by 0 - 0 are 0"
+      "Ann, 4032 + 3999 multiplied by 4032 - 3999 are 265023"
+      
+Level 7.7 а) Напишите функцию makeInitials(), кот. получает имя 
+      и фамилию, напр. "jennifer", "lopez", берет от них первые буквы, переводит в верхний регистр и ставит после каждой буквы точку. Для "jennifer", "lopez" output "J.L."
+   b) Запустите эту функцию для нескольких пар параметров:
+      "jennifer", "lopez"
+      "mike","Myers"
+      "Antony","hopkins"
+      Output:
+       "J.L."
+       "M.M."
+       "A.H."
+   c) Напишите функцию addTitle(), кот. получает имя, фамилию 
+      и обращение и запускает функцию makeInitials() так, чтобы получилoсь обращение вроде "Ms J.L."
+   d) Запустите функцию addTitle() для следующих троек 
+      параметров:
+      "jennifer", "lopez", "Ms"
+      "mike","Myers", "Mr"
+      "Julia","Roberts","Ms"
+      "Antony","hopkins", "Mr"
+      Output:
+       "Ms J.L."
+       "Mr M.M."
+       "Ms J.R."
+       "Mr A.H."
+
+   е) Даны 3 массива:
+      const firstNames1 = ["jennifer","mike","alec","Julia","Antony","Judy"]
+      const lastNames1 = ["lopez","Myers","Boldwin","Roberts","hopkins","Foster"]
+      const titles1 = ["Ms","Mr","Mr","Ms","Mr","Ms"]
+      Пройдите по всем трем массивам при помощи одного общего цикла for и запустите функцию addTitle(), используя на каждом шаге цикла, соответствующие по индексу имя, фамилию и обращение
+      Output:
+       "Ms J.L."
+       "Mr M.M."
+       "Mr A.B."
+       "Ms J.R."
+       "Mr A.H."
+       "Ms J.F."
+
+   f) Даны 3 массива:
+      const firstNames1 = ["jennifer","mike","alec","Julia","Antony","Judy"]
+      const lastNames1 = ["lopez","Myers","Boldwin","Roberts","hopkins","Foster"]
+      const titles1 = ["Ms","Mr","Mr","Ms","Mr","Ms"]
+
+      Пройдите по одному из массивов припомощи forEach, используйте индекс, чтобы одновременно в том же цикле обратиться к соответствующим элементам двух других массивов и запустите функцию addTitle()
+      Output:
+       "Ms J.L."
+       "Mr M.M."
+       "Mr A.B."
+       "Ms J.R."
+       "Mr A.H."
+       "Ms J.F."
+
+   g) Даны 3 массива:
+      const firstNames1 = ["jennifer","mike","alec","Julia","Antony","Judy"]
+      const lastNames1 = ["lopez","Myers","Boldwin","Roberts","hopkins","Foster"]
+      const titles1 = ["Ms","Mr","Mr","Ms","Mr","Ms"]
+      
+      Пройдите по всем трем массивам при помощи одного общего цикла while или do while и запустите функцию calc4(), используя на каждом шаге цикла, соответствующие по индексу числа и имя. Остановите выполнение цикла, если
+      имя будет длиннее, чем 5 букв.
+      Output:
+      "John, 73 + 18 multiplied by 73 - 18 are 5005"
+      "Mike, 0 + -6 multiplied by 73 - -6 are -36"
+      "Mary, 335 + 335 multiplied by 335 - 335 are 0"
+      "Lisa, -11.34 + 121 multiplied by -11.34 - 121 are 15835.8044"
+      "Jane, 4 + 12 multiplied by 4 - 12 are -128"
+      "David, 0 + 0 multiplied by 0 - 0 are 0"
+   h) Поменяйте в предыдущем задании массив names2 
+      на массив names1. Убедитесь, что результат получается верный
+      Output:
+      "John, 73 + 18 multiplied by 73 - 18 are 5005"
+      "Mike, 0 + -6 multiplied by 73 - -6 are -36"
+      "Mary, 335 + 335 multiplied by 335 - 335 are 0"
+      "Lisa, -11.34 + 121 multiplied by -11.34 - 121 are 15835.8044"
+      "Jane, 4 + 12 multiplied by 4 - 12 are -128"
+      "David, 0 + 0 multiplied by 0 - 0 are 0"
+      "Ann, 4032 + 3999 multiplied by 4032 - 3999 are 265023"
+      
+
+
+
+

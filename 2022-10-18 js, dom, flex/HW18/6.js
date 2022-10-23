@@ -1,3 +1,5 @@
+//TODO
+
 const trafficLight = document.querySelectorAll('.trafficlight');
 const trafficLight1 = document.querySelector('#traffic1');
 const trafficLight2 = document.querySelector('#traffic2');

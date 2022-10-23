@@ -1,0 +1,92 @@
+1. 2 (not optional) or 3 (optional) Modes
+
+   Mode 1: -- user inputs min (optional) and max
+           -- machine "thinks about number"  
+              between min and max
+           -- player enters a number,
+              the machine answers if it should be
+              greater or smaller or if it is the win
+
+            -- Validation!
+            -- "Start Again" button
+               (Some "init" or "initialization" function)  
+
+   Mode 2: -- input min, max
+           -- the player "thinks about number"  
+              between min and max
+           -- machine shows the first guess
+           -- the player answers if the number
+              should be greater or smaller or
+              it is a win
+           -- machine continues with the algorithm
+              of the binary guessing
+           -- the player continues to answer, until
+              the machine guesses
+
+(Development strategy for math algorithms: start from really small numbers, it means "max" could be 20, 10, 3, 1)
+
+Binary guessing algorithm
+
+Example of binary guessing (algorithm!) - from the machine
+point of view
+-----------------------------------------------------------------------
+
+min = 1, max = 100, middle = Math.ceil((max - min + 1) / 2) + min - 1  = 50     
+the answer is : the number is smaller
+
+min = 1, max = middle - 1 = 49, middle = Math.ceil((max - min + 1) / 2) + min - 1 = 25
+the answer is : the number is bigger
+
+min = middle + 1 = 26, max = 49, middle = Math.ceil((max - min + 1) / 2) + min - 1
+
+26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 // even amount of numbers
+                              37  or 38 
+
+
+26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 // odd amount of numbers
+                                 37
+
+Ensure that the furmula is OK!!!!!!!! Check some other ranges
+
+min = middle + 1 = 26, max = 49, middle = Math.ceil((max - min + 1) / 2) + min - 1 = 37
+the answer is : the number is smaller
+
+min = 26, max = middle - 1 = 36, middle = Math.ceil((max - min + 1) / 2) + min - 1 = 31
+the answer is : the number is bigger
+
+min = middle + 1 = 32, max = 36, middle = Math.ceil((36-32+1)/2)+32-1 = 34
+the answer is : the number is smaller
+
+min = 32, max = middle - 1 = 33, middle = Math.ceil((33-32+1)/2)+32-1 = 32
+the answer is : the number is bigger
+
+min = middle + 1 = 33, max = 33, middle = Math.ceil((33-33+1)/2)+33-1 = 33
+
+
+
+
+
+
+
+
+
+
+
+
+
+For example, number from 1 to 100 (including)
+50      44!      Binary: 50 - needs middle (1+100)/2, round? floor? ceil?
+                             after each player reaction Max or Min is changed (now Max is 49)
+84                       25 - now min is 26
+81                       37
+83                       31
+82!                      28
+-----------              29!
+             -------------------------------------------
+Mode 3 (optional) - both players are human
+Mode 4 (optional) - more than 2 players
+
+For different modes - use common functions if possible.
+
+The screen should give the player the option to choose between the modes
+

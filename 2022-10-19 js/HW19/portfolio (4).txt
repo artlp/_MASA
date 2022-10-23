@@ -1,0 +1,29 @@
+*********** What should be in PORTFOLIO ******
+
+1. about me + CV
+2. project list
+ 
+    link to the project 
+    short description
+    which technologies used (and algorithms, idea)
+    if it was done by team, with whom
+
+3. optional: some page/gallery about my hobbies, or demonstrating my hobbies
+4. optional: some WOW effect
+
+**************** MISSION ******************
+1. Get inspiration, look at the existing portfolios
+
+google for "web developer portfolio examples"
+
+2. Get a pan and a paper (or any app that you like)
+
+and draw your future portfolio and get decisions about 
+
+the look, the connections, the content
+
+3. Initial HTML (and may be some CSS of the portfolio)
+
+4. To be continued ...
+
+

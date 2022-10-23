@@ -1,0 +1,179 @@
+0. For FUN. Styling challenge.
+   Create poster like nobody-s-perfect-porsche.jpg.
+   Use some loop to create all the 1st .., 2nd .. etc.
+   entries.
+
+1. Start working on binary-guessing project.
+   Finish Mode1.
+
+2. flex-mission01.html and flex-mission01.css
+   (in the previous the css file was missing, but if you already have 
+   it done with your own CSS - it's great).
+   Use only the flex container properties to make any two different layouts
+   in the .left and in the .right.
+   Example: flex-mission01.png 
+
+3. flex-mission02.html and flex-mission02.css
+   Use only the flex container properties to make the layout
+   like in flex-mission02.png
+   
+4. DOM - training.
+
+   i. Pizzas.
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 2rem;
+        }
+
+        input {
+            font-size: 1.5rem;
+            padding: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+   <label for="pizza-num">We order
+        <input type="number" name="" id="pizza-num">
+        pizzas
+   </label>  
+
+   <label for="people-num">for
+        <input type="number" name="" id="people-num">
+        people.
+   </label>
+
+   <p class="output">So, each person gets <span></span> pizzas</p>
+
+   <script src='./js/pizzas.js'></script>
+</body>
+</html>
+
+        a) create 2 variables for the inputs and a variable for the <span> inside .output
+
+        b) create a function (arrow or regular) which
+            - gets the number of ordered pizzas
+            - gets the number of people from the input 
+            - calculates the number of pizzas per person
+            - puts this value into the innerText of the span 
+        
+        c) add a listener on the 'input' event on one of the inputs
+           and a listener on the 'change' event on the second input.
+           Both listeners should use the same function
+
+ii. Aspect ratio. 
+
+   a) Add listeners to all the 4 inputs
+   b) If ratio-width is changed, the width should change to keep 
+      the same ratio width
+
+      For example: 
+         ratio-width was 16, ratio-height was 9
+         width was 1280, height was 720
+
+         let's say, ratio-width is changed to 10
+         width should change to 720/9*10 (height / ratio-height * ratio-width)
+    
+   c) if ratio-height is changed, it affects height 
+   d) If the width is changed, the ratio is the same, but the height shoud change
+   e) If the height is changed, the ratio is the same, 
+      but the width shoud change too
+
+iii. Triangles (one loop for each triangle! not a loop inside a loop)
+
+   Input a number of triangle rows. On "input" or "change"
+   draw triangle like in the example of 5 rows:
+   
+   On "input" or "change"
+   
+   1
+   1 2
+   1 2 3
+   1 2 3 4
+   1 2 3 4 5
+
+   and
+   
+   1 2 3 4 5
+   1 2 3 4
+   1 2 3
+   1 2
+   1
+
+   and
+   
+   5 4 3 2 1
+   5 4 3 2
+   5 4 3
+   5 4
+   5
+
+   Create at *.css class ".bigger" that gives larger sizes to the div
+   and the font.
+   On "mouseover" over the triangle, class ".bigger" should be added.
+   On "mouseout" it should be removed.
+
+5. Tails and Heads. Mission from the file tails-and-heads-mission.html.
+
+6. Use addEventListener for the event mouseover in the way,
+   that when the cursor goes over DIV, this DIV shows some text.
+
+   CHALLENGE1: There are several samples of text in array,
+   and each time we see in the DIV some random text.
+
+   CHALLENGE2: There are several samples of text in array,
+   and each time we see in the DIV the next (not random!) text - 
+   according to it's order in the array.
+
+7. Guessing game.
+
+   const animals = ['mouse','dragon','fly', 'parrot','rat','cat','dog','wolf','fox'];
+
+   Show the list of the animals in the screen.
+   When the user clicks the button "play"
+   run the function that randomly choses one of the animals.
+   Show question like: "I thought about one animals from the list. Guess which?"
+
+   The user should write his guess in the input and click the button "Guess".
+
+   If the guess is wrong, change color of something in the screen 
+   to some random grey color (reminder: the colors are grey when the values 
+   of r g and b in rgb() are the same, like rgb(10,10,10)),
+   
+   if the guess is right, change color of something in the screen
+   to some random color and remove the listener from the "guess" button.
+
+
+   Challenges: 
+     - keep score
+     - allow the user to play several times, for example by 
+       removing the listener from the "play" button when the user should guess
+       an animal and adding it again when the machine should choose new animal
+     - when the user guesses an animal, show it's picture
+
+8. forEach training 
+
+   const foods = ['pizza','falafel','paSTa','sandwich','saLAt','hummus','soup'];
+   const drinks = ['beer','water','coFFEe','tee','milk','juICe','cola'];
+
+   a) Use forEach(), go over the array "drinks" and concatenate all it's elements into one string,
+      like this: 'beer, water, coffee ....'
+
+   b) Create function, avgOfArr(), that gets an array 
+       of numbers, calculates it's average (using forEach()) and rounds it to 2 digits after a dot.
+
+   c) Go over "foods". If the index is odd, show only 3 first characters of the food, otherwise - the whole food
+
+   d) Go over "foods" and capitalize all the foods.
+      Now the array "foods"  should look like: ['Pizza','Pasta','Falafel', ...]
+      IMPORTANT: use the third parameter that forEach passes to it's callback function
+
+9. More training? forEach(), etc.: level07.txt!   

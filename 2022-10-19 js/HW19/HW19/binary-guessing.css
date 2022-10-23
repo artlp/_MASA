@@ -1,0 +1,49 @@
+* {
+    font-family: 'Exo 2', sans-serif;
+    margin: 0;
+    padding: 0;
+
+}
+h1, h2 {
+    background-color: #303F9F;
+    color: #E3F2FD;
+    font-family: 'Work Sans', sans-serif;    
+    padding:5%;
+}
+h1 {
+    padding:60px;
+    text-align: center;
+    text-transform: uppercase;
+}
+h2 {
+    border-radius: 8px;
+}
+section {
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.279);
+    display:flex;
+    flex-flow: column wrap;
+    gap: 6px;
+    padding: 25px;
+    width: 300px;
+}
+
+.wrapper {
+    display:flex;
+    flex-flow: row wrap;
+    gap: 100px;
+    padding: 10px
+
+}
+
+button {
+    background-color: #303F9F;  
+    border: 1px solid transparent;
+    color: #E3F2FD;
+    padding: 4px 0;
+}
+
+button:hover {
+    background-color: #5f71e7;
+    cursor:pointer;
+}

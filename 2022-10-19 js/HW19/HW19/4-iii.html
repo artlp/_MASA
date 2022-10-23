@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            .bigger {
+                font-size: 26px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <p>iii. Triangles (one loop for each triangle! not a loop inside a loop)
+
+            Input a number of triangle rows. On "input" or "change"
+            draw triangle like in the example of 5 rows:
+
+            On "input" or "change"
+            <br>
+            1 <br>
+            1 2 <br>
+            1 2 3 <br>
+            1 2 3 4 <br>
+            1 2 3 4 5 <br>
+            <br>
+            and <br>
+            <br>
+            1 2 3 4 5 <br>
+            1 2 3 4 <br>
+            1 2 3 <br>
+            1 2 <br>
+            1 <br>
+            <br>
+            and <br>
+            <br>
+            5 4 3 2 1 <br>
+            5 4 3 2 <br>
+            5 4 3 <br>
+            5 4 <br>
+            5 <br>
+
+            Create at *.css class ".bigger" that gives larger sizes to the div
+            and the font.
+            On "mouseover" over the triangle, class ".bigger" should be added.
+            On "mouseout" it should be removed.
+        </p>
+        <input type="number" name="" id="main"><br>
+        <div class="triangles">
+            <p class="output1"></p>
+            <p class="output2"></p>
+            <p class="output3"></p>
+        </div>
+        <script>
+            const output1 = document.querySelector('.output1');
+            const output2 = document.querySelector('.output2');
+            const output3 = document.querySelector('.output3');
+            let number;
+            let array1 = [];
+            let array2 = [];
+            let array3 = [];
+            let x = 1;
+            document.querySelector('#main').addEventListener('change', function () {
+                output1.innerHTML = "";
+                output2.innerHTML = "";
+                output3.innerHTML = "";
+                number = +document.querySelector('#main').value;
+                for (i = 1; i <= number; i++) {
+                    array1.push(i);
+                    output1.innerHTML += `${array1.join(' ')} <br>`;
+                }
+
+                while (x <= number + 1) {
+                    array2.push(x);
+                    array3.unshift(x);
+                    x++;
+                };
+
+                for (i = 0; i <= number; i++) {
+                    array2.pop();
+                    output2.innerHTML += `${array2.join(` `)} <br>`;
+                }
+
+
+                for (i = number; i >= 0; i--) {
+                    array3.shift();
+                    output3.innerHTML += `${array3.join(` `)} <br>`;
+                }
+
+                array1 = [];
+                array2 = [];
+                array3 = [];
+
+            });
+
+            document.querySelector('.triangles').addEventListener('mouseover', function() {document.querySelector('.triangles').classList.add("bigger")});
+            document.querySelector('.triangles').addEventListener('mouseout', function() {document.querySelector('.triangles').classList.remove("bigger")});
+        </script>
+    </body>
+
+</html>
