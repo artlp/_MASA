@@ -36,3 +36,21 @@ numbers.forEach((_e, i) => {
 
 });
 console.log(numbers);
+
+
+const nums = [[1,2,5,6,107.1], [0,4,5], [2.3,4.5,0.1,345],[23,4,5,6,7]];
+const nums2 = [[1,1,1,1,1], [3,0,2], [5,5],[1,1,1,1,1,1,1,1,1,1]];
+//! MISSION - FIND SUM OF ALL NUMBERS
+let sum = 0;
+
+function sumOfAll(array) {
+    sum=0;
+array.forEach((e,i,array) => {
+    e.forEach((x,j) => {
+        sum += x;
+    });
+});
+return sum;
+}
+console.log(sumOfAll(nums) + ", " + sumOfAll(nums2));
+// sumOfAll(nums2);

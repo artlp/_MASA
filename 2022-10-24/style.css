@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    background: #f7e4be;
+    font-size: 40px;
+    font-family: monospace;
+}
+
+.container {
+    width: 70%;
+    height: 50vh;
+    margin: 10% auto;
+    background: #f0b49e;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.game {
+    width: 70%;
+    height: 40vh;
+    background: #b38184;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    color: #f7e4be;
+}
+

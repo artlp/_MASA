@@ -29,8 +29,7 @@ const mode3Output = document.querySelector('#mode3_output');
 const mode3Player = document.querySelectorAll('.mode3_players');
 const mode3Game = document.querySelector('.mode3_game');
 const mode3PlayerGuess = document.querySelector('#mode3_playerGuess');
-const mode3GuessLabel = document.querySelector("#mode3_guess_label");
-const refreshButton = document.querySelector('.refresh');
+const reloadButton = document.querySelector('.refresh');
 
 
 let min, min2, min3;
@@ -40,33 +39,30 @@ let numberGenerated = 0;
 let numberGenerated2 = 0;
 let numberGenerated3 = 0;
 let randomNumber, randomNumber2, randomNumber3;
-let gameStarted = 0;
 
-refreshButton.addEventListener(`click`, () => {
+reloadButton.addEventListener(`click`, () => {
     location.reload();
     return false;
 });
 
 
 document.addEventListener("DOMContentLoaded", () => {
-    refreshButton.classList.add("disabled");
+    reloadButton.classList.add("disabled");
     document.querySelector(".wrapper").classList.add("disabled");
     document.querySelectorAll("section").forEach(e => { e.classList.add("disabled"); });
-    // document.querySelector(".wrapper").classList.add("disabled");
-    // document.querySelector(".wrapper").classList.add("disabled");
 });
 
 // intro
 
 gameMode1.addEventListener('click', event => {
-    refreshButton.classList.remove("disabled");
+    reloadButton.classList.remove("disabled");
     document.querySelector(".intro").classList.add("disabled");
     document.querySelectorAll("section")[0].classList.remove("disabled");
     document.querySelector(".wrapper").classList.remove("disabled");
 }
 );
 gameMode2.addEventListener('click', event => {
-    refreshButton.classList.remove("disabled");
+    reloadButton.classList.remove("disabled");
 
     document.querySelector(".intro").classList.add("disabled");
     document.querySelectorAll("section")[1].classList.remove("disabled");
@@ -74,7 +70,7 @@ gameMode2.addEventListener('click', event => {
 }
 );
 gameMode3.addEventListener('click', event => {
-    refreshButton.classList.remove("disabled");
+    reloadButton.classList.remove("disabled");
 
     document.querySelector(".intro").classList.add("disabled");
     document.querySelectorAll("section")[2].classList.remove("disabled");
@@ -82,7 +78,7 @@ gameMode3.addEventListener('click', event => {
 }
 );
 gameMode4.addEventListener('click', event => {
-    refreshButton.classList.remove("disabled");
+    reloadButton.classList.remove("disabled");
     document.querySelector(".intro").classList.add("disabled");
     document.querySelectorAll("section").forEach(e => { e.classList.remove("disabled"); }); document.querySelector(".wrapper").classList.remove("disabled");
 }
