@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:wght@600&display=swap"
+            rel="stylesheet">
+        <title>Guess the number game</title>
+
+        <link rel="stylesheet" href="./guessthenumber.css">
+    </head>
+
+    <body>
+        <div class="intro">
+            <h1> GUESS THE NUMBER GAME
+                <br>
+                <sub>CHOOSE YOUR GAME MODE</sub>
+            </h1>
+
+            <div class="intro_wrapper">
+                <button id="gamemode1">I want to guess computer's number!</button>
+                <button id="gamemode2">I want computer to guess my number!</button>
+                <button id="gamemode3">I want to play against another human!</button>
+                <button id="gamemode4">Let me play all 3 modes at once!</button>
+            </div>
+        </div>
+
+        <h1>GUESS THE NUMBER GAME</h1>
+        <span class="refresh">⟵ back to game mode selection</span>
+
+        <div class="wrapper">
+            <section class="mode1">
+                <h2>Player guesses the number</h2>
+                <label for="mode1_min">Enter min</label>
+                <input type="number" name="" id="mode1_min" min="1" max="999" placeholder="1-999">
+                <label for="mode1_max">Enter max</label>
+                <input type="number" name="" id="mode1_max" min="1" max="999" placeholder="1-999">
+                <label for="mode1_guess">Enter guess</label>
+                <input type="number" name="" id="mode1_guess" min="1" max="999" placeholder="1-999">
+                <button id="mode1_play">PLAY</button>
+
+                <p id="mode1_output">Enter the range and your guess</p>
+                <button id="mode1_reset">RESET</button>
+            </section>
+            <section class="mode2">
+                <h2>Computer guesses the number</h2>
+                <label for="mode2_min">Enter min</label>
+                <input type="number" name="" id="mode2_min" min="1" max="999" placeholder="1-999">
+                <label for="mode2_max">Enter max</label>
+                <input type="number" name="" id="mode2_max" min="1" max="999" placeholder="1-999">
+                <label for="mode2_guess">Enter your number</label>
+                <input type="number" name="" id="mode2_guess" min="1" max="999" placeholder="1-999">
+                <button id="mode2_play">PLAY</button>
+                <p id="mode2_output">Enter the range and your number</p>
+                <button id="mode2_lower">My number is lower</button>
+                <button id="mode2_higher">My number is higher</button>
+                <button id="mode2_correct">Computer guessed my number</button>
+                <button id="mode2_reset">RESET</button>
+            </section>
+            <section class="mode3">
+                <h2>Two players</h2>
+                <label for="mode3_min">Enter min</label>
+                <input type="number" name="" id="mode3_min" min="1" max="999" placeholder="1-999">
+                <label for="mode3_max">Enter max</label>
+                <input type="number" name="" id="mode3_max" min="1" max="999" placeholder="1-999">
+                <fieldset class="radio_buttons">
+                    <legend>Who thinks of the number?</legend>
+                    <input type="radio" class="mode3_players" name="mode3_players" value="Player 1">
+                    <label for="mode3_player1">Player 1</label>
+                    <input type="radio" class="mode3_players" name="mode3_players" value="Player 2">
+                    <label for="mode3_player2">Player 2</label>
+                </fieldset>
+
+                <label for="mode3_guess" id="mode3_start">Select the player</label>
+                <input type="number" name="" id="mode3_guess" min="1" max="999" placeholder="">
+                <button id="mode3_play">PLAY</button>
+                <p id="mode3_output">Enter the range and your number</p>
+                <div class="mode3_game hidden">
+                    <label id="mode3_guess_label" for="mode3_playerGuess">Guess the number</label>
+                    <input type="number" name="" id="mode3_playerGuess" min="1" max="999">
+                    <button id="mode3_check">CHECK</button>
+                </div>
+                <button id="mode3_reset">RESET</button>
+            </section>
+            <!-- <section class="mode4">
+                <h2>mode 4 - multiplayer</h2>
+            </section> -->
+        </div>
+
+        <script src="./guessthenumber.js"></script>
+    </body>
+
+</html>
+
+<!-- TODO -->
