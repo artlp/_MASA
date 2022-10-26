@@ -1,0 +1,61 @@
+1. Continue working on binary-guessing project.
+   Start Mode2 (till 26.10.2022).
+
+2. css-explanator project (till 30.10.2022).
+   First steps: Choose CSS properties to explain 
+   and divide css-explanator.html into 4 parts.
+   The example is at css-explanator-example.png 
+
+3. Square. Loop inside loop. Get n - size of the square. 
+   Create a number square. For example, for n = 4, the square should be:
+
+   1  2  3  4
+   2  4  6  8
+   3  6  9 12
+   4  8 12 16
+
+4. Create multiplication table from 1 to 10.
+   Loop inside loop. 
+
+   a) like mult-tab-ex02.png 
+
+   b) like mult-tab-ex03.png 
+
+5. loop inside loop 
+   DO WHILE or WHILE. 
+   const countries = ['Israel','Spain','Great Britain','Hungary','Egypt','Lebanon']
+   const capitals = ['Jerusalem','Madrid','London','Budapest','Cairo','Beirut']
+
+   Show the player the country names one by one. He should answer the name
+   of the capital of the country. Stop when you get the right answer.
+
+6. map()
+    const numAr1 = [4.5, 64, 1024, 81, 10000, 3.1];
+    a) Create array of square roots of numAr1 
+
+    b) In the same map() loop create array of square roots of numAr1 and
+       array of squares of numAr1 (for one of them you use map, 
+       for the second - the usual push())
+
+    c) Create array numAr2 which elements are constructed from
+       the elements of numAr1 minus their index
+
+7. Floyd triangle. Challenge. Input: how many rows should contain the triangle.
+   The triangle should consist of sequential numbers.
+   For example, if the input is 5, the triangle:
+   1
+   2  3
+   4  5  6
+   7  8  9  10
+   11 12 13 14 15
+
+   Use anonymous function definition as callback inside 
+   the addEventListener function.
+
+
+
+
+
+
+
+

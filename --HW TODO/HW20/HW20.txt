@@ -1,0 +1,11 @@
+1. Finish HW18 and HW19
+
+2. For fun and glory. Flex-froggy
+   https://flexboxfroggy.com/#ru
+   
+3. back-mission.html and back-mission.css
+   (in the previous the css file was missing). 
+   Add the tree with the owl twice: 
+    1st time - using several background properties,
+    2nd time - using background shorthand property
+

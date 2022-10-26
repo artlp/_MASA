@@ -1,0 +1,22 @@
+1. forEach() inside map(). 
+
+   const numAr = [[-7.65, 1.8, 34.5, -0.44], [1023, 55, -3.45, 1.2, 0.2], 
+                  [0.01, 0.03, -0.05, 88.1, 0.2], [2034, 3.01], [166],
+                  [-166, -5.4, -76]]
+
+   Go over numAr elements and sum all their numbers. 
+   Create new array of these sums.
+
+2. Continue working on binary-guessing project.
+   Mode1 and Mode2 (till 26.10.2022).
+
+3. css-explanator project (till 30.10.2022).
+   The example is at css-explanator-example.png 
+
+4. Finish the 1st mode of Nim Game project 
+   Tomorrow we're making Mode2
+
+5. Finish all the previous homework
+
+
+

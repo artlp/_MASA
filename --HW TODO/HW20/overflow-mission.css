@@ -1,0 +1,47 @@
+body {
+    display: flex;
+    flex-wrap: wrap;
+}
+  
+  div {
+    margin: 1em;
+    font-size: 1.2em;
+  }
+  
+  p {
+    width: 8em;
+    height: 5em;
+    border: dotted;
+  }
+
+  img[src="./img/lion.jpg"] {
+      height: 6em;
+  }
+  
+  p.visible {
+    overflow: visible;
+  }
+  
+  p.hidden {
+    overflow: hidden;
+  }
+  
+  p.scroll {
+    overflow: scroll;
+  }
+  
+  p.auto {
+    overflow: auto;
+  }
+
+  .overflow-x-hidden {
+      overflow-x: hidden;
+  }
+  .overflow-y-hidden {
+      overflow-y: hidden;
+  }
+
+.overflow-x-scroll-y-hidden {
+    overflow: scroll hidden;
+}
+
