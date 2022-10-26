@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Multiplication table</title>
+        <style>
+            * {
+                font-family: monospace;
+            }
+            .output {
+                font-size: 18px;
+                line-height: 2px;
+                width:fit-content;
+                padding: 12px 0 0 9px;
+                border: 3px solid grey;
+                background-color: #FFD54F;
+            }
+            span:hover {
+                font-weight: 1000;
+                cursor:default;
+                background-color: black;
+                color: white;
+            }
+            hr {
+                border: none;
+                border-bottom: 1.5px solid black;
+                /* border-color: black; */
+            }
+        </style>
+    </head>
+
+    <body>
+        <p>4. Create multiplication table from 1 to 10.
+            Loop inside loop. 
+        </p>
+
+        <section class="output">
+
+        </section>
+        <script>
+            const output = document.querySelector('.output');
+            let n = 10;
+            function drawSquare() {
+                output.innerHTML = "";
+                for (i = 1; i <= n; i++) {
+                    output.innerHTML += `<span>${(i.toString()).padEnd(5,'\xa0')}</span> | `;
+                    for (j = 1; j <= n; j++) {
+                        if (j < n) {
+                        output.innerHTML += `<span> ${(i*(j+1)).toString().padEnd(4, '\xa0')}</span>| `;
+                    } else {
+                        output.innerHTML += `<br> <hr>`;
+                    }}
+                }
+            }
+            drawSquare();
+        </script>
+    </body>
+
+</html>

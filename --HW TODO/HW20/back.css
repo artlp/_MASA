@@ -2,7 +2,7 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
     flex-wrap: wrap;
-    background-image: url("../img/bg/bg-colorful-diagonal-floral-tiles.jpg");
+    background-image: url("./bg/bg-colorful-diagonal-floral-tiles.jpg");
 }
 
 article {
@@ -24,18 +24,18 @@ article > div {
 }
 
 .back-above-back {
-    background-image: url(../img/bg/green-grass-smaller.png),
-                      url(../img/bg/chandelier.jpeg);
+    background-image: url(./bg/green-grass-smaller.png),
+                      url(./bg/chandelier.jpeg);
 
     background-size: contain;
 }
 
 .back-cover {
-    background-image: url(../img/bg/tiger.jpg);
+    background-image: url(./bg/tiger.jpg);
     background-size: cover;
 }
 .back-contain {
-    background-image: url(../img/bg/tiger.jpg);
+    background-image: url(./bg/tiger.jpg);
     background-size: contain;
 }
 .norepeat {
@@ -50,16 +50,16 @@ article > div {
 }
 
 .back-size69 {
-    background-image: url(../img/bg/chandelier.jpeg);
+    background-image: url(./bg/chandelier.jpeg);
     background-size: 69px;
 }
 .back-size34 {
-    background-image: url(../img/bg/chandelier.jpeg);
+    background-image: url(./bg/chandelier.jpeg);
     background-size: 34px;
 }
 
 .back-size-stretch {
-    background-image: url(../img/bg/tiger.jpg);
+    background-image: url(./bg/tiger.jpg);
     background-size: 138px 184px;
 }
 
@@ -77,12 +77,12 @@ article > div {
 }
 
 .size-85-percents {
-    background-image: url(../img/bg/tiger.jpg);
+    background-image: url(./bg/tiger.jpg);
     background-size: 85%;
 }
 
 .two-back {
-    background: url(../img/bg/bg_glow.jpg) , url(../img/bg/bg.jpg) #194874 ;
+    background: url(./bg/bg_glow.jpg) , url(./bg/bg.jpg) #194874 ;
     background-position: center top, center top;
     background-repeat: no-repeat, repeat;
 }

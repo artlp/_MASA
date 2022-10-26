@@ -8,12 +8,12 @@ html {
     height: 100%;
     /* best practice: when using background pictures,
        use color too for the case when the pictures are not found */
-    background: #194874 url(../img/bg/bg.jpg) center top repeat;
+    background: #194874 url(./bg/bg.jpg) center top repeat;
 }
 
 body {
     height: 100%;
-    background: transparent url(../img/bg/bg_glow.jpg) center top no-repeat;
+    background: transparent url(./bg/bg_glow.jpg) center top no-repeat;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: white;
 }
@@ -40,19 +40,20 @@ pre {
     width: 45%;
     margin-bottom: 1rem;
     display: inline-block;
-    color: #444;
+    color: rgb(69, 69, 69);
 }
 
 #example01 {
-    background-image: url(../img/bg/flower.gif), url(../img/bg/paper.gif);
-    background-position: right bottom, left top;
-    background-repeat: no-repeat, repeat;
-    background-size: 130px, auto;
+    background-image: url(./bg/tree-with-owl.gif), url(./bg/flower.gif), url(./bg/paper.gif);
+    background-position: left top, right bottom, left top;
+    background-repeat: no-repeat, no-repeat, repeat;
+    background-size: 60px, auto, auto;
     padding: 15px;
 }
 
 #mission01 {
-    background-image: url(../img/bg/flower.gif), url(../img/bg/paper.gif);
+    
+    background-image: url(./bg/flower.gif), url(./bg/paper.gif);
     background-position: right bottom, left top;
     background-repeat: no-repeat, repeat;
     padding: 15px;
@@ -64,12 +65,12 @@ pre {
 }
 
 #example02 {
-    background: url(../img/bg/flower.gif) right bottom/130px no-repeat, url(../img/bg/paper.gif) left top/auto repeat;
+    background: url(./bg/tree-with-owl.gif) left top/60px no-repeat, url(./bg/flower.gif) right bottom/130px no-repeat, url(./bg/paper.gif) left top/auto repeat;
     padding: 15px;
 }
 
 #mission02 {
-    background-image: url(../img/bg/flower.gif), url(../img/bg/paper.gif);
+    background-image: url(./bg/flower.gif), url(./bg/paper.gif);
     background-position: right bottom, left top;
     background-repeat: no-repeat, repeat;
     padding: 15px;

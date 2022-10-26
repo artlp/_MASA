@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            * {
+                font-family: monospace;
+            }
+        </style>
+    </head>
+
+    <body>
+        <p>3. Square. Loop inside loop. Get n - size of the square. <br>
+            Create a number square. For example, for n = 4, the square should be: <br>
+            <br>
+            1 2 3 4 <br>
+            2 4 6 8 <br>
+            3 6 9 12 <br>
+            4 8 12 16 <br>
+        </p>
+
+        <section class="output">
+
+        </section>
+        <script>
+            const output = document.querySelector('.output');
+            let n = +prompt("enter a number");
+            function drawSquare() {
+                output.innerHTML = "";
+                for (i = 1; i <= n; i++) {
+                    output.innerHTML += `${(i.toString()).padEnd(5,'\xa0')}`;
+                    for (j = 1; j <= n; j++) {
+                        if (j < n) {
+                        output.innerHTML += `${(i*(j+1)).toString().padEnd(5, '\xa0')}`;
+                    } else {
+                        output.innerHTML += `<br>`;
+
+                    }}
+                }
+            }
+            drawSquare();
+        </script>
+    </body>
+
+</html>

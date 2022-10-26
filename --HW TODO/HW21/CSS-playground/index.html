@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS Playground page</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@700&family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./normalize.css">
+        <link rel="stylesheet" href="./style.css">
+    </head>
+    <!-- TODO -->
+
+    <body>
+        <div class="gridwrapper">
+            <div class="square">
+                <h2>Square color and border</h2>
+                <div class="flex-container">
+                    <div class="div1-field">
+                        <div id="div1"></div>
+                    </div>
+                    <div class="div1-controls">
+                        <fieldset>
+                            <legend>Square size</legend>
+                            <input type="range" name="" class="div1-input" value="40" min="20" max="150">
+                            <p class="div1-value"></p>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Square color</legend>
+                            <input type="color" name="" class="div1-input" value="#ffffff">
+                            <p class="div1-value"></p>
+
+                        </fieldset>
+                        <fieldset>
+                            <legend>Border size</legend>
+                            <input type="range" name="" class="div1-input" value="3" min="0" max="20">
+                            <p class="div1-value"></p>
+
+                        </fieldset>
+                        <fieldset>
+                            <legend>Border color</legend>
+                            <input type="color" name="" class="div1-input">
+                            <p class="div1-value"></p>
+
+                        </fieldset>
+                    </div>
+
+                </div>
+            </div>
+            <div class="square">
+                <h2>Border radius and movement</h2>
+                <div class="flex-container">
+                    <div class="div2-field">
+                        <div id="div2"></div>
+                    </div>
+                    <div class="div2-controls">
+                        <fieldset>
+                            <legend>Border radius</legend>
+                            <input type="range" name="" class="div2-input" value="0" min="0" max="50">
+                            <p class="div2-value"></p>
+                        </fieldset>
+                        <fieldset>
+                            <legend>X movement</legend>
+                            <input type="range" name="" class="div2-input" value="0" min="-50" max="50">
+                            <p class="div2-value"></p>
+
+                        </fieldset>
+                        <fieldset>
+                            <legend>Y movement</legend>
+                            <input type="range" name="" class="div2-input" value="0" min="-50" max="50">
+                            <p class="div2-value"></p>
+
+                        </fieldset>
+                        <fieldset>
+                            <legend>Rotation</legend>
+                            <input type="range" name="" class="div2-input" value="0" min="-180" max="180">
+                            <p class="div2-value"></p>
+
+                        </fieldset>
+                    </div>
+                </div>
+            </div>
+            <div class="square">
+                <h2>Font size and alignment</h2>
+                <div class="flex-container">
+                    <div class="div3-field">
+                        <div id="div3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum, ab. Nobis
+                            quaerat, nam a, atque voluptas sapiente dolores unde nostrum fugit vero harum voluptatum
+                            rerum sequi saepe laboriosam dolorem aliquid!</div>
+                    </div>
+                    <div class="div3-controls">
+                        <fieldset>
+                            <legend>Font size</legend>
+                            <input type="range" name="" class="div3-input" value="14" min="8" max="22">
+                            <p class="div3-value"></p>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Alignment</legend>
+                            <select name="align" class="div3-input">
+                                <option value="left">Left</option>
+                                <option value="center">Center</option>
+                                <option value="right">Right</option>
+                                <option value="justify">Justify</option>
+                            </select>
+                            <p class="div3-value hidden"></p>
+
+                        </fieldset>
+                        <fieldset>
+                            <legend>Font weight</legend>
+                            <input type="range" name="" class="div3-input" value="400" min="100" max="900" step="100">
+                            <p class="div3-value"></p>
+
+                        </fieldset>
+                        <fieldset>
+                            <legend>Line height</legend>
+                            <input type="range" name="" class="div3-input" value="16" min="10" max="25">
+                            <p class="div3-value"></p>
+
+                        </fieldset>
+                    </div>
+                </div>
+            </div>
+            <div class="square">
+                <h2>Shadow size and color</h2>
+                <div class="flex-container">
+                    <div class="div4-field">
+                        <div id="div4"></div>
+                    </div>
+                    <div class="div4-controls">
+                        <fieldset>
+                            <legend>X offset</legend>
+                            <input type="range" name="" class="div4-input" value="2" min="-50" max="50">
+                            <p class="div4-value"></p>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Y offset</legend>
+                            <input type="range" name="" class="div4-input" value="4" min="-50" max="50">
+                            <p class="div4-value"></p>
+
+                        </fieldset>
+                        <fieldset>
+                            <legend>Blur radius</legend>
+                            <input type="range" name="" class="div4-input" value="2" min="0" max="30">
+                            <p class="div4-value"></p>
+
+                        </fieldset>
+                        <fieldset>
+                            <legend>Spread radius</legend>
+                            <input type="range" name="" class="div4-input" value="4" min="0" max="20">
+                            <p class="div4-value"></p>
+
+                        </fieldset>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <script src="./script.js"></script>
+    </body>
+
+</html>

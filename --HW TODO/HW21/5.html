@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Annoying game</title>
+    </head>
+
+    <body>
+        <p>5. loop inside loop
+            DO WHILE or WHILE.
+            const countries = ['Israel','Spain','Great Britain','Hungary','Egypt','Lebanon']
+            const capitals = ['Jerusalem','Madrid','London','Budapest','Cairo','Beirut']
+            <br>
+            Show the player the country names one by one. He should answer the name
+            of the capital of the country. Stop when you get the right answer.
+        </p>
+        <p class="output"></p>
+        <script>
+            const countries = ['Israel', 'Spain', 'Great Britain', 'Hungary', 'Egypt', 'Lebanon'];
+            const capitals = ['Jerusalem', 'Madrid', 'London', 'Budapest', 'Cairo', 'Beirut'];
+            let answer = null;
+            let correct = false;
+            i = 0;
+            do {
+                answer = prompt(`What is the capital of ${countries[i]}?`);
+                if (answer.toLowerCase() === capitals[i].toLowerCase()) {
+                    correct = true;
+                }
+                if (i === countries.length-1) {
+                    i = 0;
+                } else {
+                i++; }
+     
+            } while (correct === false)
+            alert(`Correct, ${answer} is the capital of ${countries[i-1]}!`)
+        </script>
+    </body>
+
+</html>

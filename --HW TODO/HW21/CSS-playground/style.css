@@ -1,0 +1,135 @@
+* {
+    transition: all 0.9s cubic-bezier(0.68, -0.75, 0.265, 1.55);
+    font-family: 'Work Sans', sans-serif;
+
+}
+
+html {
+}
+h2 {
+    font-size: 26px;
+    font-weight: 500;
+}
+body {
+    background-color: rgb(255, 255, 255);
+    height: 100vh;
+}
+
+.gridwrapper {
+    display: grid;
+    gap: 3px 3px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    height: 100vh;
+    width: 100%;
+}
+
+.square:nth-child(1) {
+    background-color: #6a5c9d;
+}
+.square:nth-child(2) {
+    background-color: #b3daa3;
+}
+.square:nth-child(3) {
+    background-color: #8ed3dc;
+}
+.square:nth-child(4) {
+    background-color: #dd8a5b;
+}
+.square {
+    overflow: hidden;
+    padding: 10px 20px;
+
+}
+.flex-container {
+    /* border: 2px solid black; */
+    display: flex;
+    height: auto;
+    width: 100%;
+    font-size: 16px;
+}
+fieldset {
+    margin: 2px;
+    padding: 0;
+    border: 3px solid rgb(255, 255, 255);
+    
+}
+legend {
+    padding: 0 8px;
+}
+fieldset > p, fieldset > input {
+    display:block;
+    margin: 2px;
+}
+
+fieldset > p {
+    padding: 2px 6px;
+
+}
+.flex-container > * {
+    /* border:3px solid red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50%;
+}
+.div1-field, .div2-field, .div3-field, .div4-field {
+    align-items: center;
+    display:flex;
+    justify-content: center;
+    overflow: hidden;
+    width: 90%;
+}
+#div1 {
+    background-color: #ffffff;
+    border-color: black;
+    border-style: solid;
+    border-width: 3px;
+    height: 20px;
+    margin: 0 auto;
+    width: 20px;
+}
+#div2, #div4 {
+    background-color: #ffffff;
+    border-color: black;
+    border-style: solid;
+    border-width: 3px;
+    height: 100px;
+    margin: 0 auto;
+    width: 100px;
+}
+
+select:active, select:focus {
+outline: none;
+}
+
+#div4 {
+    box-shadow: 3px 5px 20px 5px red;
+}
+
+#div3 {
+    font-size: 14px;
+    text-align: left;
+    /* transition: all 0.9s cubic-bezier(0.68, -0.75, 0.265, 1.55); */
+    /* transition: font-weight 0.2s linear; */
+    padding: 4px;
+
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+@media (max-width: 846px){
+    .gridwrapper {
+        display: grid;
+        gap: 2px 2px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        height: auto;
+    }
+}
+
+input[type="range"] {
+width: 90%;
+}
