@@ -11,7 +11,11 @@ const student1 = {
 const student2 = {
     firstName: 'Arnold',
     lastName: 'Schwarzenegger',
-    grades: [10, 70, 01, 77, 94, 47, 20, 04, 21, 61]
+    grades: [10, 70, 01, 77, 94, 47, 20, 04, 21, 61],
+    showFullName() {
+        this.fullName = `${this.firstName} ${this.lastName}`;
+        console.log(`${this.fullName} ${this.grades}`)
+    },
 };
 
 const student3 = {
@@ -34,3 +38,12 @@ console.log(`==================OBJECTS=================`);
 
 console.log(student3.firstName + ` ` + student3.lastName);
 student1.showFullName();
+student2.showFullName();
+
+const students = [student1, student2, student3, student4, student5];
+
+//! MISSION: NEW ARRAY WITH JUST THE GRADES OF THESE STUDENTS
+const grades = students.map((e,i,arr) => {
+    return e.grades;
+})
+console.log(grades);
