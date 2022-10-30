@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HW 23 task 6</title>
+    </head>
+
+    <body>
+        <section>
+            <h2>
+                6. Loop inside loop. Write a function "memorizeOrder" that gets
+                as an argument some array that should be
+                learnt by heart in accordance with the order of its members.
+            </h2>
+
+            For example. The user have to learn by heart the order of the planets.
+            The function gets the array
+            planets = ['Mercury','Venus','Earth','Mars','Jupiter','Saturn','Uranus','Neptune']
+
+            Example:
+            the program asks "Which planet is number 1?"
+            It continues to ask the same question until the player says "Mercury".
+            Now the program asks "Which planet is number 2?"
+            And continues to ask this question until the user says "Venus".
+
+            You may envelope the whole program in the outer loop that will
+            repeat the whole process n times. */
+
+            planets = ['Mercury','Venus','Earth','Mars','Jupiter','Saturn','Uranus','Neptune']
+        </section>
+
+        <script defer>
+            const planets = ['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn', 'Uranus', 'Neptune'];
+            let i = 0;
+            do {
+                let answer = prompt(`Which planet is number ${i+1}?`);
+                if (answer.toLowerCase() === planets[i].toLowerCase()) {
+                    i++;
+                } else {
+                    continue;
+                }
+
+            } while (i < planets.length);
+
+        </script>
+    </body>
+
+</html>

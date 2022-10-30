@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HW 21 task 7</title>
+    </head>
+
+    <body>
+
+        7. Floyd triangle. Challenge. Input: how many rows should contain the triangle. <br>
+        The triangle should consist of sequential numbers. <br>
+        For example, if the input is 5, the triangle: <br>
+        1 <br>
+        2 3 <br>
+        4 5 6 <br>
+        7 8 9 10 <br>
+        11 12 13 14 15 <br>
+        <br>
+        Use anonymous function definition as callback inside <br>
+        the addEventListener function. <br>
+
+        <input type="number" class="input">
+        <div class="wrapper"></div>
+        <script>
+            const wrapper = document.querySelector('.wrapper');
+            const input = document.querySelector('.input');
+
+            input.oninput = (e) => {
+                let num = 0;
+                let str = '';
+                wrapper.innerHTML = '';
+                for (let i = 1; i <= +e.target.value; i++) {
+                    str = '';
+                    for (let j = 1; j <= i; j++) {
+                        str += ++num;
+                        str += j === i ? '' : ' ';
+                    }
+                    wrapper.innerHTML += `<br>${str}`;
+                }
+            }
+
+        </script>
+    </body>
+
+</html>

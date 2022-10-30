@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            body {
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-size: 25px;
+            }
+
+            #int, #int2 {
+                font-size: 25px;
+                color: darkblue;
+                padding: 4px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <section>
+            <h2>implementation #1</h2>
+            <label for="int">Enter integer:</label>
+            <input type="text" name="int" id="int">
+            <p id="output"></p>
+        </section>
+        <!-- Do not change <input> type. 
+         Allow only integers that consist of 
+          7, 8 or 9, like 78889779-->
+          <h2>implementation #2</h2>
+          <label for="int2">Enter integer:</label>
+          <input type="text" name="int" id="int2">
+          <p id="output2"></p>
+      </section>
+
+
+        <script defer>
+            const int = document.querySelector('#int');
+            const int2 = document.querySelector('#int2');
+            const output = document.querySelector('#output');
+            const output2 = document.querySelector('#output2');
+
+            int.addEventListener('change', function() {
+                let value = int.value;
+                if (value.includes("0") || value.includes("1") || value.includes("2") || value.includes("3") || value.includes("4") || value.includes("5") || value.includes("6")) {
+                    int.placeholder = "ERROR"
+                output.innerText = `Invalid input, only numbers consisting of 7, 8 and 9 are allowed`
+            } else {
+                output.innerText = `${value} is a valid integer`
+            }
+            })
+            
+            int2.addEventListener('input', function() {
+                let value2 = int2.value;
+                if ((int2.value[int2.value.length-1] !== '7') && (int2.value[int2.value.length-1] !== '8') && (int2.value[int2.value.length-1] !== '9')){
+
+                    output2.innerText = `${int2.value.charAt(int2.value.length-1)} is not a valid digit`
+                    int2.value = int2.value.substring(0,int2.value.length-1);
+
+                } else {
+                    output2.innerText = `${int2.value.charAt(int2.value.length-1)} is a valid digit, please continue`
+                }
+            }
+            )
+
+        </script>
+    </body>
+
+</html>

@@ -10,7 +10,5 @@
 //        the elements of numAr1 minus their index
 
 const numArsqrt = numAr1.map((e,i,ar) => {
-    return (Math.sqrt(e)), Math.round(e));
-})
+    return Math.sqrt(e) })
 console.log(numArsqrt);
-// TODO

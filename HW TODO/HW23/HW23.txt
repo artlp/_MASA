@@ -1,0 +1,137 @@
+0. Portfolio + uploading your projects and HW
+
+1. Finish binary-guessing project.
+   (till 26.10.2022).
+
+2. css-explanator project (till 30.10.2022).
+   First steps: Choose CSS properties to explain 
+   and divide css-explanator.html into 4 parts.
+   The example is at css-explanator-example.png 
+
+3. Finish Nim Game project - Mode 2 (till 30.10.2022).
+   Optional - Mode 3-4
+
+4. Objects. Continue objects.js.
+
+   a) We may create a method after the object was already created.
+      For example:
+
+      student1.showInitials = function() {
+         console.log(this.firstName[0] + '.' + this.lastName[0] + '.');
+      }
+
+      Add this to the code and afterwards run the method 
+      student1.showInitials()
+
+   b) Create for student2 a method that shows a last grade.
+      Run this method.
+
+   c) Create for student3 method setExcellentGrades 
+      that goes over the property "grades"
+      and creates new property excellentGrades which will contain 
+      only the grades equal or greater than 85. 
+      Run this method, see that the property was created.
+      HINT at the end of the file.
+
+   d) Go over the array "students" by forEach() and add for each student
+      method countGrades that creates property gradeAmount 
+      and also shows the amount of grades.
+      Go over the array "students"  and run for each the method countGrades().
+
+   e) We can address a property not only by dot . and property name,
+      but also by square brackets with property name. 
+
+      console.log(student4.firstName) is the same as
+      console.log(student4['firstName']).
+
+      Pay attention, that property name is a string.
+
+      Show the grades of student4, using square brackets.
+
+   f) Square brackets notation could be used with a variable. 
+      For example, 
+      let someProperty = 'grades';
+      console.log(student5[someProperty])
+
+      let someOtherProperty = 'lastName';
+      Go over "students", create a new array of someOtherProperty.
+
+
+5.  const foods = ['pizza','pasta','mac-and-cheese','falafel','hummus','jachnun','sabih']
+    const drinks = ['wine','beer','martini','water','wodka','tea','cola']
+
+    Create new array "meals", that will contain objects with properties 
+    "food" and "drink" , like [{food: 'pizza',drink: 'wine'},
+                               {food: 'pasta',drink: 'beer'},
+                               {food: 'mac-and-cheese', drink: 'martini'},
+                                ...]
+    HINT at the end of the file.
+
+6. Loop inside loop. Write a function "memorizeOrder" that gets 
+   as an argument some array that should be 
+   learnt by heart in accordance with the order of its members.
+
+   For example. The user have to learn by heart the order of the planets.
+   The function gets the array
+   planets = ['Mercury','Venus','Earth','Mars','Jupiter','Saturn','Uranus','Neptune']
+
+   Example:
+   the program asks "Which planet is number 1?" 
+   It continues to ask the same question until the player says "Mercury".
+   Now the program asks "Which planet is number 2?" 
+   And continues to ask this question until the user says "Venus".
+
+   You may envelope the whole program in the outer loop that will 
+   repeat the whole process n times.
+
+7. input-integer-validation.html. 
+   Do not change <input> type.
+   Allow only integers that consist of 
+    7, 8 or 9, like 78889779
+   The HINT is at the end of the file.
+
+8. Split() and join() and ... 
+   a) const arr = ['a','bc','def','geh','','abcd','stop','start', 'tararam','olala','lalala','zzzz']
+
+      Exchange the second letter (index=1) in each string.
+      The result should be like this:
+      console.log(arr) // ['a','b*','d*f','g*h','','a*cd', ...]
+      The HINT is at the end of the file.
+
+   b) let str = 'superkalifragelisticexpialidocious';
+      Exchange every second letter by '*'
+
+HINT for 4 c: Inside setExcellentGrades use student3.grades.filter()
+
+HINT for 5: use map()
+
+HINT for 7.
+a) Use "input" event
+b) Check only the last symbol, like
+
+    if (str[str.length-1] !== '7.' ...
+
+c) If the last character is wrong, don't allow
+   only the last character, like
+
+        input.value = str.substring(0,str.length-1);
+
+HINT for 8.
+a) arr.forEach - we need only one loop 
+
+   check if the current string (element) is longer than 1
+   and then split it with empty string separator - el.split('')
+
+   now exchange the second character by '*' and join all 
+   with empty string separator 
+
+   now put it back into it's place in "arr"
+
+b) split the string into the separate characters (empty string separator)
+
+   loop over it with "for" - jumping over 2 characters each time
+   and putting '*' instead of the original character 
+
+   join all the characters with empty string separator
+
+
