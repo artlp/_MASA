@@ -25,7 +25,6 @@ console.log(arr);
 Exchange every second letter by '*' */
 let str1 = 'superkalifragelisticexpialidocious';
 const arrayB = str1.split('');
-console.log(arrayB.length);
 for (x = 1; x < arrayB.length; x += 2) {
     arrayB[x] = '*';
     str1 = arrayB.join('');
