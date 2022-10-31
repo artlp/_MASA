@@ -1,9 +1,16 @@
-const h1 = document.querySelector('h1');
+const h2 = document.querySelector('h2');
 const output = document.querySelector('.output');
 
-const time = new Date();
+let time = new Date();
+h2.innerHTML = `Current time is ${time}`;
 
-h1.innerText = `Hello, today is ${time}`;
+
+
+setInterval(function () {
+    time = new Date();
+    h2.innerHTML = `Current time is ${time}`;
+}, 1000);
+
 
 const btnList = document.querySelectorAll('.btn');
 
@@ -16,9 +23,9 @@ const btnList = document.querySelectorAll('.btn');
 
 btnList.forEach(e => {
 
+
     e.addEventListener('click', (e) => {
-        console.log(e);
-        output.innerHTML += e.target.innerText +" ";
+        output.innerHTML += e.target.innerText + " ";
 
     });
 });
