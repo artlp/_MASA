@@ -1,0 +1,171 @@
+Level 8.1
+a) See the example of creating an object
+   
+   const HaifaUniver = {
+    
+      name: "Haifa University",
+      
+      site: "https://www.haifa.ac.il/",
+      
+      location: "sderot Aba Hushi, 199, mt. Carmel, Haifa",
+      
+      faculties: ['Humanities', 'Social Sciences', 'Law', 'Science and Science Education'],
+      
+      rector: undefined,
+
+      studentsByDegrees: {
+         Bachelor: 8500,
+         Master: 8500,
+         Doctor: 1000
+      },
+      
+      addFaculty: function(newFaculty) {
+
+         this.faculties.push(newFaculty);
+         
+      }
+
+ }
+
+ HaifaUniver.dateOfCreation = new Date('1972-03-01');
+
+ HaifaUniver.president = 'Ron Robin';
+
+ HaifaUniver.rector = "Gustavo Mesch";
+
+ HaifaUniver.showYearOfCreation = function() {
+
+     console.log(`${this.name} was created in ${this.dateOfCreation.getFullYear()}`);
+ 
+    }
+
+ HaifaUniver.addFaculty('Education');
+
+ HaifaUniver.showYearOfCreation();
+
+ console.log(HaifaUniver);
+
+ b)  Create an object of JaneSmith, invent it's properties, like firstName, lastName, 
+   occupation, eyeColor - with values, hairColor - undefined. 
+   Create inside the object method that tells which eye and hair color John Smith
+   has - in upper case.
+
+   After creating the object:
+   - create property hobbies - array
+   - create property of dateOfBirth and set it's value to 20 January 1990 
+   - set value of hairColor property
+   - create method that takes dateOfBirth, uses getFullYear(), 
+     calculates the age and sets new property "age"
+   - create property familyMembers as an object
+
+   After this 
+   - run the both methods of the object JohnSmith
+   - show the object in the console
+
+
+Level 8.2 
+const John = {
+    firstName:'John',
+    lastName:'Smith',
+    birthYear:1995,
+    familyMembers:['Mary','Jack','Richard','Margaret'],
+    job:'teacher',
+    isMarried:false,
+    calcAge: function() {
+                let currDate = new Date();
+                return currDate.getFullYear() - this.birthYear;
+            },
+    calcFamilyMembers: function() {
+                return this.familyMembers.length + 1;
+            }
+};
+
+a) Make method John.marryJohn - after it runs, John becomes married
+
+b) Add two properties: birthMonth and birthDay.
+   Fix the method John.calcAge to return the right age when the birthday yet not 
+   occured this year
+
+c) const newProperties = ['favouriteColor','favouriteFood','hobbies','salary']
+   const values = ['blue','sushi',['ski','knitting','speleology','riddles',16000]]
+
+   Go over newProperties and create new properties for "John" object - assign them
+   values from "values"
+
+d) Create method addHobby which adds a hobby depending on John's job. If he's a
+   teacher, it adds "reading", if a developer, it adds "running", if a cook (chef),
+   it adds "sculpture", for any other job - "playing guitar".
+
+e) Fix method marryJohn - it shoud fix John.calcFamilyMembers() - as there is one 
+   more family member now
+
+
+
+   
+Level 8.3 You've got array of objects of "Lord of the Rings" cast:
+
+   יש לכם מערך של ליהוק של הסרט "שר הטבעות":
+
+const LordOfTheRingCast = [{character: "Frodo", actor: "Elijah Wood"}, 
+                           {character: "Gandalf", actor: "Ian McKellen"},
+                           {character: "Legolas", actor: "Orlando Bloom"},
+                           {character: "Sam", actor: "Sean Astin"},
+                           {character: "Aragorn", actor: "Viggo Mortensen"},
+                           ]
+
+   Add one more character to the array.
+   Go by "forEach" loop over the array and show all the actor's first name 
+   in the console. During the same looping create string with all the characters,
+   it shood look like "Frodo-Gandalf-Legolas-Sam-Aragorn-Somebody".
+
+
+
+Level 8.4 BMI = weight/height^2
+   Meet Moshe and Dani
+ 
+   a.	For each of the two persons create an object 
+      with their name and last name, 
+      mass and height as properties
+   b.	To each object add method to calculate BMI, 
+      to save it as a property of the object and 
+      to return it
+   c.	Log to the console or to the HTML page 
+      who has the highest BMI, the full names 
+      of the both (use method that concatenates 
+      the name and the last name) and their BMI. 
+      Do not forget, there could be a draw.
+      If you need some new methods for this, add new methods to Moshe and Dani.
+
+Level 8.5
+
+a) Average of averages. Create function avgOfAvg that gets
+   array of arrays of numbers. 
+   var arr1 = [2, 3.4, -12, 35.3,14,15]
+   var arr2 = [2, 3, -12, 35]
+   var arr3 = [-1, 1, -5, 5]
+   var arr4 = [77,77,77,77,77,77]
+
+   var arrOfArrs = [arr1, arr2, arr3, arr4]
+
+   Use forEach inside forEach loop to make this function 
+   to find average of averages of all the numbers 
+
+b) New array of sums. Create function creArrOfSums - it
+   should use map() to create the new array arrOfSums 
+   which will contain sums of each array inside arrOfArrs.
+
+Level 8.6
+
+Your program gets the array
+
+const arr2 = ['a','bc','def','geh','','abcd','stop','start', 'tararam','olala','lalala','zzzz']
+
+It goes with the loop "for" over each third element of the array
+starting from the one before end and ending with the first,
+and converts the strings into arrays of the symbols, thus
+creating new array of these new arrays.
+
+For example from arr2 should be created
+
+[['l','a','l','a','l','a'],['s','t','a','r','t'],[],['b','c']]
+

@@ -16,6 +16,7 @@
             .btn {
                 font-size: 1.4rem;
                 padding: 0.2rem;
+                margin: 0.5rem;
             }
             .output {
                 padding: 1rem;
@@ -24,19 +25,28 @@
                 background-color: royalblue;
                 overflow-wrap: wrap;
             }
+            .container {
+                background-color: cornflowerblue;
+                padding: 1rem;
+                margin: 1rem;
+                border-radius: 10px;
+                max-width: 600px;
+            }
         </style>
     </head>
 
     <body>
         <h1>HELLO THERE</h1>
         <h2></h2>
-        <button class="btn">Press me 1</button>
-        <button class="btn">Press me 2</button>
-        <button class="btn">Press me 3</button>
-        <button class="btn">Press me 4</button>
-        <button class="btn">Press me 5</button>
+        <div class="container">
+            <button class="btn">Press me 1</button>
+            <button class="btn">Press me 2</button>
+            <button class="btn">Press me 3</button>
+            <button class="btn">Press me 4</button>
+            <button class="btn">Press me 5</button>
+            <div class="output"></div>
+        </div>
 
-        <div class="output"></div>
         <script src="./script.js " defer></script>
     </body>
 
