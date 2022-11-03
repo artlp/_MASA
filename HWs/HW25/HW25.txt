@@ -1,0 +1,52 @@
+1. Use updated event-target.html.
+   Continue event-target.js - add 
+   listener to .red-container to show 
+   one more stage of the event propagation.
+
+2. Start the project "Hangman".
+   Step 1
+   a) Create an array of words for the game.
+   b) When the player clicks "Start", the 
+      program will choose a word from the array 
+      and show it's first and last letter
+      and underscores instead of other letters.
+   c) Create a function that checks if a character is
+      contained in the word. 
+   d) Create a set of 5 buttons with letters: 
+      A, B, C, D, E.
+   e) When the user clicks one of the letters, 
+      there should be a message like "This letter is
+      in the word", "This letter is not in the word"
+      Use event propagation to create only one listener!
+
+3. Use updated timers.html. 
+   Continue timers.js that we've created.
+
+   No listeners! 
+   When the script is uploading,
+   sleep for the  ? of the seconds from 
+   the input and after the sleep 
+   write in the output "Slept well for ? seconds"
+
+   We'll continue tomorrow with more timers.
+
+4. NodeJS.
+
+   Create only js file (in the dir "nodejs")
+
+   In the file should be "triangle" function 
+   that gets a number and shows at the 
+   console the number triangle with this number
+   of lines, like, for 5, show 
+
+       1 
+      1 2
+     1 2 3
+    1 2 3 4 
+   1 2 3 4 5
+
+   Run this function with the parameter 5.
+
+   Run the script from the command line 
+   with nodejs command.
+     

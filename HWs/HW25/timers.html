@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-size: 1.5rem;
+        }
+
+        .container {
+            width: 16rem;
+            padding: 1rem;
+            margin: 1rem;
+            background: orangered;
+            color: palegreen;
+            display: flex;
+            flex-direction: column;
+        }
+        button {
+            cursor: pointer;
+            padding: 1rem;
+            margin: 1rem;
+            font-size: 1.5rem;
+        }
+        input {
+            background: purple;
+            padding: 1rem;
+            font-size: 1.5rem;
+            margin: 1rem;
+            color: palegreen;
+            border-radius: 4px;
+        }
+        .out {
+            padding: 1rem;
+            min-height: 4rem;
+            border: 5px groove purple;
+            border-radius: 7px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container sleep">
+        <input type="number" value="5">
+        <div class="out"></div>
+        <button>Stop Sleeeeping</button>
+    </div>
+    <script src="./js/timers.js"></script>
+</body>
+</html>
