@@ -14,7 +14,9 @@ const LordOfTheRingCast = [{character: "Frodo", actor: "Elijah Wood"},
  */
 LordOfTheRingCast.push({character: "Gollum", actor: "Daniel Radcliffe"})
 console.log(LordOfTheRingCast);
+let text = '';
 LordOfTheRingCast.forEach((e) => {
     console.log(e.actor.split(' ')[0]);
-    
+    text += `${e.character}-`;
 })
+console.log(text.substring(0,text.length-1));

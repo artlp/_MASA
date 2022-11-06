@@ -1,0 +1,40 @@
+1. Continue the project "Hangman". Finish the logic
+   of the game. Add the part of drawing the hangman 
+   each time when the player is wrong. 
+   How would you prevent the player from clicking 
+   on the letters we've already checked?
+
+2. Use position: absolute; and position: relative;
+   and create your own abstract masterpiece like 
+   we've created in the class. Example: abstract-masterpice.png
+
+3. Async functions.
+
+   Use dir "to-read".
+   a) Use fs.readdir() to read the list of the filenames into array.
+   b) Create new dir "to-write".
+   Use the next example to recreate it if needed:
+
+   fs.mkdir(dirIn,(err)=>{
+    
+    if (err) {
+        
+        if (err.message.search('file already exists')>-1) {
+            fs.rmdir(dirIn,{recursive:true},(err)=>{
+                if (err) console.log(err)
+                else console.log('rmdir succeeded ☠️')
+            })
+        } else {
+            console.log(err)
+        }
+
+   c) Go over the array of the filenames, read them
+   and create them inside the dir "to-write"
+
+4. NEW PROJECT. String Games.
+Use string-games-start.
+There are 6 parts. Check script.js - it contains 
+T.B.D. for each part. 
+Finish the part "CLOCK" and the part "QUOTES".
+
+5. Training. Timers-buttons-objects. level09.txt
