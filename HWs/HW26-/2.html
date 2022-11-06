@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HW 26 task 2</title>
+    </head>
+
+    <body>
+        <label for="max">Enter maximal number:</label>
+        <input type="number" id="max" value="17">
+        <label for="step">Enter step:</label>
+        <input type="number" id="step" value="3">
+        <label for="interval">Enter interval time:</label>
+        <input type="number" id="interval" value="2000" step="100">
+        <label for="sleep">Enter sleep time:</label>
+        <input type="number" id="sleep" value="4000" step="100">
+        <br><br>
+        <button class="btn start">Start</button>
+        <br><br>
+        <div class="output"></div>
+        <script>
+            const output = document.querySelector('.output');
+            const start = document.querySelector('.start');
+            const intervalInp = document.querySelector('#interval');
+            const stepInp = document.querySelector('#step');
+            const sleepInp = document.querySelector('#sleep');
+            const maxInp = document.querySelector('#max');
+
+            function onStart() {
+                let counter = 0;
+                let max = +maxInp.value;
+                let step = +stepInp.value;
+                let interval = +intervalInp.value;
+                let countDown = max;
+                output.innerText = '';
+                let timer1 = setInterval(() => {
+                    if (counter < max) {
+                        output.innerText += `${counter}\xa0`;
+                        counter = counter + step;
+                    } else {
+                        if (countDown >= 0 + step) {
+                            countDown = countDown - step;
+                            output.innerText += `${countDown}\xa0`;
+                        } else {
+                            clearInterval(timer1);
+                            output.innerText += `counter stopped`;
+                        }
+                    }
+                }, +interval);
+            }
+            start.addEventListener('click', onStart)
+        </script>
+    </body>
+
+</html>

@@ -43,3 +43,32 @@ HaifaUniver.addFaculty('Education');
 HaifaUniver.showYearOfCreation();
 
 console.log(HaifaUniver);
+
+const JaneSmith = {
+   firstName: "Jane",
+   lastName: "Smith",
+   occupation: "dentist",
+   eyeColor: "green",
+   hairColor: undefined,
+   showColors: function() {
+      console.log(`${this.firstName} ${this.lastName} has ${this.eyeColor} eyes and ${this.hairColor} hair`);
+   },
+}
+
+JaneSmith.hobbies = [`swimming`, `hiking`,`reading`];
+JaneSmith.dateOfBirth = new Date('1990-01-20');
+JaneSmith.hairColor = "black"
+
+JaneSmith.showColors()
+JaneSmith.age = function() {
+   let today = new Date().getFullYear();
+   let bday = this.dateOfBirth.getFullYear()
+   return (today - bday);
+}
+console.log(JaneSmith.age());
+JaneSmith.familyMembers = {
+   Bob:34,
+   Steve:28,
+}
+
+console.log(JaneSmith);

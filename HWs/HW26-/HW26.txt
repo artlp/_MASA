@@ -1,0 +1,70 @@
+1. Continue the project "Hangman"
+
+2.     <!-- Timers . Create an app with the next properties:
+   a) User enters a maximum(positive integer), step(small positive integer), interval time (in milliseconds) and sleep time (in milliseconds)
+   b) The app starts showing numbers, starting from 0 and making "steps"
+   c) The time between showing numbers is the "interval time"
+   d) When getting to the maximum, the app starts showing numbers in the reverse order, from the maximum
+   e) While showing numbers, the app waits for the period of the "sleep time" and changes the color of the body (once)
+
+   More Challenge
+
+   f) There is a button that enables the user to stop and to revert showing order of numbers by click, so showing the numbers stops and reverses at the maximum or by click
+   g) Showing numbers goes up and down up and down (by the rules of "f)" ) - and can be stopped only by another button
+   h) When changing direction - each time the app waits for the period of the "sleep time" and changes the color of the body
+   i) The numbers are sit in a DIV that is positioned ABSOLUTE and it's LEFT or RIGHT is changed in accordance with the number value (you can wait with "i" for tomorrow - we study position ABSOLUTE tomorrow)
+ -->
+    <label for="max">Enter maximal number:</label>
+    <input type="number" id="max" value="17">
+    <label for="step">Enter step:</label>
+    <input type="number" id="step" value="3">
+    <label for="interval">Enter interval time:</label>
+    <input type="number" id="interval" value="2000">
+    <label for="sleep">Enter sleep time:</label>
+    <input type="number" id="sleep" value="4000">
+    <br><br>
+    <button class="btn start">Start</button>
+    <br><br>
+    <div class="output">0</div>
+
+3. Train objects and arrays. 
+   Create 4 objects - of furniture pieces.
+      Each one should have name, height (in meters)
+      and method that converts the height from 
+      meters to centimeters.
+      Put all the objects into an array.
+      Go with forEach over the array and convert
+      the height of each object into centimeters.
+
+4. Interesting use of switch.
+   a) Check the interesting use of switch at
+      switch-interesting-use.html and switch-interesting-use.js
+
+   b) Now yourself use switch in the same way.
+      Create function that gets person's age and answers for somebody who is 
+      6 years old: You can study 
+      12 years old: You can study, work
+      17 years old: You can study, work, drive a car
+      18 years old: You can study, work, drive a car, drink alcohol
+      60 years old: You can study, work, drive a car, drink alcohol, study Kabbalah
+      
+      Otherwise: Wrong input
+
+5. NodeJS.
+
+Example of reading from file synchronously:
+const txtInput = fs.readFileSync('text-to-read.txt','utf8');
+
+The first parameter is the file name, the second is encoding.
+The function fs.readFileSync() returns the text from the file.
+
+a) Read from the file input.txt into a variable 
+b) Write the text from the variable into new-text.txt
+c) Write the same text again into new-text.txt
+d) Check that the text appears only once in new-text.txt
+e) Write the text from the variable into text-again.txt
+f) Use fs.appendFileSync() to really append the text to text-again.txt
+g) Check that the text appears twice now in text-again.txt
+h) Read the text again from any of the files, but without encoding
+i) Write the text that was read at h) into without-utf8.txt
+j) How the text appears in without-utf8.txt? 
