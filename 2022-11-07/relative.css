@@ -1,0 +1,72 @@
+/* root is used to set up variables in css 
+It is like the >HTML< selector */
+:root {
+    --orangeWidth: 150px;
+    --orangeHeight: 210px;
+}
+
+.blue {
+    background: rgb(29, 29, 202);
+    width: 170px;
+    height: 110px;
+}
+
+.purple {
+    background: purple;
+    width: 150px;
+    height: 150px;
+    position: relative;
+    left: 40px;
+    top: 30px;
+    z-index: 4;
+}
+.round {
+    border-radius: 50%;
+}
+.white{
+    background:  rgb(12, 131, 12);
+    width: 150px;
+    height: 150px;
+    position: relative;
+    top: 20px;
+    left: 20px;
+
+}
+
+.green{
+    background: rgb(12, 131, 12);
+    width: 450px;
+    height: 300px;
+    position: relative;
+    left: 15px;
+    bottom: 100px;
+    z-index: 1;
+}
+.orange{
+    background: orange;
+    width: var(--orangeWidth);
+    height: var(--orangeHeight);
+    position: absolute;
+    bottom: 10px;
+    right: 110px;
+}
+.dark{
+    background: darkred;
+    width: calc(var(--orangeWidth)/3*2);
+    height: calc(var(--orangeWidth)/7*2);
+    position: absolute;
+    top: calc(var(--orangeHeight)/2 - (var(--orangeWidth)/7));
+    right: calc(var(--orangeWidth)/2 - (var(--orangeWidth)/3*2/2));
+}
+
+.chocolate{
+    background: chocolate;
+    border: 10px groove brown;
+    width: 100px;
+    height: 70px;
+    position: absolute;
+    top: 250px;
+    left: 40%;
+    z-index: 2;
+
+}

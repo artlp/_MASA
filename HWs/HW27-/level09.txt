@@ -1,0 +1,38 @@
+Level 9.1 Создайте поле div и функцию, кот. генерирует случайное число от 0 до 255.
+
+    Сделайте так, чтобы при нажатии на div три раза запускалась эта функция
+    и задавала бы 1-ый, 2-ой и 3-ий параметры для изменения цвета div
+    при помощи rgb()
+
+Level 9.2 Задача Level 9.1 + кнопка, при нажатии на которую изменение цвета происходит 10 раз
+
+Level 9.3 Задача Level 9.2 + input + кнопка. 
+    Генерируется также случайное число для прозрачности, поэтому для цвета используется
+    rgba(). 
+    При нажатии кнопки изменение цвета происходит столько раз, сколько написано
+    в input.
+
+Level 9.4 
+const John = {
+    firstName:'John',
+    lastName:'Doe',
+    birthYear:1991,
+    birthMonth: 'January',
+    birthDate: 31,
+    familyMembers:['Maggy','Robert','Richard','Molly'],
+    job:'engineer',
+    isMarried:false,
+};
+
+// Mission: 
+*** create property hobby, that is an array
+*** create methods
+- for calculating and creating this.age 
+- for counting family members (it depends if John is
+  married)
+- for adding a hobby
+- for showing initials and creating this.initials
+- John likes to color his hair. Create a function,
+  to make his hair pink if it was green, green if it was
+  blue, purple if it was uncolored, uncolored 
+  if it was pink
