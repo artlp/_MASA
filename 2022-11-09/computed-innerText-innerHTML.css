@@ -1,0 +1,28 @@
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+}
+.change-color {
+    cursor: pointer;
+    padding: 5px 10px;
+    background: salmon;
+    color: whitesmoke;
+    border: 3px ridge brown;
+    transition: all 0.3s;
+}
+
+.change-color:hover {
+    color: darkblue;
+    border: 3px ridge whitesmoke;
+}
+
+.out {
+    border: 3px solid green;
+    min-height: 2rem;
+}
+
+.show {
+    color: whitesmoke;
+    border: 3px solid darkblue;
+    background: dodgerblue;
+}
