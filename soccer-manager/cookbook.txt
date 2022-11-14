@@ -1,7 +1,7 @@
 1. install nodejs + xampp with mysql
 2. open cmd; node --version - check nodejs version
 3. run xampp control panel > configure mysql (port, password) > start servers (apache and mysql) > admin mysql to go to phpMyAdmin.
-4.  install npm express: npm init, npm install express, and install nodemon
+4. install npm express: npm init, npm install express, and install nodemon
 {
   "name": "soccer-manager",
   "version": "1.0.0",

@@ -40,3 +40,6 @@ VALUES ('BMW', 1916 , 'Susan Claten' , 1),
        ('Volkswagen', 1937 , 'Ralf Brandstaetter' , 1),
        ('Tesla', 2003 , 'Elon Musk' , 4),
        ('Nissan', 1933 , 'Makoto Uchida' , 2);
+       
+
+DROP TABLE houses --delete table
