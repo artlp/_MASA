@@ -1,0 +1,107 @@
+0. NodeJS - laptop-stroe.
+   Make it as a project or as an exercise -
+   it should be done with express server, like we did 
+   for node-farm.
+
+1. Create orange DIV that knows to change it's color to blue
+   and back to orange (use "computed") only 5 times 
+   (use "removeEventListener")
+
+2. Training for icons, switch and classes for display: none.
+   Use some cup icons, classes for styling and display: none. 
+   Coffee fortune-teller. On button click show cup of coffee.
+   The user should choose from "select" field what she has seen in the coffee
+   remains, for example,   "butterfly", "scull", "snail",
+   "lightsaber","eye" ...
+   Remove the cup of coffee and tell the user 
+   what she should expect in the future.
+
+3. CSS Training Navigation. Use files nav-ex01.html, nav-ex01.css and shmoogle.png.
+   In the end it should look approximately like nav-ex01.png
+   Perform the next steps in nav-ex01.css:
+
+   -- we start by moving the ".logo" area left "float: left", stretching it to the height of the header "height: 100%" and giving it 30% width of the header "width: 30%"
+
+    -- let's move the whole "nav" to the right "float:right" and give it the rest of the space in the header by "width:70%"
+
+    -- we did 30% logo + 70% navigation, but the navigation has not enough space on the right because of "box-sizing: content-box" - as it not counts paddings,
+    so we change for all the elements (*) it to be "box-sizing: border-box"
+
+    -- we see there are some paddings and margins around, so we'll remove them for all the elements (*) by "margin: 0" and "padding: 0"
+
+    -- make the list entries inline-block to set them inline with the header:
+    nav li {
+        display: inline-block;
+    }
+
+    -- to make the logo image be in the middle by the Y axis we'll make the ".logo" area to be flex     "display:flex" and cancel the stretching of the image by "align-items: center"
+
+    -- make the whole list to float right (just not to left it's entries in the middle of their part of the header):
+    nav ul {
+        float: right;
+    }
+
+    -- make the line-height of "nav li" the same as the header's height to place the text in the middle - by Y axis, but it is much better to use variable for this, so create the variable in the beginning of the file 
+        :root {
+            --header-height: 5.3rem;
+        }
+        change in "header" it's height to use variable var(--header-height)
+        and put "line-height: var(--header-height)" into "nav li"
+    -- to make the buttons change when hovering above add selector "nav li:hover a" and in it all the properties that should change: "text-decoration: none",
+    "background-color: #FFF", "color: #0074D9"
+    -- to make the change of background color be seen over all the height of navigation bar make height of "nav li a" 100% of it's parent and to be able to control it's height you shoud make them "display: inline-block"
+    -- For smooth transition between the hover and not hover states put into "nav li a" property transition with values "all 1.5s ease"
+    -- To make transition work smooth for all the properties you should have in "nave li a" all the properties that you have in "nav li:hover a": ensure that you have there "text-decoration: underline" and "background-color: #0074D9" (you may choose other text-decoration or colors)
+    -- Choose your own time for the transition, your own changes, etc.
+
+4. Optional canvas project. Or use it as just an exercise.
+   Use Breakout-game-step-by-step.txt to learn about 2D canvas and prepare
+   1-level game.
+   Make from it your own project by adding levels, colors and rules 
+
+5. Train ARR.FILTER().
+
+   a) Create function that takes an array of numbers and a number,
+      for example, the number is 3 and the array is      
+      const numbers = [111, 121, 131, 433, 432, 993, 71, 1011]
+      and creates new array that contains only the numbers 
+      that are dividible by the given number
+
+    b) Create from the array of foods array that contains only vegetables 
+       (check if they are contained in the array "veggies").
+       const foods = ['soup','carrot','melon','parsley','cabbage','apple']
+       const veggies = ['onion','garlic','parsley','carrot','cucumber','cabbage','tomato']
+
+    c) Return the members of the array that are the sum of the previous two members
+       const numbers = [1, 1, 2, 3, 5, 5, 3, 8, 13 8, 13, 21, 21 ]  
+
+6. Sticky and Fixed and ... . Create a page with the next properties:
+   a) 3 columns of text. 
+   b) vertical scrollbar (It should have a lot of text)
+   c) thin header and footer are being seen always, no matter how the page is scrolled
+   d) horizontal banner (picture with text) that stcks in the middle while scrolling
+
+7.  arr.MAP() training
+
+/**a) You've got an array like:
+ *    const num35 = [6, 38, 191, 322,  7, -6]
+ *    Create new array of squares of the elements of num35
+ * 
+ * b) You've got an array like:
+ *    const names = [
+*          { firstName: 'Izchak', lastName: 'Moshe'},
+*          { firstName: 'Asaf', lastName: 'Adar'},
+*          { firstName: 'David',lastName: 'Johns'},
+*          { firstName: 'Amit', lastName: 'Tal'}
+ *      ]
+ *    Create new array where firstName is replaced
+ *    by lastName and vice versa
+ */
+
+
+
+   
+
+
+
+

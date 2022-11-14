@@ -20,7 +20,7 @@ console.log(replaceTemplate(templCardProd, productList[3]));
 // console.log(templOverview);
 // console.log(data);
 console.log(productList[0].image);
-app.get('/', (req,res) => {
+app.get('/(|home|overview)', (req,res) => {
     const cardList = productList.map(el => replaceTemplate(templCardProd,el));
     res.send(templOverview.replace('{%CARDLIST%}',cardList.join('\n')));
 })
