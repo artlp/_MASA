@@ -1,0 +1,30 @@
+
+6. DB "auto" 
+   a) Покажите все колонки из таблицы companies 
+      для компаний, длина названия которых превосходит
+      5 букв
+
+SELECT * FROM companies WHERE LENGTH(name) > 5;
+
+   b) Покажите имя СЕО, год основания компании + 10,
+      название компании для всех компаний, длина имени
+      СЕО которых короче 10 букв или которые были
+      основаны между 1933 и 1963 годами включительно.
+
+SELECT ceo, foundation_year +10, name FROM companies WHERE LENGTH(ceo) < 15 AND foundation_year BETWEEN 1933 AND 1963  ;
+
+
+
+   c) Отсортируйте предыдущий результат по фамилиям СЕО
+      (в алфавитном порядке)
+
+      SELECT ceo, foundation_year +10, name FROM companies WHERE LENGTH(ceo) < 15 AND foundation_year BETWEEN 1933 AND 1963 ORDER BY ceo ASC;
+
+
+
+   d) Отсортируйту предыдущий результат по id стран в 
+      возрастающем порядке, и по году основания
+      в убывающем порядке (одновременно по двум колонкам)
+
+SELECT ceo, foundation_year +10, name FROM companies WHERE LENGTH(ceo) < 15 AND foundation_year BETWEEN 1933 AND 1963 ORDER BY country_id ASC, foundation_year DESC;
+

@@ -1,0 +1,247 @@
+0. BONUS. Use "position", "z-index"
+   "border-radius" and percents create some CSS masterpiece. 
+   The example for the inspiration is: Coala.PNG
+   Remember about box-sizing!
+
+1. Train recursion
+
+a) Fibonacci numbers, starting from the 3rd number 
+   are created as sum of two previous numbers. 
+
+   The beginning of Fibonacci sequence:
+
+   1, 1, 2, 3, 5, 8, 13, 21, 34, 55 ...
+
+   Create function that gets number n and shows 
+   sequence of n Fibonacci numbers.
+
+b) Use document.createElement, etc. and recursion 
+   to create recursion-pic01.jpg
+
+2. Destructuring objects.
+a)Write a function called displayName() 
+that takes an object as an argument 
+and prints the person's first and last name. 
+Use object destructuring in the function argument. 
+
+const person = {
+    first: 'Elon',
+    last: 'Musk',
+    twitter: '@elonmusk',
+    company: 'Space X'
+}
+
+b)  Write a function called calculateSalesTotals() which returns an array with new two new keys (sale and total). The key 'sale' equals the calculated sale price based on the original price and the discount. The key 'total' equals the computed total based on stock, the original price and the discount. You have to use Object Destructuring on the objects in the sales array and Object Default Values for the discount key. The default value would be 0.0.
+
+const sales = [
+  { item: 'PS4 Pro', stock: 3, original: 399.99 },
+  { item: 'Xbox One X', stock: 1, original: 499.99, discount: 0.1 },
+  { item: 'Nintendo Switch', stock: 4, original: 299.99 },
+  { item: 'PS2 Console', stock: 1, original: 299.99, discount: 0.8 },
+  { item: 'Nintendo 64', stock: 2, original: 199.99, discount: 0.65 }
+];
+EXPECTED OUTPUT (array of objects):
+[
+  {
+    item: "PS4 Pro",
+    original: 399.99,
+    sale: 399.99,
+    stock: 3,
+    total: 1199.97
+  },
+  {
+    discount: 0.1,
+    item: "Xbox One X",
+    original: 499.99,
+    sale: 449.991,
+    stock: 1,
+    total: 449.991
+  },
+  {
+    item: "Nintendo Switch",
+    original: 299.99,
+    sale: 299.99,
+    stock: 4,
+    total: 1199.96
+  },
+  {
+    discount: 0.8,
+    item: "PS2 Console",
+    original: 299.99,
+    sale: 59.99799999999999,
+    stock: 1,
+    total: 59.99799999999999
+  },
+  {
+    discount: 0.65,
+    item: "Nintendo 64",
+    original: 199.99,
+    sale: 69.9965,
+    stock: 2,
+    total: 139.993
+  }
+]
+
+3. Start your NodeJS project:
+   Take Cookbook.txt, and follow it's steps to create a project 
+   for the theme you've chosen
+
+4. Train array methods.
+
+Create function rev(str) that reverses the given string
+a) with Array.reverse()
+b) without Array.reverse()
+
+input: 'sandman', output: 'namdnas'
+input: '1\n\t\t$45', output: '54$\t\t\n1'
+input: '#', output: '#'
+input: '', output: ''
+input: '   3 spaces in the beginning, and 2 spaces in the end  ', 
+output: '  dne eht ni secaps 2 dna ,gninnigeb eht ni secaps 3   '
+
+The HINT is at the end of the file
+
+
+5. Regular Expressions
+ 
+ a) let report = 'string theory'
+
+ Using regular expression and test() check if report 
+ contains "ring"
+
+ b)  Using regular expression and test() check if report 
+ contains "fire"
+
+ c) let words = ['cat', 'attempt', 'tattle']
+
+    Using regular expression and test()  get all 
+    the elements that contain 'tt'
+
+   The HINT is at the end of the file
+
+  d) PAY ATTENTION
+  NEW ARRAY FUNCTION words.every().
+   Use it like words.filter() - with callback function.
+  
+   words.every() will return "true" if every 
+   element of words sets condition to "true",
+   and will return "false" if some elements 
+   set the condition to "false".
+   ----------------------------------------------
+   MISSION: check if all the elements contain 'at'
+
+  e) PAY ATTENTION
+  NEW ARRAY FUNCTION words.some().
+   Use it like words.filter() - with callback function.
+  
+   words.some() will return "true" if at least 
+   one of the elements of words sets condition to "true",
+   and will return "false" if all the elements 
+   set the condition to "false".
+   ----------------------------------------------
+   MISSION: check if any element contains 'stat'
+
+  f) const notCats =['Cat', 'cot', 'CATER', 'SCat', 'ScUtTLe']
+  
+   Filter the array to contain only the elements that has 
+   "cat" (in any case) in them
+
+  g) Construnct regular expression using 
+     const petRE = /dog/
+
+     let str111 = 'They bought a dog'
+     let str222 = 'A cat crossed their path'
+ 
+     Check str111 and str222 - if they contain the regular expression
+
+   h) Now construct regular expression using
+     let greeting = 'Hi'
+     const greetingRE = new RegExp(greeting,i)
+     
+     str333 = "HI THERE"
+     str444 = "My height is like a height of Venus"
+
+    Check if str33 and str444 contain the regular expression
+
+  i) let str555 = '1,2,3,4'
+     Using regular expression
+     - Replace only the first "," by "-"
+     - Replace all the "," by "-"
+
+  j) Replace all "art" strings (case does not matter)
+     by "2"
+
+     let str666 = 'cArT PART tart mArt'
+
+  k) Check if the given input strings contain "two" irrespective of case.
+
+     let s1 = 'Their artwork is exceptional'
+     let s2 = 'one plus tw0 is not three'
+     let s3 = 'TRUSTWORTHY'
+
+  l) For the given array, filter all elements that do not contain e.
+
+   let items = ['goal', 'new', 'user', 'sit', 'eat', 'dinner']
+
+   The code should look like (so write the appropriate function "test()"):
+   const filteredItems = items.filter(w => test(w))      
+
+  m) let str777 = 'They ate 5 apples and 5 oranges'
+   - Replace first occurrence of 5 with five for the given string.
+   - Replace all occurrences of 5 with five for the given string.
+
+  n) Replace all occurrences of note irrespective of case with X.
+
+    let str888 = 'This note should not be NoTeD'
+
+6. DB "auto" 
+   a) Покажите все колонки из таблицы companies 
+      для компаний, длина названия которых превосходит
+      5 букв
+
+SELECT * FROM companies WHERE LENGTH(name) > 5;
+
+   b) Покажите имя СЕО, год основания компании + 10,
+      название компании для всех компаний, длина имени
+      СЕО которых короче 10 букв или которые были
+      основаны между 1933 и 1963 годами включительно.
+
+SELECT ceo, foundation_year +10, name FROM companies WHERE LENGTH(ceo) < 15 AND foundation_year BETWEEN 1933 AND 1963  ;
+
+
+
+   c) Отсортируйте предыдущий результат по фамилиям СЕО
+      (в алфавитном порядке)
+
+      SELECT ceo, foundation_year +10, name FROM companies WHERE LENGTH(ceo) < 15 AND foundation_year BETWEEN 1933 AND 1963 ORDER BY ceo ASC;
+
+
+
+   d) Отсортируйту предыдущий результат по id стран в 
+      возрастающем порядке, и по году основания
+      в убывающем порядке (одновременно по двум колонкам)
+
+SELECT ceo, foundation_year +10, name FROM companies WHERE LENGTH(ceo) < 15 AND foundation_year BETWEEN 1933 AND 1963 ORDER BY country_id ASC, foundation_year DESC;
+
+
+
+7. Используя асинхронную функцию fs.unlink(), создайте функцию, кот.
+   стирает заданный файл и проверяет наличие ошибки.
+
+   Запустите ее два раза - так, чтобы первый раз она стирала файл без
+   ошибок, а второй раз выдавала бы ошибку.
+
+HINT for 4:
+The function should first convert the string into an array
+
+HINT for 5 c):
+Use words.filter()
+
+
+
+
+
+
+
+
+
