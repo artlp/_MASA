@@ -4,15 +4,96 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>recursion</title>
+    <title>recursion divs</title>
     <style>
+        html, body {
+            height: 100%;
+        }
         body {
-            width: 100vw;
-            height: 100vh;
+            background-color: black;
+            color: white;
+        }
+        .outer-figure {
+            width: 80%;
+            height: 95%;
+            position: relative;
+            top: 6%;
+            left: 10%;
+        }
+        .outer-figure > .rectangle {
+            border: 2px solid white;
+            height: 80%;
+            font-size: 0.9em;
+            margin: 0 auto;
+        }
+        .outer-figure > .recursion {
+            text-align: center;
+            font-size: 2rem;
+        
+        }
+        .outer-figure h1{
+            font-size: 40px;
+        }
+        .recursion h1 {
+            margin: 0;
+            font-size: 0.98em;
+        }
+
+        .outer-figure > .here-we-go {
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+
+        .figure {
+            width: 80%;
+            height: 99%;
+            position: relative;
+            top: 0.5%;
+            left: 10%;
+        }
+        .figure >.rectangle {
+            border-left: 2px solid white;
+            border-right: 2px solid white;
+            border-bottom: 2px solid white;
+            height: 80%;
+
+            margin: 0 auto;
+        }
+        .figure > .recursion {
+            text-align: center;
+            font-size: 0.9em;
+  
+        }
+        .figure > .here-we-go {
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            font-size: 0.8em;   
         }
     </style>
 </head>
 <body>
+    <div class="outer-figure">
+       <div class="rectangle">
+<!--         <div class="figure">
+            <div class="rectangle">
+     
+     
+             
+            </div>
+            <div class="recursion"><h1>RECURSION</h1></div> 
+            <div class="here-we-go">
+                 Here we go again
+            </div>
+         </div> -->
+
+
+       </div>
+       <div class="recursion"><h1>RECURSION</h1></div> 
+       <div class="here-we-go">
+            Here we go
+       </div>
+    </div>
     <script src="./1.js"></script>
+
 </body>
 </html>
