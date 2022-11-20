@@ -1,13 +1,206 @@
-1. install nodejs + xampp with mysql
-2. open cmd; node --version - check nodejs version
-3. run xampp control panel > configure mysql (port, password) > start servers (apache and mysql) > admin mysql to go to phpMyAdmin.
-4. install npm express: npm init, npm install express, and install nodemon
+1. Install NodeJS + Xampp with MySQL 
+
+2. Open cmd:
+> node --version // checked that NodeJS is installed
+
+3. Run Xampp control panel 
+   Start Xampp 
+   Click MySQL Config - check the port number // 3306
+   Start MySQL 
+   Click MySQL Admin - now we have phpMyAdmin open
+
+4. > npm init
+
+package name: (soccer-manager)
+version: (1.0.0)
+description: nodejs mysql
+entry point: (index.js) soccer.js
+test command:
+git repository:
+keywords:
+author:
+license: (ISC)
+
+Now we've got package.json with this description:
 {
   "name": "soccer-manager",
   "version": "1.0.0",
-  "description": "masa project",
-  "main": "app.js",
+  "description": "nodejs mysql",
+  "main": "soccer.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  5. soccer.js :
+  "author": "",
+  "license": "ISC"
+}
+
+5. > npm i express
+
+If express is not installed because of permissions,
+use terminal "run as administrator"
+
+Now in package.json we've got the first dependency:
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+
+  If we would copy the program to other computer 
+  we'll delete node_modules before copying, and then
+  on the new computer we cd the program dir and run 
+  > npm install
+
+6. If yet not installed, install globally nodemon:
+> npm i -g nodemon
+
+now we can start our server with 
+> nodemon soccer.js
+
+but if it does not work, use the script from step 7
+
+7. Add script "start" to package.json
+
+  "scripts": {
+    "start": "nodemon soccer.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+
+Now we can start our server with
+> npm start
+
+8. soccer-manager/soccer.js:
+
+const express = require('express');
+
+const port = 8000;
+
+const app = express();
+
+app.get('/', (req, res) => {
+
+    res.send('<h1>Soccer Manager is under constructrion</h1>')
+
+})
+
+app.listen(port, () => {
+
+    console.log(`I am Express Server, I am listening on port ${port}`)
+
+})
+
+9. > npm start
+
+10. In the environment we have environment variables 
+in the object process.env.
+
+We could set port number in the environment, for example,
+in powershell:
+$env:port=8005
+
+in git bash:
+export port=8005
+
+11. MySQL:
+CREATE DATABASE soccer_manager;
+
+CREATE TABLE soccer_manager.players (
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    first_name VARCHAR(40) NOT NULL,
+    last_name VARCHAR(40) NOT NULL,
+    position VARCHAR(12) NOT NULL,
+    number INT NOT NULL,
+    image VARCHAR(255),
+    user_name VARCHAR(30)
+);
+
+CREATE USER fan@localhost IDENTIFIED BY 'Real123';
+
+GRANT ALL ON soccer_manager.* TO fan@localhost;
+
+If the user was not created, use the GUI.
+
+-- click database name 
+-- go to the tab PRIVILEGES
+-- Click "Add user account" 
+-- Username: fan
+-- Hostname: localhost
+-- Password: Real123
+-- Repeat: Real123
+-- Check "Grant all privileges on database soccer_manager"
+
+12. > npm i mysql2
+
+13. soccer.js: 
+const express = require('express');
+const mysql = require('mysql2');
+
+/* let port;
+if (process.env.port) {
+    port = process.env.port;
+} else {
+    port = 8000;
+} */
+// selector operator 
+let port = 8000;
+port = process.env.port || port;
+
+const app = express();
+
+console.log(process.env);
+
+app.get('/', (req, res) => {
+
+    res.send('<h1>Soccer Manager is under constructrion</h1>')
+
+})
+
+app.listen(port, () => {
+
+    console.log(`I am Express Server, I am listening on port ${port}`)
+
+})
+
+14. soccer.js
+
+const express = require('express');
+const mysql = require('mysql2');
+
+let port = 8000;
+port = process.env.port || port;
+
+const app = express();
+
+/****** DB ******************** */
+const db = mysql.createConnection({
+    host: 'localhost',
+    port: '3306',
+    user: 'fan',
+    password: 'Real123',
+    database: 'soccer_manager'
+})
+
+db.connect(err => {
+
+    if (err) {
+        // Connection to DB is critical for this app, so we
+        // should stop the app if we cannot connect to DB
+        throw err;
+    }
+
+    console.log(`I am lucky, I've connected to DB!`)
+})
+
+app.get('/', (req, res) => {
+
+    res.send('<h1>Soccer Manager is under constructrion</h1>')
+
+})
+
+app.listen(port, () => {
+
+    console.log(`I am Express Server, I am listening on port ${port}`)
+
+})
+
+15. Create dir "views"
+
+MVC - Model View Controller
