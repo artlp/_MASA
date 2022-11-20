@@ -5,7 +5,7 @@ const path = require('path');
 const fileUpload = require("express-fileupload");
 require('ejs');
 const { getHomePage } = require('./routes/home');
-const { getAddPage, addPlayer } = require('./routes/player');
+const { getAddPage, addPlayer, getEditPage, editPlayer, deletePlayer } = require('./routes/player');
 
 let port = 8000;
 port = process.env.port || port;
@@ -39,6 +39,10 @@ app.use(fileUpload());
 app.get('/', getHomePage);
 app.post('/add', addPlayer);
 app.get('/add', getAddPage);
+app.post('/edit', editPlayer);
+app.get('/edit', getEditPage);
+app.post('/delete', deletePlayer);
+// app.get('/delete', getDeletePage);
 
 //* HTTP REQUEST METHODS: 
 //* GET = to get a page (probably with data) - address line with parameters

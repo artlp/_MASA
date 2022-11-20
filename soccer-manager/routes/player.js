@@ -62,9 +62,17 @@ module.exports = {
         });
     },
     editPlayer: (req, res) => {
+        query = `SELECT * FROM players WHERE id = '${id}'`;
 
     },
     deletePlayer: (req, res) => {
 
-    }
+    },
+    getEditPage: (req, res) => {
+        res.render('edit-player.ejs',
+        {
+            title: 'Soccer-Manager | Edit player',
+            message: "",
+        });
+},
 };

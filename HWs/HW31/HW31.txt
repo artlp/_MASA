@@ -1,0 +1,41 @@
+1. Regular expressions.(Reminder: ^-beginning of the line, $-end of the line,
+[^]-negation)
+
+let proverb = "Opportunity did not nock until I built a door";
+
+Use replace() 
+ a) Insert ** in the beginning of line.
+ b) If there is no . ! or ? at the end of line, put dot.
+
+2. Continue your NodeJS project:
+   Take Cookbook.txt, and follow it's steps to continue your project 
+   for the theme you've chosen
+
+3. Finish soccer-manager player.js functions and create 
+   appropriate routing at soccer.js
+
+4. Optional projects:
+      A. random + turn by turn game 
+
+         i) Pig game - throw two dices several times,
+            stop the turn, keep the score. 
+            If you get 7 - your turn stops, and at this turn 
+            you'll get 0.
+            Ensure the rules at Wikipedy.
+
+         ii) Dreidel (we're going to selebrate 
+             Hanukka in several weeks!) - check 
+             the rules at Wikipedy
+
+      B. event.target + event propagation
+
+         i) Take the drum kit files. 
+            Make the audio file to make sounds 
+            on mouse click on the buttons in the page 
+            (one listener for them all)
+
+         ii) Create "memory game". Use 1 listener 
+             for all the cards together.
+             You can use memory-game-start files.
+             Use flip-card as an example for 
+             flipping cards.
