@@ -1,6 +1,6 @@
 export default function TodoItem(props) {
     return (
-      <li>{props.mission}</li>
+      <li> {`${props.num+1} ✔️ ${props.mission}`}</li>
     )
   }
 

@@ -1,0 +1,41 @@
+1. Regular expressions 
+
+a) const ar1 = ['cat','cater','concatenation','dog','dogma','scates','catamaran','catapult','tomcat','tomdog']
+Go over ar1 and create 3 new arrays: 
+
+   1 - containing all the strings from ar1, starting with "cat"
+   2 - containing all the strings from ar1, ending with "cat"
+   3 - containing all the strings from ar1, equal to "cat"
+
+b) let ar2 = ['surrender', 'unicorn', 'newer', 'door', 'empty', 'eel', 'pest']
+
+  Create new array from ar2. If the original word ended with
+  "er", it should end now with "est" instead. If the original word ended
+  with "t", it should now end with "d" instead. All other words
+  should be copied as is.
+
+c) let ar3 = ['live','arrange','render','sist','place','send']
+   let ar4 = ['cat','hack','develop','serv','ston']
+
+   Use replace() and regular expressions. Add to all the words 
+   of ar3 "re" at the beginning. Add to all the words of ar4 
+   "er" at the end.
+
+d)  Create function checkSentence(str) that checks that the given string looks like a sentence:
+        - remove all the whitespaces from the beginning and the end
+        - check that the sentence starts with an uppercase English letter
+        - check that the sentence ends with a dot or exclamation or question sign
+        - return true or false
+
+        Create function testing(ar1,ar2) that goes over "inputs", 
+        tries checkSentence() and checks if the output is as expected
+        (in outputs). If all the outputs are as expected, conclude 
+        that checkSentence() is good function.
+
+  const inputs = ['\t\t Quick brown fox jumps over a lazy dog. ','','\n\t  ','Broken crayons still color.',"I don't know ",'what happens in Vegas stays in Vegas.',"Are you insane?!  ","?","   \nHave you ever been to Paris?"]
+  const outputs = [true,false,false,true,false,false,true,false,true]
+
+2. Take a theme that you like, go over all the steps 
+   in Cookbook02-todo.txt - create your app - 
+   tomorrow we'll continue with "todo", and you'll 
+   continue with your app

@@ -3,7 +3,7 @@ import TodoItem from './TodoItem';
 
 
 export default function Todolist(props) {
-    console.log(props);
+    // console.log(props);
     const styles = {
         ul: {
             margin: 0,
@@ -15,10 +15,13 @@ export default function Todolist(props) {
     return (
         <div className="todolist">
             <ul style={styles.ul}>
-                <TodoItem mission={props.toBeDone[0].mission}/>
-                <TodoItem mission={props.toBeDone[1].mission}/>
-                <TodoItem mission={props.toBeDone[2].mission}/>
-                <TodoItem mission={props.toBeDone[3].mission}/>
+            {props.toBeDone.map((task,index) => {
+                return <TodoItem mission={task.mission}
+                key = {task.id}
+                num = {index}
+                />
+            })}
+
             </ul>
         </div>
     );

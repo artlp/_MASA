@@ -1,0 +1,321 @@
+1. Create todo app or
+  
+   > npx create-react-app todo 
+   Remove all the unnecessary parts 
+
+   or 
+
+   copy other react app to "todo" 
+   rename the dir and the name of the project to "todo"
+       at package.json and package-lock.json
+
+2. > cd todo 
+   > npm start 
+
+3. Rename App.js to App.jsx
+
+4. Add Wrapper and Header to App.jsx:
+
+function App() {
+  return (
+    <div className="App">
+      <div className="wrapper">
+        <h1>To Do</h1>
+      </div>
+    </div>
+  );
+}
+
+export default App;
+
+5. Edit index.css:
+
+* {
+
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: rgb(79, 5, 79);
+  height: 100vh;
+}
+
+.wrapper {
+
+  width: 600px;
+  margin: 0 auto;
+  background: white;
+  height: 100vh;
+
+}
+
+h1 {
+  text-align: center;
+  color: rgb(23, 122, 112);
+}
+
+6. src/components/TodoList.jsx:
+
+Use snippet "rfc" and edit:
+
+export default function TodoList() {
+  return (
+    <div className='TodoList'>
+        <ul>
+            <li>buy milk</li>
+            <li>buy bread</li>
+            <li>run 10km</li>
+            <li>learn React</li>
+        </ul>
+    </div>
+  )
+}
+
+7. Add TodoList component to App.jsx:
+
+import TodoList from "./components/TodoList";
+
+function App() {
+  return (
+    <div className="App">
+      <div className="wrapper">
+        <h1>To Do</h1>
+        <TodoList />
+      </div>
+    </div>
+  );
+}
+
+export default App;
+
+8.   To style components:
+
+    option 1: use the general index.css file
+
+    option 2: use component specific css,
+
+                inside it's JSX file 
+
+                import '<component name>.css'
+
+    option 3: create object of styles and 
+              use it with attribute "style" 
+
+    Example at TodoList.jsx:
+
+      const styles = {
+        ul: {
+          margin: 0,
+          listStyle: "none"
+        },
+        todoList: {
+          fontSize: "2rem",
+          color: "rgb(79, 5, 79)"
+        }
+      }
+
+        return (
+    <div className='TodoList' style={styles.todoList} >
+        <ul style={styles.ul}>
+            <li>buy milk</li>
+            <li>buy bread</li>
+            <li>run 10km</li>
+            <li>learn React</li>
+        </ul>
+    </div>
+  )
+
+9. components/TodoItem.jsx
+
+use "rfc" and edit:
+
+export default function TodoItem() {
+  return (
+    <li>Learn React</li>
+  )
+}
+
+10. Use in TodoList.jsx:
+
+import TodoItem from "./TodoItem";
+
+
+export default function TodoList(props) {
+
+  console.log(props)
+
+  const styles = {
+    ul: {
+      margin: 0,
+      listStyle: "none"
+    },
+    todoList: {
+      fontSize: "2rem",
+      color: "rgb(79, 5, 79)"
+    }
+  }
+
+  return (
+    <div className='TodoList' style={styles.todoList} >
+        <ul style={styles.ul}>
+            <TodoItem />
+            <TodoItem />
+            <TodoItem />
+            <TodoItem />
+        </ul>
+    </div>
+  )
+}
+
+
+11. Add data to App.jsx and pass props to TodoList:
+
+  const todos = [
+    { completed: false, mission: 'Get beer and chips', important: true},
+    { completed: false, mission: 'Watch a game'},
+    { completed: false, mission: 'Learn React'},
+    { completed: false, mission: 'Run 10km'}
+  ]
+
+  let colorOne = 'orangered';
+
+  return (
+    <div className="App">
+      <div className="wrapper">
+        <h1>To Do</h1>
+        {/** toBeDone, importantColor - parameters
+         * for the function TodoList(), shortly called "props"
+         */}
+        <TodoList toBeDone={todos} importantColor={colorOne}/>
+      </div>
+    </div>
+  );
+}
+
+12. TodoList gets props and passes mission to TodoItem:
+
+import TodoItem from "./TodoItem";
+
+
+export default function TodoList(props) {
+
+  console.log(props)
+
+  const styles = {
+    ul: {
+      margin: 0,
+      listStyle: "none"
+    },
+    todoList: {
+      fontSize: "2rem",
+      color: "rgb(79, 5, 79)"
+    }
+  }
+
+  return (
+    <div className='TodoList' style={styles.todoList} >
+        <ul style={styles.ul}>
+            <TodoItem mission={props.toBeDone[0].mission}/>
+            <TodoItem mission={props.toBeDone[1].mission}/>
+            <TodoItem mission={props.toBeDone[2].mission}/>
+            <TodoItem mission={props.toBeDone[3].mission}/>
+        </ul>
+    </div>
+  )
+}
+
+13. Use props.mission in TodoItem:
+
+export default function TodoItem(props) {
+  return (
+    <li>{ props.mission }</li>
+  )
+}
+
+
+14. Rewrite TodoList creation to use any array of tasks:
+
+  return (
+    <div className='TodoList' style={styles.todoList} >
+        <ul style={styles.ul}>
+            {props.toBeDone.map(task => {
+
+                return <TodoItem mission={task.mission}/>
+
+            })}
+            
+        </ul>
+    </div>
+  )
+
+15. Now React shows warning: 
+
+ Warning: Each child in a list should have a unique "key" prop.
+
+otherwise virtual DOM would not be able manage specific 
+components of the list.
+
+16. Add unique id for each "todo":
+
+function App() {
+
+  const todos = [
+    { id: 45, completed: false, mission: 'Get beer and chips', important: true},
+    { id: 67, completed: false, mission: 'Watch a game'},
+    { id: 11, completed: false, mission: 'Learn React'},
+    { id: 425, completed: false, mission: 'Run 10km'}
+  ]
+
+17. At TodoList.jsx pass value of id to key prop:
+
+  return (
+    <div className='TodoList' style={styles.todoList} >
+        <ul style={styles.ul}>
+            {props.toBeDone.map((task,index) => {
+
+                return <TodoItem mission={task.mission} 
+                                 key={task.id} />
+
+            })}
+            
+        </ul>
+    </div>
+  )
+
+Refresh the browser - no warnings!
+
+18. To add ordered numbers at TodoList.jsx when 
+mapping todos we pass not only the task, but also index 
+to the callback function:
+
+  return (
+    <div className='TodoList' style={styles.todoList} >
+        <ul style={styles.ul}>
+            {props.toBeDone.map((task,index) => {
+
+                return <TodoItem mission={task.mission} 
+                                 key={task.id} num={index}/>
+
+            })}
+            
+        </ul>
+    </div>
+  )
+
+19. Use index at TodoItem.jsx:
+
+export default function TodoItem(props) {
+  return (
+    <li>{ props.num+1 + '. ' + props.mission }</li>
+  )
+}
+
+20. 
+
+

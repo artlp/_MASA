@@ -1,5 +1,5 @@
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
 
@@ -29,8 +29,8 @@ code {
     width: 600px;
 }
 h1 {
-    text-align: center;
     color:rgb(3, 56, 121);
+    text-align: center;
     text-decoration: underline;
 }
 

@@ -2,10 +2,10 @@ import Todolist from "./components/Todolist";
 
 function App() {
     const todos = [
-        { completed: false, mission: 'Watch a game', importance: true },
-        { completed: false, mission: 'Learn React', importance: false },
-        { completed: false, mission: 'Get beer and chips' },
-        { completed: false, mission: 'Run 10 km', importance: true },
+        { id: 1, completed: false, mission: 'Watch a game', importance: true },
+        { id: 2, completed: false, mission: 'Learn React', importance: false },
+        { id: 3, completed: false, mission: 'Get beer and chips' },
+        { id: 4, completed: false, mission: 'Run 10 km', importance: true },
     ];
     let colorOne = 'orangered';
 
