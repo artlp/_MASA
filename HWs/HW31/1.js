@@ -11,6 +11,8 @@ let proverb = "Opportunity did not nock until I built a door";
 let newx = '';
 newx = proverb.replace(/^/, `**`);
 if (/[^.?!]$/.test(newx)) {
-    newx = newx + '.';
+    // newx = newx + '.';
+    newx = newx.replace(/$/, '.');
 }
+
 console.log(newx);
