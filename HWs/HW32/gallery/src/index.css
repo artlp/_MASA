@@ -1,13 +1,17 @@
 h1 {
+    font-size: 2rem;
     color: white;
     height: 60px;
+    margin: 0;
+    text-align: center;
+    text-shadow: 0 4px 2px black;
 }
 
 body {
     background: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(0, 0, 0, 0.189) 10px, rgba(0, 0, 0, 0.272) 20px) #37474F;
     font: 1.1em 'Product Sans', Helvetica, sans-serif;
-    height: 100vh;
-    overflow: hidden;
+    height: 98vh;
+    /* overflow: hidden; */
   }
   
   img {
@@ -27,7 +31,7 @@ body {
          column-gap: 10px;
   }
 
-  @media all and (max-width: 768px) {
+  @media all and (max-width: 868px) {
     .container {
         -moz-column-count: 3;
              column-count: 3;
@@ -35,7 +39,7 @@ body {
              column-gap: 10px;
       }
   }
-  @media all and (max-width: 520px) {
+  @media all and (max-width: 620px) {
     .container {
         -moz-column-count: 2;
              column-count: 2;
@@ -43,7 +47,7 @@ body {
              column-gap: 10px;
       }
   }
-  @media all and (max-width: 424px) {
+  @media all and (max-width: 494px) {
     .container {
         -moz-column-count: 1;
              column-count: 1;

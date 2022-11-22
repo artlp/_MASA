@@ -40,7 +40,7 @@ app.get('/', getHomePage);
 app.post('/add', addPlayer);
 app.get('/add', getAddPage);
 app.post('/edit', editPlayer);
-app.get('/edit', getEditPage);
+app.get('/edit/:username', getEditPage);
 app.post('/delete', deletePlayer);
 // app.get('/delete', getDeletePage);
 

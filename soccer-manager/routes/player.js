@@ -1,3 +1,5 @@
+const { response } = require("express");
+
 module.exports = {
     getAddPage: (req, res) => {
         res.render('add-player.ejs',
@@ -40,7 +42,7 @@ module.exports = {
                     if (err) {
                         res.status(500).send('Error saving file, err: \n', err);
                     } else {
-                        query = `INSERT INTO players (image, first_name, last_name, position, number, user_name) VALUES ('${imageName}','${firstName}','${lastName}','${position}',${number},'${userName}');`
+                        query = `INSERT INTO players (image, first_name, last_name, position, number, user_name) VALUES ('${imageName}','${firstName}','${lastName}','${position}',${number},'${userName}');`;
                         // console.log(query);
                         db.query(query, (err) => {
                             if (err) {
@@ -48,16 +50,16 @@ module.exports = {
                             } else {
                                 res.redirect('/');
                             }
-                        })
-                    } 
+                        });
+                    }
                 });
             } else {
                 message = "invalid file format";
                 res.render('add-player.ejs',
-                {
-                    title: 'Soccer-Manager | Add player',
-                    message: message,
-                });
+                    {
+                        title: 'Soccer-Manager | Add player',
+                        message: message,
+                    });
             }
         });
     },
@@ -69,10 +71,27 @@ module.exports = {
 
     },
     getEditPage: (req, res) => {
-        res.render('edit-player.ejs',
-        {
-            title: 'Soccer-Manager | Edit player',
-            message: "",
+        let message = '';
+        let username = req.params.username;
+        let query = `SELECT * FROM players WHERE user_name = '${username}'`;
+        db.query(query, (err, result) => {
+            if (err) {
+                response.status(500).send(err);
+            } else if (result.length === 0) {
+                message = `Player doesn't exist`;
+                res.render('add-player.ejs', {
+                    title: 'Soccer-Manager',
+                    message,
+                });
+            } else {
+                res.render('edit-player.ejs',
+                    {
+                        title: 'Soccer-Manager | Edit player',
+                        player: result[0],
+                        message: message,
+                    });
+
+            }
         });
-},
+    },
 };
