@@ -9,6 +9,9 @@ function App() {
     ];
     let colorOne = 'orangered';
 
+    const onCheck = function(id) {
+        // change todos[id].completed to true
+    }
 
     return (
         <div className="App">

@@ -1,0 +1,18 @@
+1. Regular expressions 
+
+const str = 'The quick brown fox jumps over the lazy dog. If the dog barked, was it really lazy?';
+
+// Use \w,\d,\s etc. and str.search(regex) to find the first character 
+that is not a word character or whitespace
+
+Show the index of the character and the character itself.
+
+2. Continue creating React app for a theme that you like, going over all the steps 
+   in Cookbook02-todo.txt 
+
+3. Finish "string-games" project - the last part "Words in Words". The explanation is
+   in words-in-words-descriptions.txt and words-in-words-result-example.png
+
+4. Finish soccer-manager
+
+5. Check the list of the projects

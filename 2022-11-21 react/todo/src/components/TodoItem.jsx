@@ -2,11 +2,21 @@ import PropTypes from "prop-types";
 
 export default function TodoItem(props) {
     return (
-        <li><input type="checkbox"/> <strong>{props.num + 1}</strong>. {props.mission} <button>❌</button></li>
-    );
-}
+        <li>
+          <span>
+            <input type="checkbox" 
+                   onClick={() => { 
+                    console.log('Checkbox is checked or unchecked')
+                   }}/>
+            <strong>&nbsp;{ props.num+1 + '. ' }</strong>{ props.mission }
+          </span>
+    
+          <button className="delete">&times;</button>
+        </li>
+      )
+    }
 
 TodoItem.propTypes = {
     mission: PropTypes.string.isRequired,
-    id: PropTypes.number.isRequired,
+    num: PropTypes.number.isRequired,
 }

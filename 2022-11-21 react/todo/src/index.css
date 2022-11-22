@@ -53,6 +53,44 @@ h1:hover {
 li:hover {
     cursor:pointer;
 }
-li:hover::after {
-    content: ""
+input[type="checkbox"] {
+    font-size: 2rem;
+    color: rgb(23, 122, 112);
+    height: 1.5rem;
+    width: 1.5rem;
 }
+input[type="checkbox"]:checked {
+    font-size: 2rem;
+    background: rgb(23, 122, 112);
+    height: 1.5rem;
+    width: 1.5rem;
+}
+  
+button.delete {
+    font-size: 1.5rem;
+    background: red;
+    color: white;
+    cursor:pointer;
+    border: 1px solid rgb(129, 12, 12);
+    border-radius: 2px;
+    transition: all 0.4s;
+    padding: 0.1rem 0.7rem;
+}
+
+button.delete:hover {
+    transform: scale(1.1);
+}
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    padding: 0.5rem;
+    margin: 5px;
+  }
+
+  span {
+    display: flex;
+    align-items: center;
+  }
