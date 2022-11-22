@@ -64,7 +64,13 @@ module.exports = {
         });
     },
     editPlayer: (req, res) => {
-        query = `SELECT * FROM players WHERE id = '${id}'`;
+        let message = '';
+        let firstName = req.body.first_name;
+        let lastName = req.body.last_name;
+        let userName = req.params.username;
+        let number = req.body.number;
+        let position = req.body.position;
+        query = `SELECT * FROM players WHERE user_name = '${username}'`;
 
     },
     deletePlayer: (req, res) => {

@@ -39,10 +39,9 @@ app.use(fileUpload());
 app.get('/', getHomePage);
 app.post('/add', addPlayer);
 app.get('/add', getAddPage);
-app.post('/edit', editPlayer);
+app.post('/edit/:username', editPlayer);
 app.get('/edit/:username', getEditPage);
-app.post('/delete', deletePlayer);
-// app.get('/delete', getDeletePage);
+app.get('/delete:username', deletePlayer);
 
 //* HTTP REQUEST METHODS: 
 //* GET = to get a page (probably with data) - address line with parameters

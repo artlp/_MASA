@@ -1,5 +1,6 @@
 import React from 'react';
 import TodoItem from './TodoItem';
+import PropTypes from "prop-types";
 
 
 export default function Todolist(props) {
@@ -25,4 +26,8 @@ export default function Todolist(props) {
             </ul>
         </div>
     );
+}
+Todolist.propTypes = {
+    toBeDone: PropTypes.array.isRequired,
+    importantColor: PropTypes.string.isRequired,
 }

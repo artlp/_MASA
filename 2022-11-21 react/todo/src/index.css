@@ -5,15 +5,22 @@
 
 }
 body {
-  background: rgb(0, 44, 83);
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  background: rgb(4, 36, 63);
+  font-family: 'Product Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  height: 100vh;
+  height: 95vh;
   margin: 0;
+}
 
+li {
+    /* justify-content: space-between; */
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    gap: 6px;
 }
 
 code {
@@ -23,14 +30,29 @@ code {
 
 .wrapper {
     background: rgb(228, 228, 228);
+    border-radius: 30px;
+    box-shadow: -4px -3px 0 3px rgb(55, 112, 255),
+    4px 3px 0 5px rgb(2, 112, 192),
+    0 0 8px 10px rgba(0, 0, 0, 0.164);
     box-sizing: border-box;
-    height: 100vh;
-    margin: 0 auto;
+    margin: 2% auto;
+    min-height: 90vh;
     width: 600px;
 }
 h1 {
     color:rgb(3, 56, 121);
+    padding: 3% 0;
     text-align: center;
     text-decoration: underline;
+    transition: all 1.8s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
-
+h1:hover {
+    cursor: default;
+    letter-spacing: 34px;
+}
+li:hover {
+    cursor:pointer;
+}
+li:hover::after {
+    content: ""
+}
