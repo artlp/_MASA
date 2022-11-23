@@ -1,4 +1,6 @@
 import Gallery from "./components/gallery";
+// import axios from 'axios';
+// import { useState } from 'react';
 
 
 function App() {
