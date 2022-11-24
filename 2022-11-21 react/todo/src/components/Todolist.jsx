@@ -15,14 +15,13 @@ export default function Todolist({toBeDone, onCheck}) {
     return (
         <div className="todolist">
             <ul style={styles.ul}>
-            {toBeDone.map((task,index) => {
+            { toBeDone.length > 0  ? toBeDone.map((task,index) => {
                 return <TodoItem task={task}
                 key = {task.id}
                 num = {index}
                 onCheck = {onCheck}
                 />
-            })}
-
+            }) : <h4>No more tasks</h4> }
             </ul>
         </div>
     );

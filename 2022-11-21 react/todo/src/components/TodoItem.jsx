@@ -1,9 +1,11 @@
 import PropTypes from "prop-types";
+import {useContext} from "react";
+import Context from "../context"
 
 export default function TodoItem({ num, task, onCheck }) {
 
     let completedClass = task.completed ? "completed" : "";
-
+    const {onX} = useContext(Context)
 
     return (
         <li>
@@ -16,7 +18,7 @@ export default function TodoItem({ num, task, onCheck }) {
                 <span className={completedClass}>{task.mission}</span>
             </span>
 
-            <button className="delete">&times;</button>
+            <button className="delete" onClick={() => onX(task.id)}>&times;</button>
         </li>
     );
 }

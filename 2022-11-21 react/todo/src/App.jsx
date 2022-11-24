@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import TodoList from "./components/Todolist";
+import Context from './context';
 
 function App() {
 
@@ -46,22 +47,23 @@ function App() {
     };
 
     const onX = (id) => {
-        todos.filter(task => {
-            return task.id !== id;
-        });
+        setTodos(todos.filter(task => task.id !== id));
     };
 
     return (
-        <div className="App">
-            <div className="wrapper">
-                <h1>To Do</h1>
-                {/** toBeDone, importantColor - parameters
+        <Context.Provider value={{onX}}>
+        {/* double curled braces ^^ first is because it's JS, second is an object */}
+            <div className="App">
+                <div className="wrapper">
+                    <h1>To Do</h1>
+                    {/** toBeDone, importantColor - parameters
          * for the function TodoList(), shortly called "props"
          */}
-                <TodoList toBeDone={todos} importantColor={colorOne}
-                    onCheck={onCheck} />
+                    <TodoList toBeDone={todos} importantColor={colorOne}
+                        onCheck={onCheck} />
+                </div>
             </div>
-        </div>
+        </Context.Provider>
     );
 }
 
