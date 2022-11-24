@@ -3,8 +3,7 @@ import TodoItem from './TodoItem';
 import PropTypes from "prop-types";
 
 
-export default function Todolist(props) {
-    // console.log(props);
+export default function Todolist({toBeDone, onCheck}) {
     const styles = {
         ul: {
             margin: 0,
@@ -16,10 +15,11 @@ export default function Todolist(props) {
     return (
         <div className="todolist">
             <ul style={styles.ul}>
-            {props.toBeDone.map((task,index) => {
-                return <TodoItem mission={task.mission}
+            {toBeDone.map((task,index) => {
+                return <TodoItem task={task}
                 key = {task.id}
                 num = {index}
+                onCheck = {onCheck}
                 />
             })}
 
@@ -30,4 +30,5 @@ export default function Todolist(props) {
 Todolist.propTypes = {
     toBeDone: PropTypes.array.isRequired,
     importantColor: PropTypes.string.isRequired,
+    onCheck: PropTypes.func.isRequired,
 }

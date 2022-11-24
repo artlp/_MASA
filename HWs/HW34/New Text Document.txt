@@ -1,0 +1,163 @@
+Natalie, [Ср 23.11.2022 10:56]
+const hero = {
+    nickName: 'Batman',
+    realName: 'Bruce Wane'
+}
+
+/* let nickName = hero.nickName;
+let realName = hero.realName; 
+
+is the same as */
+
+// object destructuring
+const { nickName, realName } = hero;
+
+const hero2 = {
+    heroName: 'Hulk',
+    fullName: 'Bruce Banner',
+    color: 'green'
+}
+
+// MISSION: use destructuring to create variables 
+/// heroName, fullName and color with the values of hero2
+
+// const { heroName, color, fullName } = hero2;
+// we could change the order as not the order
+// but the names are important
+const { heroName, color } = hero2;
+
+const hero3 = ["IronMan", "Tony Stark", "businessman", "genius","milliarder","playboy","inventor"]
+
+const
+
+Natalie, [Ср 23.11.2022 11:07]
+const colors = ['red', 'green', 'yellow', 'blue', 'purple','white','grey']
+// MISSION: use variables firstColor, secondColor and thridColor -
+// put there values of the first 3 colors,
+// and put other colors into the variable otherColors 
+console.log(firstColor) // red
+console.log(secondColor) // green
+console.log(thirdColor) // yellow
+console.log(otherColors) // []
+
+Natalie, [Ср 23.11.2022 12:32]
+// MISSION:
+// 1. At CounterButton get "increment" prop 
+//    and write the value on the button
+// 2. Turn sum to state
+// 3. Create function addIncrement that will get num and add it to the sum
+//     (use setSum)
+// 4. Pass addIncrement function to CounterButton as a prop
+//    and use it at CounterButton onClick
+
+
+function CounterButton({ increment, add }) {
+
+  return (
+    <button className="btn" >
+                +{increment}
+    </button>
+  )
+
+}
+
+function App() {
+
+  let sum = 0;
+  
+  return (
+    <div className="App">
+        <h1>Counters</h1>
+        <CounterButton increment={1} />
+        <CounterButton increment={10} />
+        <CounterButton increment={100} />
+        <CounterButton increment={1000} />
+        <span className="result">{sum}</span>
+    </div>
+  );
+}
+
+export default App;
+
+Natalie, [Ср 23.11.2022 16:19]
+// MISSION:
+// 1. At CounterButton get "increment" prop 
+//    and write the value on the button
+// 2. Turn sum to state
+// 3. Create function addIncrement that will get num and add it to the sum
+//     (use setSum)
+// 4. Pass addIncrement function to CounterButton as a prop
+//    and use it at CounterButton onClick
+
+// HW MISSION:
+// 1. Create state "currentColor" for the component App
+// 2. Create function changeColor that gets color 
+//    and changes the state to this new color
+// 3. Pass this function to each ColoredButton
+// 4. Make ColoredButtons to run changeColor onClick
+// 5. At App pass currentColor to each CounterButton
+// 6. At CounterButton use the prop of the color as additional className
+// 7. Now when you click some ColoredButton, all
+//    the counter buttons become colored by it's color
+
+import { useState } from 'react';
+
+function CounterButton({ increment, add }) {
+
+  return (
+    <button className="btn " onClick={ () => { add(increment) } } >
+                +{increment}
+    </button>
+  )
+
+}
+
+function ColoredButton({myColor, changeC}) {
+
+  return <button className={"btn size "+myColor} 
+                 >{myColor}</button>
+}
+
+function MenuButton({food}) {
+
+  return <button className={"btn size"}>{food}</button>
+}
+
+
+function App() {
+
+  const [ sum, setSum ] = useState(0);
+
+  const addIncrement = (num) => {
+    setSum(sum + num)
+  } 
+
+  return (
+    <div className="App">
+    <div className="first">
+        
+        <CounterButton increment={1}    add={addIncrement} />
+        <CounterButton increment={10}   add={addIncrement} />
+        <CounterButton increment={100}  add={addIncrement} />
+        <CounterButton increment={1000} add={addIncrement} />
+        <span className="result">{sum}</span>
+        <div>
+          <MenuButton food="limonana" />
+          <MenuButton food="masbacha"  />
+          <MenuButton food="madjadra"  />
+          <MenuButton food="malawach"  />
+        </div>
+        <div>
+          <ColoredButton myColor="red" />
+          <ColoredButton myColor="blue"  />
+          <ColoredButton myColor="green"  />
+          <ColoredButton myColor="orange"  />
+        </div>
+      </div>
+      <p className="second result">{ORDER:}</p>
+      <p className="third result">{"CHALLENGE\nORDER:"}</p>
+</div>
+  );
+}
+
+export default App;
