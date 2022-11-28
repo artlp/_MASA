@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import TodoList from "./components/Todolist";
 import Context from './context';
+import AddToDo from './components/AddToDo';
 
 function App() {
 
@@ -50,6 +51,13 @@ function App() {
         setTodos(todos.filter(task => task.id !== id));
     };
 
+    const addNewTodo = (mission) => {
+        //we use concat because it doesn't change our initial data
+        setTodos(todos.concat({id: Date.now(), completed: false, mission}));
+
+        //Date.now() is good for unique id as it is changing every second (it's a number of seconds passed since 01/01/1970)
+    }
+
     return (
         <Context.Provider value={{onX}}>
         {/* double curled braces ^^ first is because it's JS, second is an object */}
@@ -61,6 +69,7 @@ function App() {
          */}
                     <TodoList toBeDone={todos} importantColor={colorOne}
                         onCheck={onCheck} />
+                        <AddToDo addNewTodo={addNewTodo}/> 
                 </div>
             </div>
         </Context.Provider>

@@ -1,14 +1,14 @@
 * {
     box-sizing: border-box;
+    font-family: 'Product Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
     margin: 0;
     padding: 0;
 
 }
 body {
   background: rgb(4, 36, 63);
-  font-family: 'Product Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   height: 95vh;
@@ -43,58 +43,83 @@ h1 {
     color:rgb(3, 56, 121);
     padding: 3% 0;
     text-align: center;
-    text-decoration: underline;
     transition: all 1.8s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 h1:hover {
     cursor: default;
+    -webkit-filter: blur(2px) drop-shadow(0 15px 2px red);
+            filter: blur(2px) drop-shadow(0 15px 2px red);
     letter-spacing: 34px;
 }
 li:hover {
     cursor:pointer;
 }
 input[type="checkbox"] {
-    font-size: 2rem;
     color: rgb(23, 122, 112);
+    font-size: 2rem;
     height: 1.5rem;
     width: 1.5rem;
 }
 input[type="checkbox"]:checked {
-    font-size: 2rem;
     background: rgb(23, 122, 112);
+    font-size: 2rem;
     height: 1.5rem;
     width: 1.5rem;
 }
   
 button.delete {
-    font-size: 1.5rem;
     background: red;
-    color: white;
-    cursor:pointer;
     border: 1px solid rgb(129, 12, 12);
     border-radius: 2px;
-    transition: all 0.4s;
+    color: white;
+    cursor:pointer;
+    font-size: 1.5rem;
     padding: 0.1rem 0.7rem;
+    transition: all 0.4s;
 }
 
 button.delete:hover {
     transform: scale(1.1);
+    transform: rotateY(360deg);
 }
 li {
-    display: flex;
-    justify-content: space-between;
     align-items: center;
     border: 1px solid #ccc;
     border-radius: 2px;
-    padding: 0.5rem;
+    display: flex;
+    justify-content: space-between;
     margin: 5px;
+    padding: 0.5rem;
   }
 
   span {
-    display: flex;
     align-items: center;
+    display: flex;
   }
 
   .completed {
     text-decoration: line-through;
+}
+
+.addtodo {
+    padding: 5%;
+}
+
+#addtaskbtn {
+    background: rgb(26, 87, 162);
+    border-radius: 6px;
+    color: white;
+    height: 30px;
+    padding: 0 1rem;
+    margin-left: 5px;
+}
+#taskinput {
+    height: 30px;
+    outline: none;
+    border-radius: 6px;
+
+}
+
+#taskinput:focus {
+   outline: 2px solid rgb(26, 87, 162);
 }
