@@ -1,7 +1,11 @@
-import React from 'react'
-
-export default function ContactCard() {
+export default function ContactCard({contacts}) {
   return (
-    <div>ContactCard</div>
+
+    <div className="card">
+        <div className="pic"></div>
+        <div className="card-body">
+            <div className="card-title">{contacts.fullName}</div>
+        </div>
+    </div>
   )
 }
