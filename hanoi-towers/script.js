@@ -150,7 +150,7 @@ setTimeout(() => {
 }, sleep)
 }
 
-setTimeout(() => {const solve = (n, start, middle, end) => {
+const solve = (n, start, middle, end) => {
 if (n === 1) {
     move (start, end);
     return;
@@ -159,7 +159,7 @@ setTimeout(() => {solve(n-1, start, end, middle);
 }, 500)
 solve(1, start,middle,end);
 solve(n-1,middle,start,end);
-}}, 1000)
+}
 
 recursionBtn.addEventListener('click', ()=> {
     solve(numOfDisks,towers[0],towers[1],towers[2])
