@@ -1,7 +1,7 @@
 const towers = [], disks = [], twoClicks = []
 
 const numOfDisks = 23, maxWidth = 180, difference = 5
-
+const recursionBtn = document.querySelector('#recursion');
 const towerElList = document.querySelectorAll('.tower');
 const main = document.querySelector('main');
 
@@ -87,7 +87,7 @@ const onClickTower = (e) => {
     let id = Number(e.target.id);
 
 
-    console.log(`Before:`,twoClicks)
+    // console.log(`Before:`,twoClicks)
     if (twoClicks.length===0 && towers[id].disks.length > 0) {
         twoClicks.push(id)
     }
@@ -96,7 +96,7 @@ const onClickTower = (e) => {
         twoClicks.push(id)
         moveDisk();
     }
-    console.log(`After:`,twoClicks)
+    // console.log(`After:`,twoClicks)
     
 }
 
@@ -138,7 +138,29 @@ for (let i=0; i < numOfDisks; i++) {
 
     main.append(newDiskEl);
 
-    console.log(newDisk)
+    // console.log(newDisk)
     towers[0].addDisk(newDisk);
 
 }
+
+const move = (t1, t2) => {
+let sleep = 1000;
+setTimeout(() => {
+    t2.addDisk(t1.removedisk())
+}, sleep)
+}
+
+setTimeout(() => {const solve = (n, start, middle, end) => {
+if (n === 1) {
+    move (start, end);
+    return;
+}
+setTimeout(() => {solve(n-1, start, end, middle);
+}, 500)
+solve(1, start,middle,end);
+solve(n-1,middle,start,end);
+}}, 1000)
+
+recursionBtn.addEventListener('click', ()=> {
+    solve(numOfDisks,towers[0],towers[1],towers[2])
+})
